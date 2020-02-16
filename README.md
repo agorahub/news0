@@ -12,19 +12,17 @@ Read RSS news on demand.
 
 ```
 # Edit local gem 'jekyll-import' to configure the post format.
-$ vim ~/.rvm/gems/ruby-2.6.3/gems/jekyll-import-0.19.1/lib/jekyll-import/importers/rss.rb
+$ vim .../gems/jekyll-import-0.19.1/lib/jekyll-import/importers/rss.rb
 
 # Import posts from RSS feeds.
-$ ruby -r rubygems -e 'require "jekyll-import";
-  JekyllImport::Importers::RSS.run({
-    "source" => "http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_clocal.xml"
-  })'
+$ ruby -r rubygems -e 'require "jekyll-import"; JekyllImport::Importers::RSS.run({"source"=>"X"})'
 
-# RSS feeds:
-#   "http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_greaterchina.xml"
-#   "http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cinternational.xml"
-#   "http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cfinance.xml"
-#   "http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_csport.xml"
+# X:
+#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_clocal.xml
+#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_greaterchina.xml
+#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cinternational.xml
+#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cfinance.xml
+#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_csport.xml
 
 $ gem install bundler jekyll
 $ bundle exec jekyll serve
