@@ -29,8 +29,10 @@ github_username:  agorahub
 
 # Build settings
 theme: minima
+paginate: 20
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
