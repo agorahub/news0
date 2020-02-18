@@ -22,14 +22,15 @@ title: RTHK 新聞訂閱
 email: theagora@github.com
 description: >- # this means to ignore newlines until "baseurl:"
   Read news on demand.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://agorahub.github.io/news0" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/news0" # the subpath of your site, e.g. /blog
+url: "https://agorahub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: agoradao
 github_username:  agorahub
 
 # Build settings
 theme: minima
 paginate: 20
+paginate_path: "/news0/page:num"
 plugins:
   - jekyll-feed
   - jekyll-paginate
