@@ -28,6 +28,7 @@ twitter_username: agoradao
 github_username:  agorahub
 
 # Build settings
+timezone: Asia/Hong_Kong
 theme: minima
 paginate: 20
 plugins:
