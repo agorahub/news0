@@ -30,7 +30,7 @@ github_username:  agorahub
 # Build settings
 theme: minima
 paginate: 20
-paginate_path: "/rss/page:num"
+paginate_path: "rss/page:num"
 plugins:
   - jekyll-feed
   - jekyll-paginate
