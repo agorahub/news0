@@ -8,7 +8,7 @@ layout: default
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <span class="author">
-    <span class="postdate">{{ post.date }}</span>
+    <span class="postdate">{{ post.date | preserve_timezones }}</span>
   </span>
   <h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
   <!--
