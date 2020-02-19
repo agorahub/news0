@@ -30,7 +30,7 @@ github_username:  agorahub
 # Build settings
 timezone: Asia/Hong_Kong
 theme: minima
-paginate: 20
+paginate: 50
 plugins:
   - jekyll-feed
   - jekyll-paginate
