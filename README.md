@@ -15,14 +15,7 @@ Read RSS news on demand.
 $ vim .../gems/jekyll-import-0.19.1/lib/jekyll-import/importers/rss.rb
 
 # Import posts from RSS feeds.
-$ ruby -r rubygems -e 'require "jekyll-import"; JekyllImport::Importers::RSS.run({"source"=>"X"})'
-
-# X:
-#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_clocal.xml
-#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_greaterchina.xml
-#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cinternational.xml
-#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_cfinance.xml
-#   http://rthk9.rthk.hk/rthk/news/rss/c_expressnews_csport.xml
+$ ./_feed.sh
 
 $ gem install bundler jekyll
 $ bundle exec jekyll serve
