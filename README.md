@@ -8,22 +8,23 @@ Read RSS news on demand.
 
 > 時逢COVID-19疫期，請[【按需】](https://github.com/agorahub/_meta/issues/4)聯絡管理員更新訂閱。
 
-## Import, Bundle and Deploy
+## Import and Bundle
 
 ```
-# Edit local gem 'jekyll-import' to configure the post format.
-$ vim .../gems/jekyll-import-0.19.1/lib/jekyll-import/importers/rss.rb
+# Edit local gem 'jekyll-import' to configure the post format:
+# .../gems/jekyll-import-0.19.1/lib/jekyll-import/importers/rss.rb
 
-# Import posts from RSS feeds.
+# Import RSS feeds and commit posts back:
 $ ./_feed.sh
 
+# Edit _config.yml for local bundle test:
 $ gem install bundler jekyll
 $ bundle exec jekyll serve
 # => Now browse to http://localhost:4000
 
-# Edit _config.yml for production deployment
+# Edit _config.yml for production bundle:
 $ JEKYLL_ENV=production bundle exec jekyll build
-# Deploy compiled contents in the _site to your html server
+# Copy the compiled codes from _site/ to your html server.
 ```
 
 ## Disclaimer
