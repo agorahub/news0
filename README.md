@@ -15,7 +15,7 @@ Read RSS news on demand.
 # .../gems/jekyll-import-0.19.1/lib/jekyll-import/importers/rss.rb
 
 # Import RSS feeds and commit posts back:
-$ ./_feed.sh
+$ ./_feed.sh  # pull, import, archive, add, commit, push
 
 # Edit _config.yml for local bundle test:
 $ gem install bundler jekyll
