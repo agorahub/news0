@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  README
+title:  NEWS Zero
 permalink: /readme/
 ---
 
