@@ -6,25 +6,17 @@ permalink: /readme/
 
 Read RSS news on demand.
 
-> 時逢COVID-19疫期，請[【按需】](https://github.com/agorahub/_meta/issues/4)聯絡管理員更新訂閱。
+| Source | Importer  | Category |
+| ------ | --------- | -------- |
+| RTHK   | RSSRTHK   | rthk     |
+
 
 ## Import and Commit
 
 ```
-# Edit local gem 'jekyll-import' to configure the post format:
-$ vim .../gems/jekyll-import-{version}/lib/jekyll-import/importers/rss.rb
-}   ...
-}   formatted_date = item.date.strftime("%Y-%m-%d-%H-%M-%S")
-}   ...
-}   header = {
-}     "layout"     => "post",
-}     "title"      => item.title,
-}     "date"       => item.date,
-}     "categories" => "rss",
-}   }
-}   ...
-}   File.open("_posts/#{name}.md", "w") do |f|
-}   ...
+# Customize RSS importers in local gem 'jekyll-import':
+$ ls .../gems/jekyll-import-{version}/lib/jekyll-import/importers/rss*
+# rssrthk.rb
 
 # Import RSS feeds and commit posts back:
 $ ./_feed.sh  # pull, import, archive, add, commit, push
@@ -32,9 +24,9 @@ $ ./_feed.sh  # pull, import, archive, add, commit, push
 
 ## Batch and Automate
 
-> https://github.com/agorahub/news0/issues/1#issuecomment-597540617
+https://github.com/agorahub/news0/issues/1#issuecomment-597540617
 
-## Clone Test and Deploy
+## Test and Deploy
 
 ```
 # Edit _config.yml for local bundle test:
