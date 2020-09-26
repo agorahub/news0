@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: RTHK 新聞訂閱
+title: 零新聞
 email: theagora@github.com
 description: >- # this means to ignore newlines until "baseurl:"
   Read news on demand.
