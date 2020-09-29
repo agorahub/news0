@@ -7,9 +7,7 @@ layout: default
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <span class="author">
-    <span class="postdate">{{ post.date | preserve_timezones }}</span>
-  </span>
+  <span class="postdate">{{ post.date | preserve_timezones }}</span> <span class="author"> | <a href="{{ site.url }}{{ site.baseurl }}/{{ post.categories }}">{{ post.categories.first | upcase }}</a></span>
   <h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
   <!--
   <div class="content">
