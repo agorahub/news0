@@ -7,26 +7,26 @@ layout: default
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <span class="postdate">{{ post.date | preserve_timezones }}</span> · <span class="author"><a href="{{ site.url }}{{ site.baseurl }}/{{ post.categories }}"><b>{{ post.categories.first | upcase }}</b></a></span>
-  <h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-  <!--
-  <div class="content">
-    {{ post.content }}
-  </div>
-  -->
+<span class="postdate">{{ post.date | preserve_timezones }}</span> • <span class="author"><a href="{{ site.url }}{{ site.baseurl }}/{{ post.categories }}"><b>{{ post.categories.first | upcase }}</b></a></span>
+<h3><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+<!--
+<div class="content">
+  {{ post.content }}
+</div>
+-->
 {% endfor %}
 
 <!-- Pagination links -->
 <div class="pagination" style="color:gray; font-weight:bold">
   {% if paginator.previous_page %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  <a href="{{ site.url }}{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">Previous</a>
   {% else %}
-    <span class="previous">Previous</span>
+  <span class="previous">Previous</span>
   {% endif %}
-    <span class="page_number">· Page {{ paginator.page }} of {{ paginator.total_pages }} ·</span>
+  <span class="page_number">• Page {{ paginator.page }} of {{ paginator.total_pages }} •</span>
   {% if paginator.next_page %}
-    <a href="{{ site.url }}{{ site.baseurl }}{{ paginator.next_page_path }}" class="next">Next</a>
+  <a href="{{ site.url }}{{ site.baseurl }}{{ paginator.next_page_path }}" class="next">Next</a>
   {% else %}
-    <span class="next">Next</span>
+  <span class="next">Next</span>
   {% endif %}
 </div>
