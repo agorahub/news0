@@ -1,0 +1,90 @@
+---
+layout: post
+title: 肺炎疫情地圖製作教學
+date: 2020-01-27 13:38:00.000000000 +00:00
+categories: matters
+tags: blog
+author: 梁啟智
+---
+
+<p>今年新春不拜年，連大學課堂也取消了，唯有轉為網上教學，大家一起學做地圖吧。以前教過如何做<a href="https://medium.com/@leungkaichihk/%E8%8D%89%E6%A0%B9%E7%B5%84%E7%B9%94%E5%8F%8A%E5%AA%92%E9%AB%94%E5%9C%B0%E5%9C%96%E5%88%B6%E4%BD%9C%E6%8C%87%E5%8D%97-1-70f0695d2cdb" target="_blank">街道圖</a>和<a href="https://medium.com/@leungkaichihk/%E8%8D%89%E6%A0%B9%E7%B5%84%E7%B9%94%E5%8F%8A%E5%AA%92%E9%AB%94%E5%9C%B0%E5%9C%96%E8%A3%BD%E4%BD%9C%E6%8C%87%E5%8D%97-2-8b661a8d44ae" target="_blank">國家位置圖</a>，這次我們做些最最最低階的統計地圖吧。一如既往，我會介紹一些免費和極低技術要求的做圖方法。數據不是魔術，我做數據圖的原則是你不認同的話可以自己做一次，而不是我講「大數據」三個字就當交代了數據來源，你就要相信。來，我們一起把 Low Tech Infographics 進行到底！</p><h2>1. MS Excel</h2><p>第一個介紹做地圖的方法，是 Excel 。沒錯， Excel 除了做棒型圖、折線圖之外，也可以做一些很基本很基本的地圖。這兒我們用昨天香港政府公佈的<a href="https://www.chp.gov.hk/files/pdf/statistics_of_the_cases_novel_coronavirus_infection_tc.pdf" target="_blank">全國各地感染數字</a>作為示範。注意，我用這些數字做示範不等同我認同這些數字的可信性。</p><p>首先，把數字都打成一個表格：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/feff3242-497f-43c8-a63e-8032313150a4.webp" onerror="this.srcset='https://assets.matters.news/embed/feff3242-497f-43c8-a63e-8032313150a4.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/feff3242-497f-43c8-a63e-8032313150a4.png" onerror="this.srcset='https://assets.matters.news/embed/feff3242-497f-43c8-a63e-8032313150a4.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/feff3242-497f-43c8-a63e-8032313150a4.webp">
+
+        <img src="https://assets.matters.news/embed/feff3242-497f-43c8-a63e-8032313150a4.png" srcset="https://assets.matters.news/processed/540w/embed/feff3242-497f-43c8-a63e-8032313150a4.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>把要做圖的數據範圍選好，然後選 Insert ，再在菜單上選 Maps：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.webp" onerror="this.srcset='https://assets.matters.news/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.png" onerror="this.srcset='https://assets.matters.news/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.webp">
+
+        <img src="https://assets.matters.news/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.png" srcset="https://assets.matters.news/processed/540w/embed/af2672f0-0190-4c02-b26b-b3a633a2f13e.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>就這樣，一張全國疫情分佈圖就做好了：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/be285805-2e37-40f9-8015-d65db73c209a.webp" onerror="this.srcset='https://assets.matters.news/embed/be285805-2e37-40f9-8015-d65db73c209a.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/be285805-2e37-40f9-8015-d65db73c209a.png" onerror="this.srcset='https://assets.matters.news/embed/be285805-2e37-40f9-8015-d65db73c209a.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/be285805-2e37-40f9-8015-d65db73c209a.webp">
+
+        <img src="https://assets.matters.news/embed/be285805-2e37-40f9-8015-d65db73c209a.png" srcset="https://assets.matters.news/processed/540w/embed/be285805-2e37-40f9-8015-d65db73c209a.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>這樣做圖的好處，是對技術零要求。電腦會自己認得你輸入的省份名稱，然後製成地圖。如果你輸入的是國家名，電腦就會自動做一張世界地圖，如此類推。</p><p>不過上面這張圖有明顯的特點，就是湖北省的數字太高，顯得其他省份之間的差異看不到。視乎你的目的，這樣表達可以是優點也可以是缺點。不過如果你堅持要清楚看到不同省份之間的差異，可以自己先和所有數據做一次分類：例如 0 是 0， 1–9 是 1， 10–99 是 2，100–999 是 3， 1000或以上是4，讓數據變成這樣：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7abde510-4710-4aa7-adc0-4cb37944f682.webp" onerror="this.srcset='https://assets.matters.news/embed/7abde510-4710-4aa7-adc0-4cb37944f682.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7abde510-4710-4aa7-adc0-4cb37944f682.png" onerror="this.srcset='https://assets.matters.news/embed/7abde510-4710-4aa7-adc0-4cb37944f682.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7abde510-4710-4aa7-adc0-4cb37944f682.webp">
+
+        <img src="https://assets.matters.news/embed/7abde510-4710-4aa7-adc0-4cb37944f682.png" srcset="https://assets.matters.news/processed/540w/embed/7abde510-4710-4aa7-adc0-4cb37944f682.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>再按一次做圖，出來的結果就是：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.webp" onerror="this.srcset='https://assets.matters.news/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.png" onerror="this.srcset='https://assets.matters.news/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.webp">
+
+        <img src="https://assets.matters.news/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.png" srcset="https://assets.matters.news/processed/540w/embed/a0b9b352-7f73-40ac-97cd-96dc5c9b9892.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>當然，這不可能是最後的成品，還要再弄一下標題和圖例才可以出街，不然人家以為湖北只有 4 例就麻煩了。</p><h2>2. mapchart.net</h2><p>如果上面的方法也嫌太複雜，我們可以使用一些網上現成的做地圖網站，例如 <a href="https://mapchart.net/china.html" target="_blank">mapchart.net</a> 。這兒的技術要求就不可能再低了，就當是填顏色一樣在圖上點按就可以：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.webp" onerror="this.srcset='https://assets.matters.news/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.png" onerror="this.srcset='https://assets.matters.news/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.webp">
+
+        <img src="https://assets.matters.news/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.png" srcset="https://assets.matters.news/processed/540w/embed/55b2f24b-6d91-488f-8ef9-ada3f12b68ee.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>當然如果你認真做的話，其實也可以很不錯的：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.webp" onerror="this.srcset='https://assets.matters.news/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.png" onerror="this.srcset='https://assets.matters.news/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.webp">
+
+        <img src="https://assets.matters.news/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.png" srcset="https://assets.matters.news/processed/540w/embed/37e02f34-5d5a-4990-9e85-638a057e8e57.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><h2>3. QGIS</h2><p>當然，任何現成的方法都會有其限制。如果你想要有最大的自由度做去設計，則還是要用專用的製圖軟件，例如 QGIS ，那麼你喜歡怎樣就怎樣。詳細 QGIS 的教學，請見文首的兩條連結。以下是我用三分鐘做出來的製成品：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.webp" onerror="this.srcset='https://assets.matters.news/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.png" onerror="this.srcset='https://assets.matters.news/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.webp">
+
+        <img src="https://assets.matters.news/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.png" srcset="https://assets.matters.news/processed/540w/embed/cd0f09f9-5cb6-47a5-96b6-c549c2e5fc56.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>（原文首發於 Medium 專頁）</p>
