@@ -1,5 +1,5 @@
 ---
-title: 🅘
+title: Ⓘnitium
 layout: page
 ---
 {% for category in site.categories %}
