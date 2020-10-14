@@ -1,5 +1,5 @@
 ---
-title: Ⓜatters
+title: srettaⓂ
 layout: page
 ---
 {% for category in site.categories %}
