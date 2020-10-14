@@ -1,0 +1,50 @@
+---
+layout: post
+title: Tor 有那麼難用嗎？
+date: 2020-05-24 13:37:13.000000000 +00:00
+categories: matters
+tags: blog
+author: Luterngun
+---
+
+<p>據我觀察和臆測，使用 Tor 的中文網友仍是少數。至於為什麼拒絕使用 Tor，考慮到中國封鎖 Tor 的特殊網絡環境：<br class="smart"> 1、部分網友可能因為不會配置而不得其門而入，在短短幾分鐘內走完了“從入門到放棄”的全程；<br class="smart"> 2、部分網友可能因為選擇了meek網橋，在漫長的等待中耗盡耐心而放棄；<br class="smart"> 3、有的網友可能僅僅道聽途說 Tor 上網很慢、很難用而對它敬而遠之；<br class="smart"> 4、還有些網友能夠熟練地使用 Proxy + Tor，但為了便利而主動放棄 Tor。（這種選擇不難理解：畢竟在移動互聯網時代電腦 + Tor 已是縛手縛腳，就別提虛擬機和 live CD/USB 了。如果每次上網都要經歷這樣一套繁瑣的“儀式”，上網的樂趣自然要大打折扣了）</p><p>本文全文引用 Cryptoboy 的舊作《<a href="https://cryptoboy.home.blog/2018/11/04/proxy-over-tor/" target="_blank">Proxy over Tor</a>》，希望幫助那些因為不會用而放棄的網友學會使用 Proxy + Tor，改變他們對於“Tor很難用”、“Tor上網很慢”的印象。</p><blockquote>打开最新版本的tor,再点击开始以后应该是自动按照上一次设置进行连接。假设之前没有设置过，或者要修改设置，先取消连接过程，这时候就会跳转到配置界面:</blockquote><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.webp" onerror="this.srcset='https://assets.matters.news/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.png" onerror="this.srcset='https://assets.matters.news/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.webp">
+
+        <img src="https://assets.matters.news/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.png" srcset="https://assets.matters.news/processed/540w/embed/f64cedb9-3fa0-4a9f-9d9d-63ab1d8c1f42.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><blockquote>选择configuration(配置)</blockquote><blockquote>选择 <strong>Tor is cencered in my country (我所在的国家tor是受到审查的)</strong></blockquote><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.webp" onerror="this.srcset='https://assets.matters.news/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.png" onerror="this.srcset='https://assets.matters.news/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.webp">
+
+        <img src="https://assets.matters.news/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.png" srcset="https://assets.matters.news/processed/540w/embed/a4dd11d5-421f-424b-b5df-d6ad04c3a791.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><blockquote>说一下这一条，必须要勾选否则打不开tor的混淆协议的设置，目的就是让网络供应商政府之类的看不出我在用tor,我觉得这一条是必选。就字面意思来说，我觉得没有什么国家不监控tor，只是程度不同罢了。</blockquote><blockquote>比方说中国就是不遗余力的想尽一切办法的干掉tor，目前来说大概只有meek-azure是在中国管用的。但是不是说美国欧洲就不监控，比如美国NSA就是属于视奸状态，分析tor流量，分析谁下载了tor,谁连接了tor，但是不会轻易动手也不会明目张胆阻断tor的流量。</blockquote><blockquote>所以为了安全性考虑，还是选择这一个选项，不要勾选meek，因为我们已经是代理连接tor了，meek会极大的降低速度，目前来说对速度支持最好的是obfs4</blockquote><blockquote>再选择 <strong>I use a proxy to connect the internet(我通过代理上网)</strong></blockquote><blockquote>选择这个以后我们就可以看到设置代理的界面了。首先不管是HTTP还是Socks代理，这里前面的Address(地址)部分都可以直接填127.0.0.1。</blockquote><p>注：如在虛擬機系統中使用 Tor，需先在主系統代理軟件的 socks/HTTP 偵聽地址從“127.0.0.1”改為“0.0.0.0” 以允許局域網中其他設備接入，跟住查看主系統在局域網中的 IP 地址（ifconfig en0），最後在虛擬機系統的 Tor Browser 配置介面中將之前的“127.0.0.1”替換成主系統的 IP（192.168.x.x） ，其餘不變。</p><blockquote>然后的设置部分就非常简单了，你只需要注意两个信息：<br class="smart">1.是HTTP代理还是socks代理？<br class="smart">2.port是多少？<br class="smart">只要搞清楚这两件事情，如实填入就好了<br class="smart">比方说你用不管是shadowsocks还是赛风，还是大杀器还是自由门，只需要选择Socks5,然后address输入127.0.0.1 ports输入你的port就行，比方说是1080就填入即可<br class="smart">然后再看到这个图</blockquote><p>注：HTTP/Socks代理端口可以在代理軟件中查看，具體情況取決於你使用的代理客戶端。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.webp" onerror="this.srcset='https://assets.matters.news/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.png" onerror="this.srcset='https://assets.matters.news/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.webp">
+
+        <img src="https://assets.matters.news/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.png" srcset="https://assets.matters.news/processed/540w/embed/a4e68253-a2d8-42c9-817b-710087dce5fd.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><blockquote>选择连接即可<br class="smart">这样配置以后你的网络因该是这样的：</blockquote><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.webp" onerror="this.srcset='https://assets.matters.news/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.png" onerror="this.srcset='https://assets.matters.news/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.webp">
+
+        <img src="https://assets.matters.news/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.png" srcset="https://assets.matters.news/processed/540w/embed/acef31f8-54e3-4e14-815e-aef868e56d8c.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>*提醒：</strong>如果你想讓自己的網絡身份盡可能保持匿名，Tor 的使用必須是“全過程的”，間歇性使用 Tor 還不如不用，所以不要有“半路出家”這種想法。如果你想從現在起轉投 Tor，請先忍痛與你的舊身分“斷捨離”，註冊新號從頭來過。</p><p><br></p><p><strong>*Tor 加持的系統</strong></p><p>Tails OS、Kodachi 等主打隱私和匿名的 Linux 發行版會強制本機全部流量經過 Tor。但這類系統在設計時沒有考慮到中國封殺 Tor 及傳統 VPN 的特殊網絡環境，比如 Kodachi 的作者在 Github 回覆稱自己根本沒聽說過 Shadowsocks。相比在主系統中直接使用 Proxy + Tor，可抗 GFW 封鎖的前置代理的缺失成了中國用戶使用 Tails OS 時的最大阻礙。</p><p>另外這類系統為了對抗取證默認以 live 形式運作， Tails OS 在虛擬機中更不支持永久模式，意味著系統不會保留用戶的任何設置。這導致中國用戶在每次使用時都要下載、安裝和配置 Shadowsocks 等代理工具，或者在使用局域網中其他已翻牆的設備轉發代理，顯然十分不便。愚以為，「Tor 的前置代理」是在中國推廣普及類 Tails OS 系統時必須解決的絆腳石。</p>
