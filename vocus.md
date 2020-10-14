@@ -1,5 +1,5 @@
 ---
-title: Ⓥocus
+title: sucoⓋ
 layout: page
 ---
 {% for category in site.categories %}
