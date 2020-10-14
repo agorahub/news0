@@ -1,5 +1,5 @@
 ---
-title: Ⓘnitium
+title: muitinⒾ
 layout: page
 ---
 {% for category in site.categories %}
