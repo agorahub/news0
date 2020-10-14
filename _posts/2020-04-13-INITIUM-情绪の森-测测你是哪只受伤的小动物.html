@@ -1,0 +1,90 @@
+---
+layout: post
+title: 情绪の森：测测你是哪只受伤的小动物
+date: 2020-04-13 09:49:00.000000000 +00:00
+categories: initium
+tags: blog
+author: 端传媒
+---
+
+<p>「能做的太少，时间却空出很多；需要拥抱，却不得不社交隔离。我们被困在一片迷雾遍布的情绪森林，就让作为病友的我们为你把脉，测测你是哪只受伤的小动物。」</p><p>端传媒</p><meta charset="utf-8"><meta name="description" content><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><title>情緒の森</title><meta property="og:type" content="article"><meta property="og:title" content="情緒の森"><meta property="og:description" content="測測你是哪隻受傷的小動物"><meta property="og:quote" content="情緒の森:測測你是哪隻受傷的小動物"><meta property="og:url" content="https://theinitium.com/project/20200411-quiz-emotionforest"><meta property="og:image" content="https://theinitium.com/project/20200411-quiz-emotionforest/images/sharepic-01.jpg"><link rel="stylesheet" href="styles/vendor.css"><link rel="stylesheet" href="styles/index.css"><style>.section {
+        position: relative;
+        background-color: #adf6ff;
+        background-image: url(images/bg.jpg);
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: top;
+        background-repeat: no-repeat;
+      }
+
+      @media (max-width: 1024px) and (orientation: portrait) {
+        .section {
+          background-image: url(images/bg_mobile.jpg);
+        }
+      }
+
+      .progress-bar {
+        background-color: rgba(244, 244, 244, 0.2);
+        opacity: 0.5;
+      }
+      .progress-bar::-moz-progress-bar {
+        background-color: #004e8b;
+      }
+      .progress-bar::-webkit-progress-value {
+        background-color: #004e8b;
+      }
+      .question,
+      a.modal-container,
+      .nav-btn {
+        color: #fff;
+        background-color: rgba(244, 244, 244, 0.2);
+      }
+      .issue.content > .question{
+        overflow-y: hidden;
+      }
+      .js-show-next,
+      .js-show-result,
+      .js-send{
+        background-color: #f44028;
+        color: #fbbf29;
+        border: 1px solid #fff;
+      }
+      .option label{
+        background-color: #074168;
+        color: Light_text_Color;
+      }
+      .option .indicator {
+        color: #004e8b;
+        border-color: #004e8b;
+      }
+      
+      .option input:checked + label{
+        color: #fff;
+        background-color: #004e8b;
+      }
+
+      .result,
+      .intro__content,
+      .issue.content{
+        color: #fff;
+        background-image: url(images/blue_bg.png);
+        background-repeat: repeat;
+        background-size: 25em;
+        background-color: #004e8b;
+        border: 5px solid #010817;
+      }
+
+      .intro__btn {
+        border-color: #dddddd;
+      }
+      .intro__title {
+      }
+      .result-share,
+      .modal-icon{
+        color: #004e8b;
+      }
+      .issue.content{
+        padding: 0.5em;
+      }</style><!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--><div class="loader"><spin class="spin"></spin></div><main id="fullpage"><intro type="intro" :title="title" :subtitle="subtitle" :description="intro"></intro><intro type="privacy" title="隱私政策" :description="privacy"></intro><div class="section" data-anchor="questions"><div class="slide" style="position: relative;" v-for="(issue_index, issue) in issues" data-anchor="{{ issue_index+1 }}"><a href="https://theinitium.com/" class="logo"></a><progress class="progress-bar" value="{{ issue.progress }}" max="100"></progress><div class="content-wrap"><div class="issue content"><issue-question :issue="issue"></issue-question><ul class="options"><range-options :issue="issue" :issue_index="issue_index" v-if="issue.type === 'range'"></range-options><choice-options :issue="issue" :issue_index="issue_index" v-if="issue.type === 'choice'"></choice-options><dropdown-options :issue="issue" :issue_index="issue_index" v-if="issue.type === 'dropdown'"></dropdown-options></ul><div style="display: flex;flex-direction: row;justify-content: space-between;align-items:center;"><button v-if="issue_index !== 0" class="nav-btn issue-btn issue-btn--left js-show-prev" type="button">上一題</button><p v-if="issue.comment" style="font-size: 0.9em;">{{ issue.comment }}</p><button v-show="!issue.showModal" class="nav-btn issue-btn issue-btn--right" v-bind:class="[is_last_issue(issue_index) ? 'js-show-result' : 'js-show-next']" type="button">{{ is_last_issue(issue_index) ? '結束答題' : '下一題' }}</button></div></div></div><footer><a href="https://theinitium.com/" target="_blank">© 2020 Initium Media</a> <a href="https://theinitium.com/misc/privacy/" target="_blank" style="text-align: right;">隱私政策</a></footer></div></div><result :morequizzes="moreQuizzes"></result></main><div id="mask"></div><div id="weixin_tips"><img id="weixin_tips_image" src="https://theinitium.com/article/20200413-quiz-emotionforest/images/arrow.svg" referrerpolicy="no-referrer"><p>請點擊右上角<br>將它發送給指定朋友<br>或分享到朋友圈</p></div><modal :show.sync="showModal" :bingo="bingo" :text="modalText"></modal>

@@ -1,0 +1,215 @@
+---
+layout: post
+title: 互动地图：2019冠状病毒疫情全球确诊病例分布
+date: 2020-02-03 10:30:00.000000000 +00:00
+categories: initium
+tags: blog
+author: 陈莉雅
+---
+
+<p>「本页面每日持续更新疫情进展，敬请关注。」</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="自2019年底至今，2019冠狀病毒蔓延全球，端傳媒將持續以互動地圖及深度報導，帶你掌握疫情進展。">
+    <meta property="fb:app_id" content>
+    <meta property="og:title" content="2019冠狀病毒疫情全球確診病例｜端傳媒">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theinitium.com/project/20200203-international-novel-coronavirus-live">
+    <meta property="og:image" content="https://theinitium.com/project/20200203-international-novel-coronavirus-live/img/social4.png">
+    <meta property="og:image:alt" content="2019冠狀病毒疫情全球確診病例｜端傳媒">
+    <meta property="og:site_name" content="2019冠狀病毒疫情全球確診病例｜端傳媒">
+    <meta property="og:description" content="自2019年底至今，2019冠狀病毒蔓延全球，端傳媒將持續以互動地圖及深度報導，帶你掌握疫情進展。">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@initiumnews">
+    <meta name="twitter:creator" content="@initiumnews">
+    <meta name="twitter:title" content="2019冠狀病毒疫情全球確診病例｜端傳媒">
+    <meta name="twitter:description" content="自2019年底至今，2019冠狀病毒蔓延全球，端傳媒將持續以互動地圖及深度報導，帶你掌握疫情進展。">
+    <meta name="twitter:image:src" content="https://theinitium.com/project/20200203-international-novel-coronavirus-live/img/social4.png">
+    <meta name="twitter:url" content="https://theinitium.com/project/20200203-international-novel-coronavirus-live">
+    <title>2019冠狀病毒疫情全球確診病例｜端傳媒</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/app.min.css">
+    
+  
+  
+    <div id="wrapper">
+      <div class="loading">
+        <div class="container">
+          <h1 class="serif">2019冠狀病毒疫情<br>全球確診病例分布圖</h1>
+          <figure><img src="https://theinitium.com/article/20200203-international-novel-coronavirus-live/img/ajax-loader.gif" referrerpolicy="no-referrer"></figure><span>載入中 [ 0/3 ]</span>
+        </div>
+      </div>
+      <nav id="nav">
+        <div class="logo"><a href="https://theinitium.com/">端傳媒</a></div>
+      </nav>
+      <main class="index" id="main">
+        <div class="scene">
+          <section class="intro">
+            <div class="container">
+              <div class="title">
+                <div class="info">
+                  <div class="date">截至 {{ updateTime }}</div>
+                  <div class="share"><a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Ftheinitium.com%2Fproject%2F20200203-international-novel-coronavirus-live" target="_blank"><span></span></a><a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftheinitium.com%2Fproject%2F20200203-international-novel-coronavirus-live" target="_blank"><span></span></a></div>
+                </div>
+                <h1 class="serif">2019冠狀病毒疫情<br>全球確診病例分佈圖</h1>
+              </div>
+              <div class="accumulation serif">
+                <div class="death">
+                  <h6>累計死亡<br><b>{{dataCSV | sumData('death') + dpDeath}}</b></h6>
+                  <p>較上次更新增加<b>{{newDeath}}</b></p>
+                </div>
+                <div class="confirmed">
+                  <h6>累計確診<br><b>{{dataCSV | sumData('confirmed') + dpConfirmed}}</b></h6>
+                  <p>較上次更新增加<b>{{newConfirmed}}</b></p>
+                </div>
+                <div class="cure">
+                  <h6>累計治癒<br><b>{{dataCSV | sumData('cure') + dpCure}}</b></h6>
+                  <p>較上次更新增加<b>{{newCure}}</b></p>
+                </div>
+              </div>
+              <div class="news">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8 col-md-10">
+                    <h4>疫情要點<a :href="newsLink" target="_blank" href="https://theinitium.com/article/20200203-international-novel-coronavirus-live/undefined">（點擊閱讀疫情深度報道）</a></h4>
+                    <ul>
+                      <li>{{ newsTitle }}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="map">
+            <div id="leaflet" v-on:click="closePopup"></div>
+            <div class="button d-md-none anchor"><a v-on:click="mapButton" href="https://theinitium.com/article/20200203-international-novel-coronavirus-live/undefined">查看完整數據</a></div>
+            <div class="button d-md-none menu"><a v-on:click="filterDisplay(true)" href="https://theinitium.com/article/20200203-international-novel-coronavirus-live/undefined"></a><span class="tips">點選查看大事紀與確診病例歷時變化 </span></div>
+            <div class="legend d-none d-md-block">
+              <ul>
+                <li>8001 例以上</li>
+                <li>5001 ~ 8000 例</li>
+                <li>3001 ~ 5000 例</li>
+                <li>2001 ~ 3000 例</li>
+                <li>1001 ~ 2000 例</li>
+                <li>301 ~ 1000 例</li>
+                <li>101 ~ 300 例</li>
+                <li>51 ~ 100 例</li>
+                <li>31 ~ 50 例</li>
+                <li>1 ~ 30 例</li>
+              </ul>
+            </div>
+            <div class="filter desktop d-none d-md-block">
+              <div class="bar"><span class="tips">拉動時間軸，查看大事紀與確診病例歷時變化</span>
+                <input type="range" step="1" value="16" min="0" max="16" v-on:change="filterDateDesktop">
+                <ul>
+                  <li v-for="(data, key) in filterData" :key="key"><span>{{data.date}}</span>
+                    <p>{{data.text}}</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter mobile d-md-none"><a class="close" v-on:click="filterDisplay(false)" href="https://theinitium.com/article/20200203-international-novel-coronavirus-live/undefined"></a>
+              <div class="bar">
+                <div class="form-check" v-for="(data, index, key) in filterData" :key="key">
+                  <templete v-if="data.val === 'latest'">
+                    <input class="form-check-input" type="radio" name="date" :value="index" :id="index" v-on:change="filterDateMobile" checked>
+                  </templete>
+                  <templete v-else>
+                    <input class="form-check-input" type="radio" name="date" :value="index" :id="index" v-on:change="filterDateMobile">
+                  </templete>
+                  <label class="form-check-label" :for="index"><span>{{data.date}}</span>
+                    <p>{{data.text}}</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="statistic">
+          <div class="container">
+            <div class="row justify-content-center" :class="switchState?'active':''">
+              <div v-for="(datas, key) in groupByType" :key="key" :class="key==='world'?'world col-12 col-md-10':'china col-12 col-md-10 col-lg-6'">
+                <div class="title serif">
+                  <h3>{{ key | groupName }}</h3>
+                  <div class="info" v-if="key === 'world'"><span class="confirmed">累計確診 {{datas | sumData('confirmed') + dpConfirmed}} 例 </span>/ <br><span class="death">死亡 {{datas | sumData('death') + dpDeath}} 例 </span>/ <span class="cure">治癒 {{datas | sumData('cure') + dpCure}} 例</span></div>
+                  <div class="info" v-else><span class="confirmed">累計確診 {{datas | sumData('confirmed')}} 例 </span>/ <br><span class="death">死亡 {{datas | sumData('death')}} 例 </span>/ <span class="cure">治癒 {{datas | sumData('cure')}} 例</span></div>
+                </div>
+                <div class="content">
+                  <div class="row" v-if="key === 'world'">
+                    <div class="col-lg-6 col-md-12" v-for="(data, key) in datas" :key="key"><span class="local">{{data.name_zh}}</span><span class="confirmed">{{data.confirmed}}</span><span class="death">{{data.death}}</span><span class="cure">{{data.cure}}</span></div>
+                    <div class="col-lg-6 col-md-12"><span class="local">鑽石公主號</span><span class="confirmed">{{dpConfirmed}}</span><span class="death">{{dpDeath}}</span><span class="cure">{{dpCure}}</span></div>
+                  </div>
+                  <div class="row" v-else>
+                    <div class="col-lg-12" v-for="(data, key) in datas" :key="key"><span class="local">{{data.name_zh}}</span><span class="confirmed">{{data.confirmed}}</span><span class="death">{{data.death}}</span><span class="cure">{{data.cure}}</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="source">
+              <p>資源來源：美國約翰霍普金斯大學（Johns Hopkins CSSE）資訊、綜合傳媒報導</p>
+            </div>
+          </div>
+          <div class="switch">
+            <div class="container">
+              <div class="buttons">
+                <button class="btn" @click="switchStatistic"><span class="icon">
+                    <svg height="16px" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" width="16px" space="preserve" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" fill="var(--icon-color, #000)">
+                      <path d="M14,8c-0.609,0-0.898,0.43-1,0.883C12.635,10.516,11.084,13,8,13c-0.757,0-1.473-0.172-2.114-0.474L6.414,12  C6.773,11.656,7,11.445,7,11c0-0.523-0.438-1-1-1H3c-0.609,0-1,0.492-1,1v3c0,0.541,0.428,1,1,1c0.484,0,0.688-0.273,1-0.594  l0.408-0.407C5.458,14.632,6.685,15,8,15c4.99,0,7-4.75,7-5.938C15,8.336,14.469,8,14,8z M3,7.117C3.365,5.485,4.916,3,8,3  c0.757,0,1.473,0.171,2.114,0.473L9.586,4C9.227,4.344,9,4.555,9,5c0,0.523,0.438,1,1,1h3c0.609,0,1-0.492,1-1V2  c0-0.541-0.428-1-1-1c-0.484,0-0.688,0.273-1,0.594l-0.408,0.407C10.542,1.368,9.315,1,8,1C3.01,1,1,5.75,1,6.938  C1,7.664,1.531,8,2,8C2.609,8,2.898,7.57,3,7.117z"/>
+                    </svg></span><span class="text">切換<b v-if="switchState">中國大陸境外</b><b v-else>中國大陸境內</b>數據</span></button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="credit">
+          <div class="container">
+            <div class="list">
+              <dl>
+                <dt>網站工程</dt>
+                <dd>Felix、Sayid、Elk Liang</dd>
+                <dt>設　　計</dt>
+                <dd>郭瑾燁</dd>
+                <dt>監　　製</dt>
+                <dd>陳莉雅、吳婧</dd>
+              </dl>
+            </div>
+            <div class="share"><a class="facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Ftheinitium.com%2Fproject%2F20200203-international-novel-coronavirus-live" target="_blank"><span></span></a><a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftheinitium.com%2Fproject%2F20200203-international-novel-coronavirus-live" target="_blank"><span></span></a></div>
+          </div>
+        </section>
+        <section class="more">
+          <div class="container">
+            <div class="title serif">
+              <h3>延伸閱讀</h3>
+            </div>
+            <div class="article" v-for="(article, key) in groupByCategory" :key="key">
+              <div class="title serif">
+                <h4>{{ key }}</h4>
+              </div>
+              <div class="content">
+                <div class="row">
+                  <div class="col-6 col-md-3" v-for="(content, key) in article" :key="key"><a target="_blank" :href="`${content.link}`" href="https://theinitium.com/article/20200203-international-novel-coronavirus-live/undefined">
+                      <figure><img class="img-fluid" :src="`${content.thumbnail}`" src="https://theinitium.com/article/20200203-international-novel-coronavirus-live/undefined" referrerpolicy="no-referrer"></figure>
+                      <h5>{{content.title}}</h5></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="button"><a href="https://theinitium.com/channel/20200106-mainland-wuhan-pneumonia/" target="_blank">閱讀更多</a></div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="member">
+          <div class="container">
+            <div class="title">
+              <h3>加入端傳媒，支持好新聞</h3>
+              <h4>用你選擇的媒體，決定你看見的世界</h4>
+            </div>
+            <div class="button"><a href="https://theinitium.com/subscription/offers/?&utm_source=initium&utm_medium=initium&utm_campaign=initium_project" target="_blank">付費支持</a></div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <p>©2020 Initium Media. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
