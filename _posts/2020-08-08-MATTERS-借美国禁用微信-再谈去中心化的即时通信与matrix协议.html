@@ -1,0 +1,40 @@
+---
+layout: post
+title: 借美国禁用微信，再谈去中心化的即时通信与Matrix协议
+date: 2020-08-08 18:31:28.000000000 +00:00
+categories: matters
+tags: blog
+author: 鸥芈
+---
+
+<p>近期，美国将禁用微信成为了一个热门话题。除了对美国的抗议和趁机发泄对微信的积怨这两方面，一个很现实的问题也被越来越多人谈起：未来还有哪些聊天(即时通信)工具是中美同时都可以用的?</p><p>其实这并不是一个容易回答的问题，因为即使给出了答案，也很难保证这个回答一直有效：也许某天它就被美国政府禁用了或者被中国政府墙掉了。那么，是否存在一个无法被禁掉的即时通信呢？</p><p><strong>去中心化的即时通信给出了一种答案。</strong></p><p>（<em>如果你只关心如何使用不关心原理，且不准备自己搭建，可以直接看后面</em>）</p><p><br></p><h2><strong>去中心化即时通信</strong></h2><p>这里的去中心化不是像p2p那样的完全分布式，更贴切的说法是联邦式。</p><p>一个类比就是电子邮件。无论你使用网易邮箱，还是QQ邮箱，或者gmail，你都可以自由地与其他人收发邮件，即使你们使用不同的邮箱。（当然，电子邮件自有其特殊性，由于有强烈的反垃圾邮件需求，大家不得不“投靠”几大电子邮件提供商，自建电子邮件服务器/小型电子邮件服务器发出去的很可能就被当成垃圾邮件了）</p><p>gfw可以墙掉gmail的web页面（未来也可以更进一步，连给发gmail地址发件也不允许），却无法禁掉电子邮件协议本身——如何去禁一个协议呢？</p><p><br></p><p>去中心化的即时通信正是这样一种东西。</p><p>目前最流行的是Matrix协议。微信的数据都存储在腾讯的服务器上，要使用微信，所有人都必须使用微信的客户端连接到腾讯的服务器。而对于使用Matrix通信的用户来说，他们的数据分布在千千万万个、或大或小、由不同人/组织搭建的不同服务器上。只需要用客户端(包括网页客户端)连接到自己注册帐号的那个服务器，就进入了整个Matrix网络。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.webp" onerror="this.srcset='https://assets.matters.news/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.png" onerror="this.srcset='https://assets.matters.news/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.webp">
+
+        <img src="https://assets.matters.news/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.png" srcset="https://assets.matters.news/processed/540w/embed/cc42e0bd-9ca6-4227-a3a4-49433de4bd2d.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>使用开源代码(最著名的是Synapse，也有其他实现)，任何人都可以轻松的搭建自己的后台服务器(Homeserver)。你可以不开放注册只给自己使用，让自己成功接入Matrix网络；也可以给自己的亲朋好友提供几个帐号；还可以在一个性能好一点的服务器上搭建并完全开放注册，让上面有许许多多的用户和群。一切都由你自己决定。</p><p>当然，可选的端对端加密使得作为服务器主的你也不能通过后台看到私聊或群聊的内容。对用户来说，这意味着你不用担心你的聊天记录，至少开启了端对端加密的聊天记录，被政府监控——不管是哪个政府。</p><p><br></p><p>一个值得一提的细节是，每个Matrix后台服务器有两个url地址，一个是用来服务器之间通信的，也是这个它的唯一标识；另一个是给客户端连接该服务器用的。这意味着即使想彻底墙掉一个特定的服务器也不是一件容易的事情——毕竟后一个地址可以随意变化，可以有多个，可以用其他ip地址作为镜像跳转。</p><p><br></p><h2><strong>使用</strong></h2><p>最后来谈谈普通人如何使用Matrix。</p><p>这主要包含两件事情：打开一个客户端，和选择一个用来注册的服务器。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.webp" onerror="this.srcset='https://assets.matters.news/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.png" onerror="this.srcset='https://assets.matters.news/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.webp">
+
+        <img src="https://assets.matters.news/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.png" srcset="https://assets.matters.news/processed/540w/embed/3e6fc661-c42c-4fbe-bcc3-9eb44e374930.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>在手机上，可以使用各种app(<a href="https://matrix.org/clients/" target="_blank">这里</a>有一份列表，需要翻墙)，其中最出名也最成熟的是Element（原名Riot）。安卓用户可以从<a href="https://play.google.com/store/apps/details?id=im.vector.app" target="_blank">google play</a>或<a href="https://f-droid.org/packages/im.vector.app/" target="_blank">F-Droid</a>(无需翻墙)上安装，苹果用户则可以直接在<a href="https://apps.apple.com/app/vector/id1083446067" target="_blank">应用商店</a>安装（可能需要换区）。</p><p>而要完整使用所有功能，则需要网页版。网页版本质上也是一个客户端——它只是一堆静态的html和js代码，帮助你后台和服务器通信。网页版本身不存储任何信息或做任何运算。</p><p>如果你能翻墙，你可以使用 <a href="https://app.element.io/" target="_blank">https://app.element.io/</a> 。基于开源项目<a href="https://github.com/vector-im/riot-web" target="_blank">riot-web</a>，你可以搭建和它一个一模一样的、自己的网页版客户端——这件事情很简单，只需要把一个静态的文件夹放到自己的服务器上。</p><p><em>本文不会推荐任何墙内可访问的网页版客户端，以免导致他们被墙。</em></p><p><br></p><p>说完客户端，再来说服务器。</p><p><strong>注册无需手机邮箱等</strong>，设定好用户名和密码即可——不过这也就意味着许多服务器不会一直开放注册。</p><p>目前最出名的服务器是matrix项目自己维护的“官方”服务器 matrix.org，它的给客户端用来连接的地址(Homesever)是https://matrix-client.matrix.org。如果你使用Element或者https://app.element.io，你并不需要输入这个地址，因为这是它的默认Homeserver ，你只需要选择[matrix.org]。其他App也有各自自己的默认Homeserver。</p><p>不难想到，这个地址<strong>显然是被墙了的</strong>。另外由于使用人数很多，注册会比较困难，可能需要多试几次。</p><p><br></p><p>一个对墙内用户比较友好的选项是mozilla(就是firefox那个mozilla)的服务器。尽管它的网页版地址（<a href="https://chat.mozilla.org/" target="_blank">https://chat.mozilla.org/</a>）墙内无法访问，服务器本身还是可用的。在手机App或网页版上输入下图的Homeserver即可。不支持自由注册，直接使用firefox账户登陆。（如果登陆有困难可以试试切换流量/wifi，毕竟现在墙内访问firefox也不太稳定了）</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.webp" onerror="this.srcset='https://assets.matters.news/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.png" onerror="this.srcset='https://assets.matters.news/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.webp">
+
+        <img src="https://assets.matters.news/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.png" srcset="https://assets.matters.news/processed/540w/embed/ad4bb755-ac89-4d43-9658-f3955a3c55ad.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>目前国内的Matrix服务器，据我所知有北大Linux俱乐部的matrixim.cc，清华闭社的m-thu.closed.social。前者偶尔开放注册，可以联系管理员@vimacs:matrixim.cc碰碰运气。后者只向<a href="https://closed.social/" target="_blank">闭社</a>用户提供帐号。</p><p><strong>期待</strong>未来国内会有更多的Matrix服务器，方便更多人注册和使用。</p><p><br></p><h2><strong>缺点</strong></h2><p>和其他许多自由软件一样，Matrix系列最大的问题是进展缓慢。经过六年的发展，后端已经比较成熟，但客户端，尤其是手机客户端仍然功能不完善，这严重影响了使用体验。</p><p>这些大型开源项目，需要更多人/公司的关注和投入。最近我也在给dimension项目贡献代码，这是一个给Matrix提供集成管理的项目，它的主要特色是表情包管理，包括从telegram直接导入表情包。</p><p>不过最近一段时间情况似乎有所好转，开发速度正在加快（例如现在有了大量看起来还不错的客户端，虽然都还基本只有beta）。未来，随着逆全球化进程，各国互联网企业在他国越来越受到打压和猜忌，互联网也将面临越来越不互联(其实即使没被打压，那些巨头们本身也一直在推动这种不互联)。像Matrix这样的去中心化工具，才有希望让互联网回到它应有的模样。</p><p><br></p><p><strong>参考：</strong></p><p><a href="https://matrixim.cc/sfd2017-matrix.pdf" target="_blank">自由畅聊，我用Matrix</a></p><p><a href="https://zh.wikipedia.org/wiki/Matrix_(%E5%8D%8F%E8%AE%AE)" target="_blank">维基百科</a></p><p><a href="https://wiki.mozilla.org/Matrix" target="_blank">Mozilla wiki</a></p>
