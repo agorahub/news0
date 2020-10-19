@@ -1,0 +1,70 @@
+---
+layout: post
+title: 道高一尺，魔高一丈：中国人与防火长城的斗争
+date: 2020-01-19 14:02:30.000000000 +00:00
+categories: matters
+tags: blog
+author: 可可托海
+---
+
+<p>如果你身处大陆还能看到这篇文章，那你应该对翻墙并不陌生。普通人的理解，翻墙就是突破大陆网络封锁的过程。尽管对于使用者来说，翻墙的结果都是“打开了Google”，但背后所使用的技术在这些年里发生了很多变化。</p><p>在这篇文章里，我将尝试用技术小白也能理解的语言，介绍一下这十多年来翻墙手段的演进。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.webp" onerror="this.srcset='https://assets.matters.news/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.jpeg" onerror="this.srcset='https://assets.matters.news/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.webp">
+
+        <img src="https://assets.matters.news/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.jpeg" srcset="https://assets.matters.news/processed/540w/embed/4ebe4ded-1d31-4e88-b64f-d4941e788401.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>https://www.fairobserver.com/region/asia_pacific/great-firewall-china-censorship-chinese-news-today-vpn-china-38018/</span></figcaption></figure><h2>约定俗成：VPN</h2><p>最为人所熟知的翻墙技术就是<a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E7%A7%81%E4%BA%BA%E7%B6%B2%E8%B7%AF" target="_blank">VPN</a>，这个词甚至流行到用来指代一切翻墙技术。在大陆的互联网上，VPN就是梯子，就是用来翻墙的代理。但实际上这个说法并不准确，现在大多数翻墙的方式并不是通过VPN。所以如果有人说“我的VPN又挂了”，你就有八成把我判断他是个不懂技术的小白。</p><p>VPN即Virtual Private Network。设计初衷是用来在不安全的网络中传输机密信息，尤其是在90年代网络还没那么发达的情况下。如果你在一个大公司工作，十有八九你会接触过VPN。你可以通过VPN进入到公司的内网，或者学校的教育网，访问外网无法获取的信息。这时候你能看到的信息，跟你在公司/学校内网络看到的一样。当然，会有延时。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.webp" onerror="this.srcset='https://assets.matters.news/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.jpeg" onerror="this.srcset='https://assets.matters.news/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.webp">
+
+        <img src="https://assets.matters.news/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.jpeg" srcset="https://assets.matters.news/processed/540w/embed/8e71203d-0e5e-48cb-87fe-0e8179f08f8a.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>https://www.webhostingsecretrevealed.net/zh-TW/the-a-to-z-vpn-guide/</span></figcaption></figure><p>其实这才是VPN的真正作用：在互联网上建立一条虚拟的加密通道。</p><p>刚才说到，连上公司的VPN，你的网络会跟在公司内网里没有区别。于是聪明的中国人很快发现，如果这家公司在境外会怎么样？没错，连上境外服务器的VPN，就跟在境外没区别了。于是本该用于内部通信的VPN成了中国人翻墙的工具。</p><p>VPN有很多种，L2TP、PPTP、IPsec、AnyConnect等等，这里不说技术细节。</p><p>至于为什么VPN成了翻墙工具的代称，我认为跟iOS有关。NetworkExtension是苹果提供的用于配置 VPN 和定制、扩展核心网络功能的框架。Network Extension 最早出现在 iOS 8，不过只能调用 iOS 系统自带的 IPSec 和 IKEv2 协议的 VPN。在 iOS 9 中，开发者终于可以实现非标准化的私密VPN技术。连上以后，Status Bar上都会有一个“VPN”的标示，尽管那不一定是VPN。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.webp" onerror="this.srcset='https://assets.matters.news/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.png" onerror="this.srcset='https://assets.matters.news/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.webp">
+
+        <img src="https://assets.matters.news/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.png" srcset="https://assets.matters.news/processed/540w/embed/e8e148ce-53e2-4181-87cb-ba52172558e9.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>就这样，VPN阴差阳错成了翻墙的代名词。</p><h2>启蒙：无界/自由门</h2><p>很多人最开始用的翻墙工具就是无界/自由门，我也是。因为那时候谷歌还能上，Facebook还没什么人知道，没有必要花钱在境外租服务器架设代理。这两个软件的原理大概就是通过经常变换代理服务器的地址，提供http和socks协议的代理。</p><p>不过这两个软件因为资金来源问题，每次连上后都会打开大纪元等轮子系网站。不过也正是因为有资金支持，这两个软件都很稳定。</p><h2>直达目的地：host</h2><p>在防火墙的最初阶段，被墙的网站还没那么多。尤其是最常用的谷歌并没有完全被封锁，GFW会针对谷歌的域名进行DNS投毒。</p><p>什么是DNS？网络上每个设备都会有一个IP地址，用于通信。如果你在境外可以用电脑ping一下matters.news，或者用其他在线服务，会得到一串数字，我ping到的是42.200.114.232，是香港电讯的地址。但这种数字太难记，加上服务器不一定只有一个/只在一个地方，于是需要DNS服务器将<a href="https://matters.news/" target="_blank">https://matters.news/</a> 这种网址转换成相应的IP地址。</p><p>GFW会让你企图访问google.com的时候给你解析到错误的地址。对于这种手段破解方法很简单，我不让DNS服务器解析这个地址，在本机的hosts文件写好域名和IP的对应关系，直接在本地解析。</p><p>这种方法对当时的谷歌系网站比较有用，因为谷歌的IP非常多，服务器遍布全球。香港的访问不了，新加坡的总能访问吧，新加坡不行，澳大利亚总行了吧。</p><p>后来封锁升级，不是针对 IP 地址，而是针对每一个网络连接。受限于为数不多的几个出入境节点，网民的每一个出境网络连接实际上都被扫描过一遍。HTTP协议的设计者哪能想到中国人的这些大智慧都用在研究封锁上了，所以设计时并没有考虑到这点。导致HTTP/HTTPS协议的特征非常明显，看连接的前几十个字节就能认出来了。</p><p>于是域名没有封不掉的，只有没发现的。hosts路线走不通了。</p><h2>免费的午餐：Goagent</h2><p>这个时候谷歌仍没有彻底被封杀，仍有服务器能连接。于是人们利用Google App Engine平台，在上面搭设代理服务器，通过HTTPS协议翻墙。还能实现通过pac配置条件，让国内数据直连，境外数据走代理。这其实就是用谷歌服务器搭的一个梯子。</p><p>后来随着谷歌服务器逐渐被封，这条路也死了。</p><h2>另辟蹊径：西厢计划</h2><p>我之所以记住这个，是因为名字太好记。<a href="https://code.google.com/archive/p/scholarzhang/wikis/README.wiki" target="_blank">西厢计划</a>不是一个协议或是服务，而是针对TCP连接重置、DNS劫持、IP封锁和URL关键字过滤的一组工具。比如GFW只检测出境的流量，而不检测入境的。通过让回程流量直连可以节省很多时间。</p><p>后来随着GFW的升级，可钻的空子越来越少。西厢计划终结。</p><h2>去中心化P2P：Tor</h2><p><a href="https://www.torproject.org/" target="_blank">Tor</a>是美国开发的一款自由软件。初衷也不是为了翻墙，而是为了匿名。在你和目标服务器之间，通过三个节点进行中转。这样目标服务器就没法知道你的真实IP。</p><p>Tor还可以建立只能通过Tor网络访问的网站，这就是所谓的暗网。曾经很有名的黑市“丝绸之路”就只能通过Tor访问，在上面你可以用比特币购买各种违禁品。</p><p>尽管主要用途是匿名而不是翻墙，但如果最终的出口节点位于境外，也是能起到翻墙的作用的。只是你应该能想象到，经过三个节点的中转，Tor的速度非常慢。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/989e3a45-6a87-448b-8906-d8d2997e969a.webp" onerror="this.srcset='https://assets.matters.news/embed/989e3a45-6a87-448b-8906-d8d2997e969a.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/989e3a45-6a87-448b-8906-d8d2997e969a.png" onerror="this.srcset='https://assets.matters.news/embed/989e3a45-6a87-448b-8906-d8d2997e969a.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/989e3a45-6a87-448b-8906-d8d2997e969a.webp">
+
+        <img src="https://assets.matters.news/embed/989e3a45-6a87-448b-8906-d8d2997e969a.png" srcset="https://assets.matters.news/processed/540w/embed/989e3a45-6a87-448b-8906-d8d2997e969a.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><h2>改变历史：Shadowsocks</h2><p>要讲翻墙史，不可不提的就是Shadowsocks。本质上这是Socks 5的加密版本，无法被检测出来。并且可以针对境内外流量自动分流。Shadowsocks部署简单，对服务器配置要求低，使用自行设计的协议进行加密通信。因此这个协议一经推出，就成为最流行的翻墙协议。毕竟和VPN不同，Shadowsocks就是为翻墙而设计的。</p><p>另外还有在Shadowsocks基础上开发出来的ShadowsocksR，但这个协议的开发者引来过一些<a href="https://www.hongweiit.com/ss-and-ssr.html" target="_blank">争议</a>，不再赘述。ShadowsocksR被昵称为SSR酸酸乳。Shadowsocks被简称为SS。</p><p>Shadowsocks的火爆也给开发者Clowwindy带来了麻烦，被警察请喝了茶。之后他删去Github上的项目，现在已经跑路美利坚。</p><p>因为Shadowsocks的标志是一个纸飞机，因此现在也会把提供翻墙服务的服务器称作机场。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.webp" onerror="this.srcset='https://assets.matters.news/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.png" onerror="this.srcset='https://assets.matters.news/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.webp">
+
+        <img src="https://assets.matters.news/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.png" srcset="https://assets.matters.news/processed/540w/embed/9e8de159-9756-44ea-b7cc-ea60c302c240.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><h2>釜底抽薪：应用下架</h2><p>当然这些协议再怎么加密、混淆，也斗不过GFW强大的算力。现在之所以还能用纯粹是因为封掉所有境外服务器不现实。</p><p>于是中国想了一个新法子，要求各应用商店下架代理类应用，包括App Store。从此以后要想下载app得先翻墙，还得有个境外区的账号（Apple ID）才能下到。这一步阻挡住了很多小白用户。</p><p>Surge是最早一批利用Network Extension支持SS等协议的产品（如果我没记错的话），即使在今天这也是iOS平台最稳定、体验最好的代理应用——当然作者会说这个是网络调试工具不是让你翻墙的，但，你懂的。</p><p>但Surge的价格太高，于是一个叫Shadowrocket的产品逐渐流行起来。这个产品支持SS、SSR等各种常见代理协议，价格又便宜。由于icon是一个火箭，又被称作小火箭。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.webp" onerror="this.srcset='https://assets.matters.news/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.jpeg" onerror="this.srcset='https://assets.matters.news/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.webp">
+
+        <img src="https://assets.matters.news/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.jpeg" srcset="https://assets.matters.news/processed/540w/embed/ee7b7913-8a12-4d7f-9ab1-3922f3065f96.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>需要分清，Shadowsocks、SSR这些是协议，而Surge和shadowrocket是应用，这些应用通过协议达到翻墙的目的。</p><h2>新时代：v2ray</h2><p>由于SS和SSR的作者都不再继续开发了，近两年有个后起之秀v2ray开始流行。简单点说，v2ray是模块化的代理软件包。支持很多协议。</p><blockquote>模块化，简单来说就是乐高积木，每一块积木都有统一的接口（有例外，这里忽略），积木和积木之间想拼就拼，想拆就拆，很方便。V2Ray 也是这样，V2Ray 中的每一个功能都可以简单地添加或移除。</blockquote><p>其中Vmess是该项目组开发的协议，也拥有加密和混淆的功能。通常情况下梯子服务商说提供“v2ray“的意思其实是”支持vmess协议“。</p><p>然而v2ray开发者也已经消失一年了。。。</p><h2> 并不光明的未来</h2><p>一边是强大的国家机器，拥有近乎无限的资金和人力——都是顶尖高校的精英，还有最强大的计算机；另一边则是散沙化的个人开发者，不能公开身份，随时会被喝茶（目前判刑的都是卖代理服务的，没听说过哪个单纯的开发者坐牢）。这场战争的输赢显而易见。</p><p>在十年前，GFW还有很多漏洞可以钻，它也没有那个资源检查所有流量。但现在基本上没有发现不了的翻墙，只是想不想管的差别。19年十月前后大批机场阵亡就是例子。说实在的，你现在还能翻出去，只是因为翻墙门槛已经很高，政府不想赶尽杀绝而已。毕竟还有很多人需要靠这个工作和学习。</p><p>但这场个体和国家的对抗，结果早就注定。</p>
