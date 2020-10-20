@@ -1,0 +1,90 @@
+---
+layout: post
+title: "【Matters數據可視化之五】從點讚數據看社區規模"
+date: 2020-09-05 02:00:14.000000000 +00:00
+categories: matters
+tags: blog
+author: zzzyx
+---
+
+<p>前幾篇文統計的都是按文章的被點讚數，從 <a class="mention" href="https://matters.news/@sunline" target="_blank" data-display-name="Sunline" data-user-name="sunline" data-id="VXNlcjoxNjg1OA">﻿<span>@Sunline</span>﻿</a> 的 <a href="https://matters.news/@awzw_qkzu_yjaw/matters%E6%95%B8%E6%93%9A%E5%8F%AF%E8%A6%96%E5%8C%96%E4%B9%8B%E4%B8%89-%E8%AE%9A%E6%95%B8%E6%8E%92%E5%90%8D-bafyreicwq2kpgzfzfl4mknyejhwk5jslgvaep5n2mapfoxqrhexslqjdwa#QXJ0aWNsZTo2NDY5OA" target="_blank">評論</a> 來看，或許有很多寫作者對給出點讚的整個讀者羣體感興趣，因爲一個良好的寫作者社區應該還有大量的讀者，一個良好的社區應該有 10 倍於作者以上規模的讀者</p><p>圖一是近18個月來的作者數統計，在當月至少寫過一篇文的作者數規模：可以看到，在三月份達到頂點的超過 1500 位作者寫作 6 千篇文之後，逐漸下降到 八月份 的 1100 位作者 4400 篇文</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif" onerror="this.srcset='https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif" onerror="this.srcset='https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif">
+
+        <img src="https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif" srcset="https://assets.matters.news/embed/ed85c428-4ddc-4be7-99f6-609f66bfd70e.gif" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>按 ↑ 寫文作者統計 1</span></figcaption></figure><p>圖二是統計了全站三年累積的 5 萬多篇文上的所有點讚記錄得出的按月份給出點讚的讀者羣體規模，指在當月至少點過一次讚的用戶數，這個反而是在二月份爲頂峯，有 4000 位讀者給 4,500 篇文 7萬5千次點讚，到 五月份是 3,150 位讀者給 7500 文 18 萬讚，到 八月份則是 2,300 位讀者 給 5700 篇文 14 萬讚； </p><p>反映的趨勢是集中化？ 更少的讀者點出了更多的讚數？ 還是因爲更多的讀者在點讚方面變得更爲謹慎？ 因爲這裏不是 Facebook 的 Like Button，這裏的點讚給出去了就無法 Dislike ，曾在留言區看到 有人點過之後 才發現文章是轉載來的，表示悔之晚矣，問站方有無辦法 取消點讚？</p><p>又或者說更多的讀者變爲了讀過了，然後默默飄過，不點讚、也不評論？  對於那樣的讀者，也許只有閱讀時長可以統計，目前並不支持公開查詢；或許在適當的時候站方可以公佈一些以閱讀時長爲基礎的讀者數據？</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif" onerror="this.srcset='https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif" onerror="this.srcset='https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif">
+
+        <img src="https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif" srcset="https://assets.matters.news/embed/a2b151c4-b110-4d2c-8188-2235bfc15240.gif" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>按 ↑ 點讚讀者統計</span></figcaption></figure><p>爲了看清這個趨勢，再用 Treemap 顯示二、至八月份的點讚用戶數分佈圖，按每用戶點讚數排序之後取前 80% 點讚記錄，其餘 太細碎的部分共計 20% 部分歸入 Others：</p><p>從其中可以看出對點讚最爲活躍的讀者們分別是哪些？</p><p>二月份活躍讀者有 <a class="mention" href="https://matters.news/@mthree" target="_blank" data-display-name="用爱心说诚实话" data-user-name="mthree" data-id="VXNlcjoxMzMzMA">﻿<span>@用爱心说诚实话</span>﻿</a> <a class="mention" href="https://matters.news/@yingshinlee" target="_blank" data-display-name="映昕" data-user-name="yingshinlee" data-id="VXNlcjoxMQ">﻿<span>@映昕</span>﻿</a> <a class="mention" href="https://matters.news/@fkh01" target="_blank" data-display-name="WrightFu" data-user-name="fkh01" data-id="VXNlcjozNTg5">﻿<span>@WrightFu</span>﻿</a> <a class="mention" href="https://matters.news/@HollowErhu" target="_blank" data-display-name="空心二胡" data-user-name="HollowErhu" data-id="VXNlcjoyMjQ3MQ">﻿<span>@空心二胡</span>﻿</a> <a class="mention" href="https://matters.news/@tanlikming" target="_blank" data-display-name="tanlikming陈力名" data-user-name="tanlikming" data-id="VXNlcjoxOTg5Mw">﻿<span>@tanlikming陈力名</span>﻿</a> <a class="mention" href="https://matters.news/@albertp" target="_blank" data-display-name="存乎一心" data-user-name="albertp" data-id="VXNlcjoyMTkyNw">﻿<span>@存乎一心</span>﻿</a></p><p>五月份活躍讀者有 <a class="mention" href="https://matters.news/@albertp" target="_blank" data-display-name="存乎一心" data-user-name="albertp" data-id="VXNlcjoyMTkyNw">﻿<span>@存乎一心</span>﻿</a> <a class="mention" href="https://matters.news/@bluepeach045" target="_blank" data-display-name="桐生茂豫" data-user-name="bluepeach045" data-id="VXNlcjoxNDk0OQ">﻿<span>@桐生茂豫</span>﻿</a> <a class="mention" href="https://matters.news/@wilhb8155" target="_blank" data-display-name="wilhb81" data-user-name="wilhb8155" data-id="VXNlcjoyNTA4Mw">﻿<span>@wilhb81</span>﻿</a> <a class="mention" href="https://matters.news/@cherryzzz" target="_blank" data-display-name="阿紫" data-user-name="cherryzzz" data-id="VXNlcjoyNzcyNA">﻿<span>@阿紫</span>﻿</a></p><p>八月份則 則是 <a class="mention" href="https://matters.news/@bluepeach045" target="_blank" data-display-name="桐生茂豫" data-user-name="bluepeach045" data-id="VXNlcjoxNDk0OQ">﻿<span>@桐生茂豫</span>﻿</a> <a class="mention" href="https://matters.news/@fasiulung" target="_blank" data-display-name="花笑儂" data-user-name="fasiulung" data-id="VXNlcjo0MTE1MQ">﻿<span>@花笑儂</span>﻿</a> <a class="mention" href="https://matters.news/@cherryzzz" target="_blank" data-display-name="阿紫" data-user-name="cherryzzz" data-id="VXNlcjoyNzcyNA">﻿<span>@阿紫</span>﻿</a> <a class="mention" href="https://matters.news/@susanli3769" target="_blank" data-display-name="susanli3769" data-user-name="susanli3769" data-id="VXNlcjoxOTk3Ng">﻿<span>@susanli3769</span>﻿</a> <a class="mention" href="https://matters.news/@albertp" target="_blank" data-display-name="存乎一心" data-user-name="albertp" data-id="VXNlcjoyMTkyNw">﻿<span>@存乎一心</span>﻿</a> <a class="mention" href="https://matters.news/@JasonT" target="_blank" data-display-name="JasonT" data-user-name="JasonT" data-id="VXNlcjozMDA5Ng">﻿<span>@JasonT</span>﻿</a></p><p>如果統計前 100 位所佔比例的話，其實占比在變高了，也就是說社區整體活躍程度在向頭部集中化，這對於整個社區是好事還是不好</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.webp" onerror="this.srcset='https://assets.matters.news/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.png" onerror="this.srcset='https://assets.matters.news/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.webp">
+
+        <img src="https://assets.matters.news/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.png" srcset="https://assets.matters.news/processed/540w/embed/66c04f23-a4aa-489b-9ab0-171ce7abcc89.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>2020 二月份點讚記錄</span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.webp" onerror="this.srcset='https://assets.matters.news/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.png" onerror="this.srcset='https://assets.matters.news/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.webp">
+
+        <img src="https://assets.matters.news/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.png" srcset="https://assets.matters.news/processed/540w/embed/33602a6d-d2f0-495b-b7f5-00911658abe0.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>2020 五月份點讚記錄</span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7ef96619-8971-4467-8137-de66b8ceb076.webp" onerror="this.srcset='https://assets.matters.news/embed/7ef96619-8971-4467-8137-de66b8ceb076.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7ef96619-8971-4467-8137-de66b8ceb076.png" onerror="this.srcset='https://assets.matters.news/embed/7ef96619-8971-4467-8137-de66b8ceb076.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7ef96619-8971-4467-8137-de66b8ceb076.webp">
+
+        <img src="https://assets.matters.news/embed/7ef96619-8971-4467-8137-de66b8ceb076.png" srcset="https://assets.matters.news/processed/540w/embed/7ef96619-8971-4467-8137-de66b8ceb076.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>2020 八月份點讚記錄</span></figcaption></figure><p>從上面也可以看出其實大部分用心拍手的讀者也是活躍的作者；或者說包含很多喜歡社交的類型？ 給出大量的拍手並且每次都拍滿，以期待對方也到自己的文章來拍滿？</p><p>爲了找出哪些是最用心的讀者，按照幾個條件 1) 拍過的文章數、有過拍手活躍日數高 2) 自己的文章數不高（較少社交壓力）拍手不總是 5 下拍滿？（以排除社交壓力的拍手、想對那些全部記錄都是 5 下拍滿的人說：「難道就不能有某些文章只值 3 下、2下、或 1 下的嗎？」） 4) 排除站方人士( 比如 <a class="mention" href="https://matters.news/@yingshinlee" target="_blank" data-display-name="映昕" data-user-name="yingshinlee" data-id="VXNlcjoxMQ">﻿<span>@映昕</span>﻿</a> 的工作內容就是「專門在站上跟大家聊天」)</p><p>得出的結論是 <a class="mention" href="https://matters.news/@albertp" target="_blank" data-display-name="存乎一心" data-user-name="albertp" data-id="VXNlcjoyMTkyNw">﻿<span>@存乎一心</span>﻿</a> 在 201 天裏給 5377 篇文 26,317 次拍手； 實在值得站方給頒一個「<strong>最佳讀者獎</strong>」 😀<br class="smart">下圖中 第三欄 '<em>appreciationsSentTotal</em>' 是當日拍手記錄，在很多天都是很多篇文的累計 100 次以上拍手，看出其在認真閱讀上所花時間最多<br class="smart"></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.webp" onerror="this.srcset='https://assets.matters.news/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.png" onerror="this.srcset='https://assets.matters.news/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.webp">
+
+        <img src="https://assets.matters.news/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.png" srcset="https://assets.matters.news/processed/540w/embed/59d0b518-57f2-40e9-8c3f-a905de31fa29.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>其次是 <a class="mention" href="https://matters.news/@fkh01" target="_blank" data-display-name="WrightFu" data-user-name="fkh01" data-id="VXNlcjozNTg5">﻿<span>@WrightFu</span>﻿</a> 在 209 天裏給 5207 篇文 15,550 次拍手</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.webp" onerror="this.srcset='https://assets.matters.news/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.png" onerror="this.srcset='https://assets.matters.news/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.webp">
+
+        <img src="https://assets.matters.news/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.png" srcset="https://assets.matters.news/processed/540w/embed/e7886ab6-ce2a-45a6-9f1d-4a7f50f6ebda.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>然後還有，「 <a class="mention" href="https://matters.news/@mthree" target="_blank" data-display-name="用爱心说诚实话" data-user-name="mthree" data-id="VXNlcjoxMzMzMA">﻿<span>@用爱心说诚实话</span>﻿</a> 在 255 天裏給 3643 篇文 13,741 次拍手 」 也是在前十之內。 不管你喜不喜歡，愛心都曾是一位很用心的讀者，給你的文章認真讀完了，點讚(不拍滿)、並且評論。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.webp" onerror="this.srcset='https://assets.matters.news/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.png" onerror="this.srcset='https://assets.matters.news/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.webp">
+
+        <img src="https://assets.matters.news/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.png" srcset="https://assets.matters.news/processed/540w/embed/d48cdd02-fcb1-4b5d-a461-3085454ed63d.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p>
