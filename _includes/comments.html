@@ -1,5 +1,5 @@
 <script>
-const GH_API_URL = 'https://api.github.com/repos/agorahub/news0/issues/3/comments';
+const GH_API_URL = 'https://api.github.com/repos/agorahub/news0/issues/{{ page.comments_id }}/comments';
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
@@ -24,8 +24,7 @@ function createCommentEl( response ) {
   let userAvatar = document.createElement( 'img' );
   userAvatar.classList.add( 'avatar' );
   userAvatar.setAttribute( 'src', response.user.avatar_url );
-    userAvatar.setAttribute( 'width', '30' );
-    userAvatar.setAttribute( 'height', '30' );
+  userAvatar.setAttribute( 'style', 'width:30px;border-radius:50%' );
   user.appendChild( userAvatar );
   let commentLink = document.createElement( 'a' );
   commentLink.setAttribute( 'href', response.html_url );
@@ -52,6 +51,6 @@ request.send();
   <h2>Comments</h2>
   <ul id="gh-comments-list"></ul>
   <!--  <p id="no-comments-found">No comments found for this article.</p> -->
-  <p id="leave-a-comment"><a href="https://github.com/agorahub/news0/issues/3"><b>Leave a comment</b></a></p>
+  <p id="leave-a-comment"><a href="https://github.com/agorahub/news0/issues/{{ page.comments_id }}"><b>Leave a comment</b></a></p>
 </div>
 
