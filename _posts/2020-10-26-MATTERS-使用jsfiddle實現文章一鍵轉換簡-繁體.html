@@ -1,0 +1,77 @@
+---
+layout: post
+title: 使用JSFiddle實現文章一鍵轉換簡-繁體
+date: 2020-10-26 11:41:31.000000000 +00:00
+categories: matters
+tags: blog
+author: Sokiraon
+---
+
+<p>之前在新人打卡的時候，想到了簡繁體可能帶來的閱讀不便問題。原本想的是“要不就乾脆發兩個版本算了”，後來才發現Matters支持嵌入JSFiddle頁面，於是頓時有了想法：如果在程式中實現簡繁轉換的功能，不就能夠達成要求了？</p><p>初步嘗試後，果然成功了。下面分享一下做法。</p><hr><p>首先嘮叨幾句原理，對程式無感的朋友可以直接跳過。</p><p>基本的運作過程就是：設置兩個按鈕，分別對應“簡轉繁”和“繁轉簡”兩個操作。用戶點擊其中一個按鈕時，調用相應的程式函數，通過第三方的轉換工具實現文字的轉換。</p><p>更具體地說，轉換工具選用的是OpenCC；由於原庫似乎只支持在Node下運作，因此換用了它的一個非官方移植opencc-js。</p><hr><p>下面是具體操作。如果有還不熟悉JSFiddle的朋友，可以先看一下<a href="https://matters.news/@Jhane_Chou/%E4%BD%BF%E7%94%A8-js-fiddle-%E5%AE%A2%E8%A3%BD%E5%8F%AF%E4%BF%AE%E6%94%B9%E7%9A%84%E5%85%A7%E5%AE%B9-%E4%BB%8B%E9%9D%A2-%E9%99%84%E5%9F%BA%E6%9C%AC%E7%89%88%E5%9E%8B-bafyreiczqd5oxlbsm7emq2rdkrovyvhhepazc3okax4g7nyrmtfrslnzzi" target="_blank">這篇文章</a>。</p><p>首先打開一個JSFiddle筆記本。在寫之前，先要導入我們所需要的庫：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.webp" onerror="this.srcset='https://assets.matters.news/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.png" onerror="this.srcset='https://assets.matters.news/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.webp">
+
+        <img src="https://assets.matters.news/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.png" srcset="https://assets.matters.news/processed/540w/embed/0f7d8c65-2e7b-4121-bfd3-4ec97d541704.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>導入opencc-js</span></figcaption></figure><p>點擊左邊欄的Resources選項卡，在文本框中鍵入下面的網址：</p><pre class="ql-syntax">https://cdn.jsdelivr.net/npm/opencc-js@0.3.3
+</pre><p>點擊右邊的加號，稍等片刻後資源就會導入進去了。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.webp" onerror="this.srcset='https://assets.matters.news/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.png" onerror="this.srcset='https://assets.matters.news/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.webp">
+
+        <img src="https://assets.matters.news/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.png" srcset="https://assets.matters.news/processed/540w/embed/f36bdbf4-5ad9-4b1e-8bfa-10b485f0bebf.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>現在已經導入進去了</span></figcaption></figure><p>下面就可以開始寫程式了。在右側程式區的HTML中寫入下面的代碼：</p><pre class="ql-syntax"><div>
+<button type="button" onclick="stot()">
+簡轉繁
+</button>
+<button type="button" onclick="ttos()">
+繁转简
+</button>
+</div>
+<h2 id="target">
+要转换的文字
+</h2>
+</pre><p>上面的代碼聲明了兩個按鈕（通過<button>標籤），並通過onclick屬性綁定了對應的程式函數。<h2>標籤是我們打算拿來演示轉換效果的，注意要給它指定一個id，否則後面JS程式中就索引不到。</p><p>這段代碼的效果如下：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/1139707b-3bed-49c8-bb02-81281a33c268.webp" onerror="this.srcset='https://assets.matters.news/embed/1139707b-3bed-49c8-bb02-81281a33c268.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/1139707b-3bed-49c8-bb02-81281a33c268.png" onerror="this.srcset='https://assets.matters.news/embed/1139707b-3bed-49c8-bb02-81281a33c268.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/1139707b-3bed-49c8-bb02-81281a33c268.webp">
+
+        <img src="https://assets.matters.news/embed/1139707b-3bed-49c8-bb02-81281a33c268.png" srcset="https://assets.matters.news/processed/540w/embed/1139707b-3bed-49c8-bb02-81281a33c268.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>純HTML的效果</span></figcaption></figure><p>下面寫JS代碼，內容如下：</p><pre class="ql-syntax">const target = document.getElementById("target");
+
+function stot() {
+OpenCC.Converter('cn', 'tw')
+.then(convert => {
+target.innerText = convert(target.innerText);
+});
+}
+
+function ttos() {
+OpenCC.Converter('tw', 'cn')
+.then(convert => {
+target.innerText = convert(target.innerText);
+});
+}
+</pre><p>這段代碼可能有些朋友看不懂，沒有關係，大部分內容是可以直接複製粘貼的。只需要注意我們一開始用了document.getElementById("target")，這裏就是我們通過id來索引之前定義的文字內容。</p><p>到這裏爲止就已經可以了。點擊“簡轉繁”按鈕後，效果如下：</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.webp" onerror="this.srcset='https://assets.matters.news/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.png" onerror="this.srcset='https://assets.matters.news/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.webp">
+
+        <img src="https://assets.matters.news/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.png" srcset="https://assets.matters.news/processed/540w/embed/7a3e9929-e0bb-4d02-8340-0ad001515867.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>簡轉繁的效果</span></figcaption></figure><p>我們用這個方法，再加上之前<a href="https://matters.news/@Jhane_Chou/%E4%BD%BF%E7%94%A8-js-fiddle-%E5%AE%A2%E8%A3%BD%E5%8F%AF%E4%BF%AE%E6%94%B9%E7%9A%84%E5%85%A7%E5%AE%B9-%E4%BB%8B%E9%9D%A2-%E9%99%84%E5%9F%BA%E6%9C%AC%E7%89%88%E5%9E%8B-bafyreiczqd5oxlbsm7emq2rdkrovyvhhepazc3okax4g7nyrmtfrslnzzi" target="_blank">Jhane的文章</a>中所提到的嵌入方式，最終效果如下：</p><figure class="embed-code"><div class="iframe-container"><iframe loading="lazy" src="https://jsfiddle.net/uka2L176/embedded/result" frameborder="0" allowfullscreen="false" sandbox="allow-scripts allow-same-origin allow-popups"></iframe></div><figcaption><span>最終效果</span></figcaption></figure><hr><p>總的來說，由於Matters對嵌入JSFiddle的支援，擴展其功能的空間幾乎是無限的（你甚至可以在裏面用Vue、React這樣的框架），但是就我個人而言，美觀度還是有些低，而且似乎已經有些偏離了寫文章的初衷。所以這篇文章，大家看着玩玩就好🤣</p><p>當然，最希望的還是官方可以加入簡-繁轉換的功能，那就再好不過了😊</p>
