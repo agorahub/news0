@@ -1,0 +1,121 @@
+---
+layout: post
+title: Coding起來- Python工具-Sphinx 操作教學
+date: 2020-08-24 13:27:19.000000000 +00:00
+categories: matters
+tags: blog
+author: 為自己Coding
+---
+
+<p><br></p><p>嗨，先來簡單談談為什麼要用Sphinx，相信大家在撰寫程式時，為了讓之後的自己或他人能看得懂，所以非常勤勞在寫註解，而我們的程式專案的產出，文件(doc)是非常重要的，它讓使用者了解我們的專案code在幹麻，Sphinx就是一個非常好的工具，幫我們自動萃取註解成一個可讀檔(html形式)，這樣我們就不用上傳完專案，還要重新寫一份文檔來解釋，可以使用Sphinx的方法來修改即可。</p><p><a href="https://github.com/chwang12341/Learn-Python-/tree/master/sphinx/python-project" target="_blank">Github連結</a></p><p><br></p><h2>Step1: 先建立一個資料夾結構</h2><p>像是建立python_project(folder)裡面有doc 與 src 兩個資料夾</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.webp" onerror="this.srcset='https://assets.matters.news/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.png" onerror="this.srcset='https://assets.matters.news/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.webp">
+
+        <img src="https://assets.matters.news/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.png" srcset="https://assets.matters.news/processed/540w/embed/b0e4c0a1-7cd7-4848-8f8b-408b606c248d.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><h2>Step2: 將 你的python檔放在src資料夾底下(src 用來存放python code)</h2><p>建立一個python文件(ex. Example.py)，其實就是撰寫python，並保存在src裡面，下面有個範例:</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.webp" onerror="this.srcset='https://assets.matters.news/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.png" onerror="this.srcset='https://assets.matters.news/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.webp">
+
+        <img src="https://assets.matters.news/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.png" srcset="https://assets.matters.news/processed/540w/embed/1c7c8164-fcd5-47f4-9b89-f5bed74495b1.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><h2>Step3: 在doc(folder) 建立 Sphinx 文件</h2><p>a.先cd到專案目錄(python-project)底下</p><p>(我是用Anaconda Prompt開啟)</p><p>b.安裝 sphinx</p><pre class="ql-syntax">pip install –U sphinx
+</pre><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.webp" onerror="this.srcset='https://assets.matters.news/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.png" onerror="this.srcset='https://assets.matters.news/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.webp">
+
+        <img src="https://assets.matters.news/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.png" srcset="https://assets.matters.news/processed/540w/embed/4308e3ed-29c6-48b2-9c5b-6fafc5b7068a.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>c.建立sphinx專案</p><p>sphinx-quickstart doc</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.webp" onerror="this.srcset='https://assets.matters.news/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.png" onerror="this.srcset='https://assets.matters.news/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.webp">
+
+        <img src="https://assets.matters.news/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.png" srcset="https://assets.matters.news/processed/540w/embed/95239f33-37e8-4526-bd04-5f52e2c38e50.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>執行後，它會詢問一些資訊:(你可以自由開心填)</p><p>i. Separate source and build directories(y/n): 看你要不要把source 跟 build 資料夾分開，這邊選的是yes</p><p>ii. Project name: (專案名稱)</p><p>Author name(s): (作者)</p><p>Project release []: (版本)</p><p>iii. Project language [en] : (語言) 我選的是英文 en，也可以填zh-TW等</p><p>接下來就會產生許多我們需要的folder</p><h2>Step4: 更改doc/source/conf.py檔案</h2><p>要確保有圖片裡的兩個圈</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.webp" onerror="this.srcset='https://assets.matters.news/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.png" onerror="this.srcset='https://assets.matters.news/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.webp">
+
+        <img src="https://assets.matters.news/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.png" srcset="https://assets.matters.news/processed/540w/embed/a23ca0dc-34c4-4510-a3eb-261974c54254.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>a. Sys.path… : 設定路徑(設定到src，因為我們的python 在那裡)</p><p>b. Sphinx.ext.autodoc: 自動抓取路徑檔案的插件</p><p>c. html_theme:更換html主題，讓你的介面不一樣</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.webp" onerror="this.srcset='https://assets.matters.news/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.png" onerror="this.srcset='https://assets.matters.news/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.webp">
+
+        <img src="https://assets.matters.news/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.png" srcset="https://assets.matters.news/processed/540w/embed/5b6453b3-0fb3-4bf8-b086-ee175c7ea406.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>i. 來點特別的,所以我選擇scrolls來用用看，你可以選擇下面各種選項，我記得我一開它預設是alabaster</p><p>官網預設的主題: alabaster、classic、sphinxdoc、scrolls, agogo, traditional, nature , haiku,pyramid, bizstyle、default</p><p>參考官網: <a href="https://www.sphinx-doc.org/en/master/usage/theming.html" target="_blank">https://www.sphinx-doc.org/en/master/usage/theming.html</a></p><p>ii. 如果你選擇的是default 或classic，可以加入html_theme_options ={} 來更改裡面的樣式，像是如圖，當然也有很多參數可以自行做調整</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.webp" onerror="this.srcset='https://assets.matters.news/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.png" onerror="this.srcset='https://assets.matters.news/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.webp">
+
+        <img src="https://assets.matters.news/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.png" srcset="https://assets.matters.news/processed/540w/embed/4bf8da8b-c2cc-4bd2-81db-876cfac8accc.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>我覺得可以參考這篇，寫得非常詳細分常厲害!!</p><p>參考這篇: <a href="http://kevinchen.synology.me/TechnicalDocuments/Sphinx/Sphinx_module.html" target="_blank">http://kevinchen.synology.me/TechnicalDocuments/Sphinx/Sphinx_module.html</a></p><h2>Step5: 再來編輯另一個 doc/source/index.rst rst檔案</h2><p>a. Index.rst是最後形成html的預設首頁， 加入我們的索引名稱 Example (需要與..toctree:: : 區塊隔一行)</p><p>b.(p.s ..toctree:: 是rst檔用來連接外部檔案的)</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.webp" onerror="this.srcset='https://assets.matters.news/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.png" onerror="this.srcset='https://assets.matters.news/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.webp">
+
+        <img src="https://assets.matters.news/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.png" srcset="https://assets.matters.news/processed/540w/embed/9f1400f0-385a-4810-ae05-e8b8ceda89b5.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><h2>Step6: 在doc/source/目錄底下建立一個 Example.rst文件 並 撰寫內容，它會是呈現我們程式檔案，並說明的頁面，感覺很抽象，沒關係看下去你就知道了</h2><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/95b50db9-236f-4e38-b6a7-85356e629781.webp" onerror="this.srcset='https://assets.matters.news/embed/95b50db9-236f-4e38-b6a7-85356e629781.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/95b50db9-236f-4e38-b6a7-85356e629781.png" onerror="this.srcset='https://assets.matters.news/embed/95b50db9-236f-4e38-b6a7-85356e629781.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/95b50db9-236f-4e38-b6a7-85356e629781.webp">
+
+        <img src="https://assets.matters.news/embed/95b50db9-236f-4e38-b6a7-85356e629781.png" srcset="https://assets.matters.news/processed/540w/embed/95b50db9-236f-4e38-b6a7-85356e629781.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>a. ===========的上面: 是標題的名稱，它會出現在最後html裡面的content標題</p><p>b. .. auotmodule:: Example : 它會去自動抓取(之前設定的插件)我們在src底下的檔名(Example)(我們之前設定的路徑)</p><p>c. :members: House: 這個程式檔裡面有個House的class (成員) 一定要抓class的名稱 或 function的名稱，不能自己亂抓，但可以選擇不填，讓它自己抓(建議)</p><p><strong>Warning: 如果只填一個function或class 的名稱，只會抓到該function或class 的裡面的資料， 但選擇不填 就可以都抓到</strong></p><h2>Step7: 最後cd 到doc目錄底下</h2><p><strong>a. 打上 make html，就可以到 doc/build/html/ 看到html檔</strong></p><p><strong>b. 預設首頁是index.tml，點開來play</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.webp" onerror="this.srcset='https://assets.matters.news/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.png" onerror="this.srcset='https://assets.matters.news/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.webp">
+
+        <img src="https://assets.matters.news/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.png" srcset="https://assets.matters.news/processed/540w/embed/324b0740-26a3-4a31-ba2c-0ab50ad70136.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>Contents: 裡面有我們預設的主題名稱，點進去看看</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3cf5060c-c13a-418e-a953-52da79de13df.webp" onerror="this.srcset='https://assets.matters.news/embed/3cf5060c-c13a-418e-a953-52da79de13df.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3cf5060c-c13a-418e-a953-52da79de13df.png" onerror="this.srcset='https://assets.matters.news/embed/3cf5060c-c13a-418e-a953-52da79de13df.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/3cf5060c-c13a-418e-a953-52da79de13df.webp">
+
+        <img src="https://assets.matters.news/embed/3cf5060c-c13a-418e-a953-52da79de13df.png" srcset="https://assets.matters.news/processed/540w/embed/3cf5060c-c13a-418e-a953-52da79de13df.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>Amzaing!! 完成了</p><p>希望這次對您也有很大的幫助!!</p><p><br></p><p><strong>Reference:</strong></p><p><a href="https://www.sphinx-doc.org/en/master/usage/theming.html" target="_blank">https://www.sphinx-doc.org/en/master/usage/theming.html</a></p><p><a href="http://kevinchen.synology.me/TechnicalDocuments/Sphinx/sphinx_detailed_teach.html" target="_blank">http://kevinchen.synology.me/TechnicalDocuments/Sphinx/sphinx_detailed_teach.html</a></p><p><a href="https://myapollo.com.tw/zh-tw/python-autodoc/" target="_blank">https://myapollo.com.tw/zh-tw/python-autodoc/</a></p><p><a href="http://kevinchen.synology.me/TechnicalDocuments/Sphinx/Sphinx_module.html" target="_blank">http://kevinchen.synology.me/TechnicalDocuments/Sphinx/Sphinx_module.html</a></p>

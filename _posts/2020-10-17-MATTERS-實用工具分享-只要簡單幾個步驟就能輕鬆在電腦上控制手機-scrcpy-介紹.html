@@ -1,0 +1,130 @@
+---
+layout: post
+title: "[實用工具分享]只要簡單幾個步驟就能輕鬆在電腦上控制手機-Scrcpy 介紹"
+date: 2020-10-17 03:15:29.000000000 +00:00
+categories: matters
+tags: blog
+author: 為自己Coding
+---
+
+<p><br></p><h2>Scrcpy介紹</h2><ul><li>它是一個透過usb線，並使用電腦來控制Android手機的應用程式</li><li>它不需要取得任何的root權線</li><li>它可以在 Windows 、 MacOS 和 GNU/Linux上使用(今天我要示範的是使用Windows喔)</li></ul><p><br></p><h2>事前準備</h2><p>要讓手機能夠連結到PC上，並與它互相傳輸資料，我們需要先將USB除錯功能開啟</p><p><strong>USB除錯功能如何開啟?</strong></p><p>每款手機都有不同的開啟方式，這邊我是用手邊非常舊的手機XD，Sony的Xperia G3226來做示範喔!!大家可以自行查查自己的手機，如何開啟手機除錯，但是其實幾乎都是一樣的方式，但按鈕的位置不同而已</p><p><strong>Step1:</strong></p><p>到<strong>[設定]</strong>裡面，並點進<strong>[系統]</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.webp" onerror="this.srcset='https://assets.matters.news/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.png" onerror="this.srcset='https://assets.matters.news/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.webp">
+
+        <img src="https://assets.matters.news/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.png" srcset="https://assets.matters.news/processed/540w/embed/ac1e7489-e7ee-41c4-b893-ce5d865f14c3.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><strong>Step2:</strong></p><p>點進<strong>[關於手機]</strong>，並找到<strong>[版本號碼]</strong>，狂點它後，它就會跳出<strong>"您已經成為開發人員"</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.webp" onerror="this.srcset='https://assets.matters.news/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.png" onerror="this.srcset='https://assets.matters.news/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.webp">
+
+        <img src="https://assets.matters.news/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.png" srcset="https://assets.matters.news/processed/540w/embed/249d933f-9b1c-4436-aa41-d6f8f1db374f.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><strong>Step3:</strong></p><p>回到<strong>[系統</strong>]，就會看到新出現的<strong>[開發人員選項]</strong>，點進去然後把<strong>[USB偵錯]</strong>打開就完成囉!!</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.webp" onerror="this.srcset='https://assets.matters.news/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.png" onerror="this.srcset='https://assets.matters.news/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.webp">
+
+        <img src="https://assets.matters.news/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.png" srcset="https://assets.matters.news/processed/540w/embed/8b3a4a32-f405-4f30-bca4-641cc700791b.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.webp" onerror="this.srcset='https://assets.matters.news/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.png" onerror="this.srcset='https://assets.matters.news/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.webp">
+
+        <img src="https://assets.matters.news/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.png" srcset="https://assets.matters.news/processed/540w/embed/3dfb9e12-9fa8-47f0-a99f-36f65770f9b9.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>這樣就完成了事前準備喔!!</p><p><br></p><h2>Scrcpy使用教學</h2><h2>使用步驟:</h2><p><strong>Step1: </strong></p><p>進到<a href="https://github.com/Genymobile/scrcpy" target="_blank"> Github網站</a> <a href="https://github.com/Genymobile/scrcpy" target="_blank">https://github.com/Genymobile/scrcpy</a> ，然後找尋自己對應的作業系統來下載檔案，我這邊示範的是用Windows喔</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/61e904c0-61e1-4ee2-825f-64271362db51.webp" onerror="this.srcset='https://assets.matters.news/embed/61e904c0-61e1-4ee2-825f-64271362db51.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/61e904c0-61e1-4ee2-825f-64271362db51.png" onerror="this.srcset='https://assets.matters.news/embed/61e904c0-61e1-4ee2-825f-64271362db51.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/61e904c0-61e1-4ee2-825f-64271362db51.webp">
+
+        <img src="https://assets.matters.news/embed/61e904c0-61e1-4ee2-825f-64271362db51.png" srcset="https://assets.matters.news/processed/540w/embed/61e904c0-61e1-4ee2-825f-64271362db51.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>放大一點給大家看</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/61484da2-ecd3-417a-99ab-21048e966cb6.webp" onerror="this.srcset='https://assets.matters.news/embed/61484da2-ecd3-417a-99ab-21048e966cb6.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/61484da2-ecd3-417a-99ab-21048e966cb6.png" onerror="this.srcset='https://assets.matters.news/embed/61484da2-ecd3-417a-99ab-21048e966cb6.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/61484da2-ecd3-417a-99ab-21048e966cb6.webp">
+
+        <img src="https://assets.matters.news/embed/61484da2-ecd3-417a-99ab-21048e966cb6.png" srcset="https://assets.matters.news/processed/540w/embed/61484da2-ecd3-417a-99ab-21048e966cb6.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>Step2:</strong></p><p>解壓縮下載下來的壓縮檔</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.webp" onerror="this.srcset='https://assets.matters.news/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.png" onerror="this.srcset='https://assets.matters.news/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.webp">
+
+        <img src="https://assets.matters.news/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.png" srcset="https://assets.matters.news/processed/540w/embed/a282b6af-cd84-4f04-aa66-d5a7f88e57c7.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>Step3: </strong></p><ul><li>連接好手機->允許usb偵錯->選檔案傳輸</li><li>點擊scrcpy.exe來啟動它</li></ul><p><br></p><p>連結手機，手機會跳這個訊息，按下確定</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.webp" onerror="this.srcset='https://assets.matters.news/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.png" onerror="this.srcset='https://assets.matters.news/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.webp">
+
+        <img src="https://assets.matters.news/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.png" srcset="https://assets.matters.news/processed/540w/embed/3ed6a76b-6141-42c0-b2db-5d41f148c4ca.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>連結手機，手機會跳這個訊息，按下確定</span></figcaption></figure><p>我是選擇檔案傳輸的選項</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.webp" onerror="this.srcset='https://assets.matters.news/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.png" onerror="this.srcset='https://assets.matters.news/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.webp">
+
+        <img src="https://assets.matters.news/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.png" srcset="https://assets.matters.news/processed/540w/embed/fe3df2ec-b743-41a2-a5f0-9af4f434703a.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>接下來就是啟動我們解壓縮後的scrcpy檔</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.webp" onerror="this.srcset='https://assets.matters.news/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.png" onerror="this.srcset='https://assets.matters.news/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.webp">
+
+        <img src="https://assets.matters.news/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.png" srcset="https://assets.matters.news/processed/540w/embed/319b22af-9b1c-46a0-a2ef-eee5f2366df2.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>Magic!! 我們的手機螢幕就出現在電腦上囉!! 大家可以用電腦滑鼠跟鍵盤控制看看自己的手機</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.webp" onerror="this.srcset='https://assets.matters.news/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.png" onerror="this.srcset='https://assets.matters.news/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.webp">
+
+        <img src="https://assets.matters.news/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.png" srcset="https://assets.matters.news/processed/540w/embed/9f4fd42a-e187-429a-8e3e-f9ca1286e2cb.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>像是大家可以透過電腦，來控制手機打字等等，當然也能夠玩遊戲，傳line之類的喔</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.webp" onerror="this.srcset='https://assets.matters.news/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.png" onerror="this.srcset='https://assets.matters.news/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.webp">
+
+        <img src="https://assets.matters.news/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.png" srcset="https://assets.matters.news/processed/540w/embed/7c49f5a7-ecdb-4518-905d-e7e2e9e0a3cd.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>這樣大家以後不管是要投影自己的螢幕給別人看，還是要使用電腦來控制手機打字等等，Scrcpy都是相當棒的工具喔!! 希望這篇有幫助到您~~</strong></p><p><br></p><p><br></p><h2>Reference</h2><p><a href="https://github.com/Genymobile/scrcpy" target="_blank">https://github.com/Genymobile/scrcpy</a></p><p><a href="https://blog.rom1v.com/2018/03/introducing-scrcpy/" target="_blank">https://blog.rom1v.com/2018/03/introducing-scrcpy/</a></p>

@@ -1,0 +1,98 @@
+---
+layout: post
+title: Machine Learning -關聯分析-Apriori演算法-詳細解說啤酒與尿布的背後原理 Python實作-Scikit Learn一步一步教學
+date: 2020-10-15 15:31:14.000000000 +00:00
+categories: matters
+tags: blog
+author: 為自己Coding
+---
+
+<p><br class="smart"></p><p><a href="https://github.com/chwang12341/Machine-Learning/blob/master/Apriori/%E9%97%9C%E8%81%AF%E8%A6%8F%E5%89%87%E5%AF%A6%E6%88%B0.ipynb" target="_blank"><strong>Github完整程式連結</strong></a></p><p>Yo, 今天來跟大家介紹一個非常有趣的分析方法-關聯分析(Apriori),為什麼說它有趣呢?因為它是在擁有大量數據的資料庫中，找尋資料間彼此的關聯, 很常會讓人意想不到!!經典的Walmart 尿布與啤酒的故事,這兩樣八桿子打不著關係的商品放在一起，竟然可以增加營業額!!這就是使用關聯分析所發現的喔!!<br class="smart"> <br class="smart"> </p><h2>1. 關聯分析是什麼?</h2><p><br class="smart"></p><p>a. 簡單來說，它就是在大量數據中找尋資料彼此之間的關聯，它是透過兩種主要的方式來進行分析: 頻繁項集、關聯規則</p><blockquote> i. 頻繁項集(Frequent Itemsets): 經常一起出現的物品集合  </blockquote><blockquote>ii. 關聯規則(Association Rules): 表達數據之間的可能存在很強關聯姓</blockquote><p><br class="smart"><br class="smart"> b. 分析主要透過計算支持度(Support)與信心水準(Confidence)來挖掘數據間關聯的強弱<br class="smart"> <br class="smart"> c. 舉例: 如圖中，我們可以看出{B、C、E}這三項物品一起出現的頻率高，也就是所謂的頻繁項集，而圖中也可以尋找{B、E}這兩箱物品一起出現的關聯，就稱為關聯規則，而它們關聯的強弱就由支持度(Support)與信心水準(Confidence)來計算<br class="smart"><br class="smart"></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.webp" onerror="this.srcset='https://assets.matters.news/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.png" onerror="this.srcset='https://assets.matters.news/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.webp">
+
+        <img src="https://assets.matters.news/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.png" srcset="https://assets.matters.news/processed/540w/embed/a345e0cd-e356-4448-a250-7f25e4b908fd.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p> d. 應用範例: 關聯分析使用的範圍相當廣，也是非常受到歡迎的分析方法, 這邊就舉幾個社會上的使用案例: 1. 淘寶推薦相關書籍 2. 百度文庫推薦相關文件 3. Walmart尿布與啤酒 4. 推薦醫療器具組合 <br class="smart"> </p><h2> 2. 歷史回顧</h2><pre class="ql-syntax">a.關聯分析觀念提出者: Agrawal, Imielinski and Swami於SIGMOD會議上所提出(1993) 
+b. Apriori演算法提出者: Agrawal and Srikant(1994)提出執行關聯分析的演算法 
+</pre><h2> 3. 關聯規則的重要評估指標</h2><p><br class="smart"><strong> a. 支持度(Support): </strong></p><p>表示物品集(Ex. 如果只有一個物品({A),如果有想個物品{A,B})在擁有N個資料(ALL_DATA)的數據庫中出現的次數比例<br class="smart"><strong> </strong></p><pre class="ql-syntax">公式:  
+
+i. 只算一個物品出現的支持度: Support(A) = Count(A)/Count(ALL_DATA)  
+
+ii. 兩個物品同時出現的支持度時: Support(A -> B) = Count(A ∪ B) / Count(ALL_DATA)
+</pre><p><br class="smart"> 舉例: 如果總共的交易數據有200筆， 香腸這項商品出現的次數有20筆, 那它的支持度為50/200 = 1/4, 也就是香腸的支持度為25%<br class="smart"> <br class="smart"><strong> b. 信心水準(Confidence):</strong></p><p><br class="smart"> 表示兩物品同時出現的條件機率，簡單來說就是在已經出現商品A的情況下，出現商品B的機率<br class="smart"> </p><pre class="ql-syntax">公式: 
+Confidence(A -> B) = P(B|A) = P(A ∪ B) / P(A)
+</pre><p><br class="smart"><strong> c. 提升度(Lift):</strong></p><p><br class="smart"> 表示當經出現商品A的情況下，出現商品B的機率，但會看出只出現商品B的機率的問題，提升度(Lift)代表著數據間的關聯性<br class="smart"> </p><pre class="ql-syntax">公式:
+ Lift(A -> B) = Confidence(A -> B) / P(B) = P(B|A) / P(B) 
+</pre><p><br class="smart"> i. 提升度 > 1 : 表示數據間越相關，呈正相關<br class="smart"> ii. 提升度 = 1 : 表示兩數據獨立，不相關<br class="smart"> iii. 提升度 < 1 : 表示兩數據呈負相關<br class="smart"><br class="smart"></p><p><strong>d.其他指標: Leverage 和 Conviction</strong></p><p>這兩個指標比較不會用到，但是這邊還是跟大家提一下，它們兩個都是值越大表示關聯越強</p><pre class="ql-syntax">公式:
+Leverage: P(A,B)-P(A)P(B)
+Conviction: P(A)P(B)/P(A,B)
+</pre><p><br class="smart"></p><blockquote>補充: 支持度(Support)跟信心水準(Confidence)就可以計算了，為什麼要使用提升度? 因為有能會有在有A商品的情況下,有B商品的機率高, 但在沒有A商品的情況下,有B商品的機率還是很高，但如果忽略掉提升度(Lift)就會誤判，以為A->B的關聯性很強</blockquote><h2> 4. 進行關聯分析前的預備</h2><blockquote> a. 在進行關聯分析前，我們要先設定好我們的最小支持度(Min Support)與最小信心水準(Min Confidenc)，這需要自行定義，那我通常會定義在50%，也就是說商品項目集{A,B}的# 支持度要高於50%，也就是出現次數要高於(總共數據量 x 50%)次, 才為高頻率項集，如果低於這個次數，就會被拿掉不考慮, 下面的Apriori原理中會做詳細介紹 </blockquote><blockquote>b. 設定太高或太低? 設定太低的話，會導致關聯分析的結果出現太多的關聯規則，太高的話，關聯規則太少, 都不利我們參考分析結果做決策</blockquote><h2> 5. Apriori優缺點:</h2><p><br class="smart"><strong> 缺點:</strong> 1. 資料量大時, 運算效率低<br class="smart"><strong> 優點: </strong>1. 數據中只需要有關連數據即可，其它屬性資料用不到 2. 容易編碼<br class="smart"> <br class="smart"> </p><h2>6. Apriori原理</h2><p> Apriori重要假設: Apriori是計算頻繁項集的一種演算法，它假設當項集是頻繁的，也就是假設B這個物品在數據中是頻繁出現的，那它的子集也會是頻繁的，也就是說{B、C}、{B、C、E}等也是頻繁的，反之就是不頻繁的</p><p><br class="smart"> 這邊使用圖片來為大家講解Apriori的原理</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.webp" onerror="this.srcset='https://assets.matters.news/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.jpeg" onerror="this.srcset='https://assets.matters.news/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.webp">
+
+        <img src="https://assets.matters.news/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.jpeg" srcset="https://assets.matters.news/processed/540w/embed/132b85b1-9c63-4b6c-a938-4836dbaa2cbc.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><strong>Step1: </strong>上圖由左至右進行疊代，有了最左邊的數據庫後，接下來進行第一次掃描，可以看出每樣商品出現的次數，由於我們自行設定的最小支持度為50%，所以如果次數小於3(總數據量6 x 50%)，就會被當成是不頻繁項集淘汰，也就是圖中的D商品，為什麼會被淘汰?因為前面有提到Apriori的重要假設，當項目集是不頻繁的，那它的子集也不會頻繁，接下來就形成了新的數據表</p><p><strong>Step2:</strong> 接下來進行我們的第二次掃描，也就是項目集中會有兩樣商品來做分析，一樣列出出現次數後，淘汰掉次數低於3的項目集，形成新的數據表</p><p><strong>Step3:</strong> 最後進行我們的第三次掃描，項目集中會有三樣商品來做分析，列出出現次數，由於只有一組項目集，分析過程也就完成囉，最後一樣會形成一個關聯數據表</p><p><br class="smart"></p><h2>7. 實作</h2><p><br class="smart"></p><p><strong>這邊我放了兩種實現Apriori算法的方法，更多的方法我會放在我的Github中，歡迎大家自行參考</strong></p><p><br class="smart"></p><h2>方法一: 使用apyori套件</h2><p><br class="smart"></p><p><strong>Step1: 安裝套件</strong></p><pre class="ql-syntax">pip install apyori
+</pre><p><strong>Step2: 程式實作</strong></p><p><br class="smart">a. 調整最小支持度(Min Support)、最小信心水準(Min Confidence)、最小提升度(Min Lift)來實現你的關聯分析，最小提升度要大於1才有關聯，所以要設在1以上，越大表示關聯性越強<br class="smart">b. max_length: 用來調整要對幾個商品關聯, 拿下面的程式碼來看，如果改成max_length = 4，那print(pair)就會有二到四個商品在list中，也就是我們剛剛學習過的原理，它會繼續scan下去，直到項目集裡有四個商品</p><p><br></p><pre class="ql-syntax">## Import package
+from apyori import apriori
+## Data 自行定義數據
+market_data = [['T-Shirt','Pants','Jeans','Jersy','Socks','Basketball','Bottle','Shorts'],['T-Shirt','Jeans'],['Jersy','Basketball','Socks','Bottle'],['Jeans','Pants','Bottle'],['Shorts','Basketball'],['Shorts','Jersy'],['T-Shirt'],['Basketball','Jersy'],]
+association_rules = apriori(market_data, min_support=0.2, min_confidence=0.2, min_lift=2, max_length=2)
+association_results = list(association_rules)
+##print(association_results )
+for product in association_results:#print(product) # ex. RelationRecord(items=frozenset({'Basketball', 'Socks'}), support=0.25, ordered_statistics=[OrderedStatistic(items_base=frozenset({'Basketball'}), items_add=frozenset({'Socks'}), confidence=0.5, lift=2.0), OrderedStatistic(items_base=frozenset({'Socks'}), items_add=frozenset({'Basketball'}), confidence=1.0, lift=2.0)])pair = product[0] 
+ ##print(pair) ## ex. frozenset({'Basketball', 'Socks'})products = [x for x in pair]print(products) # ex. ['Basketball', 'Socks']print("Rule: " + products[0] + " →" + products[1])print("Support: " + str(product[1]))print("Lift: " + str(product[2][0][3]))print("==================================")
+</pre><p><br></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.webp" onerror="this.srcset='https://assets.matters.news/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.png" onerror="this.srcset='https://assets.matters.news/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.webp">
+
+        <img src="https://assets.matters.news/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.png" srcset="https://assets.matters.news/processed/540w/embed/7b51160b-8f1b-44a0-92bc-7d3761e95dab.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><br class="smart"></p><h2>方法二: 使用mlxtend套件，將數據轉換成one-hot編碼</h2><p><br class="smart"></p><blockquote>這個方法中，在最後計算關聯規則(Assocaition Rules)的同時，會幫我們計算各種指標值，像是我們之前有提到的Conviction與Levrage也會呈現出來</blockquote><p><br class="smart"></p><p><strong>Step1 : 安裝套件</strong></p><pre class="ql-syntax">pip install mlxtend
+</pre><p><br class="smart"><strong>Step2: 程式實作</strong></p><p><br></p><pre class="ql-syntax">## Import Package
+import pandas as pd
+from mlxtend.frequent_patterns import apriori
+from mlxtend.frequent_patterns import association_rules
+## Data 自行定義數據
+market_data = {'Transaction ID': [1,2,3,4,5,6,7,8],'Items':[['T-Shirt','Pants','Jeans','Jersy','Socks','Basketball','Bottle','Shorts'],['T-Shirt','Jeans'],['Jersy','Basketball','Socks','Bottle'],['Jeans','Pants','Bottle'],['Shorts','Basketball'],['Shorts','Jersy'],['T-Shirt'],['Basketball','Jersy'],]}
+## 轉成DataFrame
+data = pd.DataFrame(market_data)
+## 讓DataFrame 能呈現的寬度大一點
+pd.options.display.max_colwidth = 100
+## 轉成數值編碼，目前都是字串的組合
+data_id = data.drop('Items', 1)
+data_items = data.Items.str.join(',')
+## 轉成數值
+data_items = data_items.str.get_dummies(',')
+## 接上Transaction ID
+data = data_id.join(data_items)
+## 計算支持度 Support
+Support_items = apriori(data[['T-Shirt','Pants','Jeans','Jersy','Socks','Basketball','Bottle','Shorts']], min_support=0.20, use_colnames = True)
+## 計算關聯規則 Association Rule
+Association_Rules = association_rules(Support_items, metric = 'lift', min_threshold=1)
+
+Association_Rules
+</pre><p><br></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.webp" onerror="this.srcset='https://assets.matters.news/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.png" onerror="this.srcset='https://assets.matters.news/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.webp">
+
+        <img src="https://assets.matters.news/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.png" srcset="https://assets.matters.news/processed/540w/embed/835579f1-fa64-4c44-accc-b1447fb6ac28.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p>因為排版的關係，我自己也覺得程式不是很清楚，所以大家可以直接去我的Github中看喔!!<br class="smart"></p><h2>學完後是不是覺得很有趣呢?希望大家都有滿滿的收穫~~</h2><p><br class="smart"></p><p><br class="smart"></p><p><strong><em>Reference:</em></strong><br class="smart"> <a href="https://kknews.cc/zh-tw/news/pqnq86e.html" target="_blank">https://kknews.cc/zh-tw/news/pqnq86e.html</a></p><p><a href="https://medium.com/bandai%E7%9A%84%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/%E6%89%8B%E6%8A%8A%E6%89%8B%E7%A8%8B%E5%BC%8F%E5%AF%A6%E4%BD%9C%E5%88%86%E4%BA%AB%E7%B3%BB%E5%88%97-%E5%85%88%E9%A9%97%E6%BC%94%E7%AE%97%E6%B3%95-apriori-algorithm-%E9%97%9C%E8%81%AF%E8%A6%8F%E5%89%87%E5%88%86%E6%9E%90-64e0c8506413" target="_blank"><strong>手把手程式實作分享系列：先驗演算法（Apriori Algorithm） 關聯規則分析</strong><br class="smart"><em>0. 前言</em>medium.com</a></p><p><a href="https://www.itread01.com/content/1544958735.html" target="_blank"><strong>一步步教你輕鬆學關聯規則Apriori演算法</strong><br class="smart"><em>摘要：先驗演算法（Apriori…</em></a><a href="https://matters.news/@CHWang/machine-learning-%25E9%2597%259C%25E8%2581%25AF%25E5%2588%2586%25E6%259E%2590-apriori%25E6%25BC%2594%25E7%25AE%2597%25E6%25B3%2595-%25E8%25A9%25B3%25E7%25B4%25B0%25E8%25A7%25A3%25E8%25AA%25AA%25E5%2595%25A4%25E9%2585%2592%25E8%2588%2587%25E5%25B0%25BF%25E5%25B8%2583%25E7%259A%2584%25E8%2583%258C%25E5%25BE%258C%25E5%258E%259F%25E7%2590%2586-python%25E5%25AF%25A6%25E4%25BD%259C-scikit-learn%25E4%25B8%2580%25E6%25AD%25A5%25E4%25B8%2580%25E6%25AD%25A5%25E6%2595%2599%25E5%25AD%25B8-bafyreiblhbu7qc3go3aatvabovx2yykd5t4azssw56c5ewcezshjkr74m4" target="_blank">www.itread01.com</a></p><p><a href="https://medium.com/marketingdatascience/%E4%BD%A0%E6%80%8E%E9%BA%BC%E8%99%95%E7%90%86%E9%A1%A7%E5%AE%A2%E4%BA%A4%E6%98%93%E8%B3%87%E8%A8%8A-apriori%E6%BC%94%E7%AE%97%E6%B3%95-1523b1f8443b" target="_blank"><strong>你怎麼處理顧客交易資訊？Apriori演算法</strong><br class="smart"><em>在電腦科學以及資料探勘領域中，Apriori 演算法是「關聯規則學習」或是「關聯分析（Associative…</em>medium.com</a></p><p><br class="smart"></p>

@@ -1,0 +1,135 @@
+---
+layout: post
+title: Coding起來 - Python - 一行指令就能輕鬆建立網頁伺服器 - SimpleHTTPServer套件 - http.server使用教學
+date: 2020-10-12 13:06:15.000000000 +00:00
+categories: matters
+tags: blog
+author: 為自己Coding
+---
+
+<h1><br></h1><p><a href="https://github.com/chwang12341/Learn-Python-/tree/master/simplehttpserver_learning" target="_blank">Github連結</a></p><p><br></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9991ab67-5446-44d9-8028-302f6f67cd73.webp" onerror="this.srcset='https://assets.matters.news/embed/9991ab67-5446-44d9-8028-302f6f67cd73.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/9991ab67-5446-44d9-8028-302f6f67cd73.jpeg" onerror="this.srcset='https://assets.matters.news/embed/9991ab67-5446-44d9-8028-302f6f67cd73.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/9991ab67-5446-44d9-8028-302f6f67cd73.webp">
+
+        <img src="https://assets.matters.news/embed/9991ab67-5446-44d9-8028-302f6f67cd73.jpeg" srcset="https://assets.matters.news/processed/540w/embed/9991ab67-5446-44d9-8028-302f6f67cd73.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>攝影師：Mateusz Dach，連結：Pexels</span></figcaption></figure><p><br></p><p><br></p><p>嗨嗨，大家有時候在寫網頁前端或簡單的互動視覺化圖時，可能都會想用網頁伺服器來預覽成品放到網頁上的感覺，但有時候只是想簡單檢視一下結果，卻要花上很多時間安裝完整的伺服器(ex.Apache)，或是撰寫nodejs來開啟Local Server，今天就來跟大家介紹一個我今天無意間看到的一個超實用套件- SimpleHTTPServer，它幫助我們省下非常多的時間，只要一行指令輕鬆就能幫助我們開啟Local Server，建立臨時的網頁</p><h2><strong>為什麼要使用SimpleHTTPServer?</strong></h2><ul><li>它幫助我們快速地將Local端任何目錄底下的資料以網頁的形式分享到網路上，除了可以幫助我們預覽一些工作成果，像是網頁前端、互動視覺畫圖等等，也可以幫助將資料分享於區域網路(Local Network)之中，我們就能快速地展示結果給身邊的人用自己的網路設備觀看</li><li>使用SimpleHTTPServer的方法，只要擁有Python環境，並只要一行指令就能建立簡單地網頁伺服器</li></ul><h2><strong>環境建置</strong></h2><ol><li>安裝Python3，並添加到環境變數之中，就能使用命令提示字元(cmd)來執行操作</li><li>直接安裝Anaconda，就能直接使用Anaconda Prompt來執行操作</li></ol><p><strong>提醒: 我這邊使用的SimpleHTTPServer套件是Python3版本的喔，所以指令會與Python2不同</strong></p><pre class="ql-syntax">Python3指令: python -m http.server
+Python2指令: python -m SimpleHTTPServer
+</pre><h2><strong>如何使用SimpleHTTPServer?</strong></h2><h4><strong>Step1:</strong></h4><p>選定欲開方的目錄資料夾，並開啟命令提示字元(cmd)或任何可以使用Python的指令工具(ex. Anaconda Prompt)，我這邊使用Anaconda Prompt 來示範，開啟後切換(cd)到欲開放的目錄資料夾內(ex. cd C:\Users\user\Desktop\Learn-Python-\simplehttpserver_learning)</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.webp" onerror="this.srcset='https://assets.matters.news/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.png" onerror="this.srcset='https://assets.matters.news/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.webp">
+
+        <img src="https://assets.matters.news/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.png" srcset="https://assets.matters.news/processed/540w/embed/7f4f3d6a-bfef-4140-9f37-9ecdad5651e8.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><h4><strong>Step2:</strong></h4><p>開啟Local Server， 在Anaconda Prompt中接著下python -m http.server指令</p><pre class="ql-syntax">python -m http.server
+</pre><figure class="image"><img src="https://matters.news/@CHWang/coding%25E8%25B5%25B7%25E4%25BE%2586-python-%25E4%25B8%2580%25E8%25A1%258C%25E6%258C%2587%25E4%25BB%25A4%25E5%25B0%25B1%25E8%2583%25BD%25E8%25BC%2595%25E9%25AC%2586%25E5%25BB%25BA%25E7%25AB%258B%25E7%25B6%25B2%25E9%25A0%2581%25E4%25BC%25BA%25E6%259C%258D%25E5%2599%25A8-simple-http-server%25E5%25A5%2597%25E4%25BB%25B6-http-server%25E4%25BD%25BF%25E7%2594%25A8%25E6%2595%2599%25E5%25AD%25B8-bafyreibuvns63l345bbwa2drrkogydze5sx7xgbzjzxxeujbtf37oj6nhy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.webp" onerror="this.srcset='https://assets.matters.news/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.png" onerror="this.srcset='https://assets.matters.news/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.webp">
+
+        <img src="https://assets.matters.news/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.png" srcset="https://assets.matters.news/processed/540w/embed/13012d5b-001b-4dd5-a74b-c7b3e13215f4.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><br></p><h4><strong>Step3:</strong></h4><p>打開瀏覽器，並輸入</p><ol><li>自己觀看的網址: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></li></ol><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.webp" onerror="this.srcset='https://assets.matters.news/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.png" onerror="this.srcset='https://assets.matters.news/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.webp">
+
+        <img src="https://assets.matters.news/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.png" srcset="https://assets.matters.news/processed/540w/embed/46a57683-d0b7-42fd-aea1-61f8b8072846.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p>2. 分享給別的網址:</p><ul><li>找到自己的IP位置，並在後面加上:8000，就可以囉</li></ul><p>ex. <a href="http://192.168.31.214:8000/" target="_blank">http://192.168.31.214:8000/</a></p><figure class="image"><img src="https://matters.news/@CHWang/coding%25E8%25B5%25B7%25E4%25BE%2586-python-%25E4%25B8%2580%25E8%25A1%258C%25E6%258C%2587%25E4%25BB%25A4%25E5%25B0%25B1%25E8%2583%25BD%25E8%25BC%2595%25E9%25AC%2586%25E5%25BB%25BA%25E7%25AB%258B%25E7%25B6%25B2%25E9%25A0%2581%25E4%25BC%25BA%25E6%259C%258D%25E5%2599%25A8-simple-http-server%25E5%25A5%2597%25E4%25BB%25B6-http-server%25E4%25BD%25BF%25E7%2594%25A8%25E6%2595%2599%25E5%25AD%25B8-bafyreibuvns63l345bbwa2drrkogydze5sx7xgbzjzxxeujbtf37oj6nhy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.webp" onerror="this.srcset='https://assets.matters.news/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.png" onerror="this.srcset='https://assets.matters.news/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.webp">
+
+        <img src="https://assets.matters.news/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.png" srcset="https://assets.matters.news/processed/540w/embed/f4d9118e-e704-4525-a21d-74fdc3e8ce69.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><br></p><p><br></p><p><strong>補充: 如何找自己的IP位置? 在cmd中，輸入ipconfig指令，就會看到了</strong></p><p><strong>這樣就算完成囉，是不是非常輕鬆呀，這樣大家就能看到你分享的檔案囉!!</strong></p><h2><br></h2><h2><strong>補充: 如果想修改Port呢?</strong></h2><p>SimpleHTTPServer模組預設的port為8000，也就是上面我們IP位置後面指定的Port，像是<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>，後面的8000就是Port，如果想要指定不同的Port，非常簡單喔，只要在指令後面加上指定的Port就好，想是我想要將Port改變為8080，就輸入以下指令</p><pre class="ql-syntax">python -m http.server 8080
+</pre><p><br></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.webp" onerror="this.srcset='https://assets.matters.news/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.png" onerror="this.srcset='https://assets.matters.news/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.webp">
+
+        <img src="https://assets.matters.news/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.png" srcset="https://assets.matters.news/processed/540w/embed/08f68f15-b1eb-4476-9751-a6d8a4fe1533.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><br></p><h2><strong>補充: 自行寫一個Python程式來開啟</strong></h2><p>預設情況下，這個套件會傾聽所有的網路位置，如果想要只傾聽local端的位址，就要自行寫一個Python程式來執行囉</p><p><strong>範例1 : 這是我在網路上找尋大家的文章，所使用的範例程式</strong></p><pre class="ql-syntax">## http.server.py
+​
+​
+# -*- coding: utf-8 -*-
+import sys
+import http.server
+from http.server import SimpleHTTPRequestHandler
+​
+HandlerClass = SimpleHTTPRequestHandler
+ServerClass = http.server.HTTPServer
+Protocol  = "HTTP/1.0"
+​
+if sys.argv[1:]:
+  port = int(sys.argv[1])
+else:
+  port = 8000
+server_address = ('127.0.0.1', port)
+​
+HandlerClass.protocol_version = Protocol
+httpd = ServerClass(server_address, HandlerClass)
+​
+sa = httpd.socket.getsockname()
+print("Serving HTTP on", sa[0], "port", sa[1], "...")
+httpd.serve_forever()
+​
+</pre><p><strong>範例2: 這邊檢安教大家如何修改預設的port，只要將程式檔裡的port改變(ex. port = 8060)，再執行這個程式檔，就可以囉!!</strong></p><pre class="ql-syntax">## http.server.py
+​
+​
+# -*- coding: utf-8 -*-
+import sys
+import http.server
+from http.server import SimpleHTTPRequestHandler
+​
+HandlerClass = SimpleHTTPRequestHandler
+ServerClass = http.server.HTTPServer
+Protocol  = "HTTP/1.0"
+​
+if sys.argv[1:]:
+  port = int(sys.argv[1])
+else:
+  port = 8060
+server_address = ('127.0.0.1', port)
+​
+HandlerClass.protocol_version = Protocol
+httpd = ServerClass(server_address, HandlerClass)
+​
+sa = httpd.socket.getsockname()
+print("Serving HTTP on", sa[0], "port", sa[1], "...")
+httpd.serve_forever()
+​
+</pre><p>接著執行Python檔，開啟Local Server，一樣輸入指令:</p><pre class="ql-syntax">python -m httpserver
+</pre><figure class="image"><img src="https://matters.news/@CHWang/coding%25E8%25B5%25B7%25E4%25BE%2586-python-%25E4%25B8%2580%25E8%25A1%258C%25E6%258C%2587%25E4%25BB%25A4%25E5%25B0%25B1%25E8%2583%25BD%25E8%25BC%2595%25E9%25AC%2586%25E5%25BB%25BA%25E7%25AB%258B%25E7%25B6%25B2%25E9%25A0%2581%25E4%25BC%25BA%25E6%259C%258D%25E5%2599%25A8-simple-http-server%25E5%25A5%2597%25E4%25BB%25B6-http-server%25E4%25BD%25BF%25E7%2594%25A8%25E6%2595%2599%25E5%25AD%25B8-bafyreibuvns63l345bbwa2drrkogydze5sx7xgbzjzxxeujbtf37oj6nhy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.webp" onerror="this.srcset='https://assets.matters.news/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.png" onerror="this.srcset='https://assets.matters.news/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.webp">
+
+        <img src="https://assets.matters.news/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.png" srcset="https://assets.matters.news/processed/540w/embed/7a660366-d456-40f0-8426-86f5fc71d7a8.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p>結果就會發現，預設的Port改變成8060囉</p><p><br></p><p><br></p><p><strong>﻿希望這次也有幫助到大家~~</strong></p><p><br></p><p><br></p><h2><strong>Reference:</strong></h2><p><a href="https://blog.gtwang.org/web-development/python-simplehttpserver-web-server/" target="_blank">https://blog.gtwang.org/web-development/python-simplehttpserver-web-server/</a></p><p><a href="https://www.afternerd.com/blog/python-http-server/" target="_blank">https://www.afternerd.com/blog/python-http-server/</a></p><p><a href="https://shengyu7697.github.io/blog/2019/11/27/Python-simple-web-server/" target="_blank">https://shengyu7697.github.io/blog/2019/11/27/Python-simple-web-server/</a></p><p><a href="https://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python" target="_blank">https://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python</a></p><p><a href="https://www.itread01.com/content/1547851700.html" target="_blank">https://www.itread01.com/content/1547851700.html</a></p><figure class="image"><img src="https://matters.news/@CHWang/coding%25E8%25B5%25B7%25E4%25BE%2586-python-%25E4%25B8%2580%25E8%25A1%258C%25E6%258C%2587%25E4%25BB%25A4%25E5%25B0%25B1%25E8%2583%25BD%25E8%25BC%2595%25E9%25AC%2586%25E5%25BB%25BA%25E7%25AB%258B%25E7%25B6%25B2%25E9%25A0%2581%25E4%25BC%25BA%25E6%259C%258D%25E5%2599%25A8-simple-http-server%25E5%25A5%2597%25E4%25BB%25B6-http-server%25E4%25BD%25BF%25E7%2594%25A8%25E6%2595%2599%25E5%25AD%25B8-bafyreibuvns63l345bbwa2drrkogydze5sx7xgbzjzxxeujbtf37oj6nhy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><p><br></p><figure class="image"><img src="https://matters.news/@CHWang/coding%25E8%25B5%25B7%25E4%25BE%2586-python-%25E4%25B8%2580%25E8%25A1%258C%25E6%258C%2587%25E4%25BB%25A4%25E5%25B0%25B1%25E8%2583%25BD%25E8%25BC%2595%25E9%25AC%2586%25E5%25BB%25BA%25E7%25AB%258B%25E7%25B6%25B2%25E9%25A0%2581%25E4%25BC%25BA%25E6%259C%258D%25E5%2599%25A8-simple-http-server%25E5%25A5%2597%25E4%25BB%25B6-http-server%25E4%25BD%25BF%25E7%2594%25A8%25E6%2595%2599%25E5%25AD%25B8-bafyreibuvns63l345bbwa2drrkogydze5sx7xgbzjzxxeujbtf37oj6nhy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure>

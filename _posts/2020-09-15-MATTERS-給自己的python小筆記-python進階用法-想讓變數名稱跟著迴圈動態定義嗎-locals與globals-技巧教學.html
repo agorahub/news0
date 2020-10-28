@@ -1,0 +1,119 @@
+---
+layout: post
+title: '給自己的Python小筆記: Python進階用法- 想讓變數名稱跟著迴圈動態定義嗎- Locals與Globals 技巧教學'
+date: 2020-09-15 15:46:35.000000000 +00:00
+categories: matters
+tags: blog
+author: 為自己Coding
+---
+
+<h1><br></h1><p><a href="https://github.com/chwang12341/Learn-Python-/tree/master/Globals_and_Locals" target="_blank">Github完整程式碼連結</a></p><p><br></p><p>哈囉哈囉，今天想跟大家介紹一個我在工作中常用到的一個小技巧，由於職業的關係，我時常需要導入數據，並賦予不同的變數名稱來同時操作這些不同時間點錄下的資料，但如果想要同時對這種眾多檔案進行一樣的數據處理，總不能要我一個一個定義變數名稱給它們，然後再一個一個進行數據處理，這樣我就沒時間回家寫文章了XD，所以今天要來分享給大家這個，我覺得非常實用的技巧</p><h2><strong>問題1: 如果今天遇到一個需要我們定義很多連續變數的值時，我們該怎麼做呢?</strong></h2><h4><strong>範例1: 一般的作法，我們會分別定義每個變數的值，然後再使用它們</strong></h4><pre class="ql-syntax">number1 = 1
+number2 = 2
+number3 = 3
+number4 = 4
+number5 = 5
+number6 = 6
+number7 = 7
+number8 = 8
+number9 = 9
+number10 = 10
+​
+​
+print(number1)
+print(number2)
+print(number3)
+print(number4)
+print(number5)
+print(number6)
+print(number7)
+print(number8)
+print(number9)
+print(number10)
+</pre><figure class="image"><img src="https://matters.news/@CHWang/%25E7%25B5%25A6%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584python%25E5%25B0%258F%25E7%25AD%2586%25E8%25A8%2598-python%25E9%2580%25B2%25E9%259A%258E%25E7%2594%25A8%25E6%25B3%2595-%25E6%2583%25B3%25E8%25AE%2593%25E8%25AE%258A%25E6%2595%25B8%25E5%2590%258D%25E7%25A8%25B1%25E8%25B7%259F%25E8%2591%2597%25E8%25BF%25B4%25E5%259C%2588%25E5%258B%2595%25E6%2585%258B%25E5%25AE%259A%25E7%25BE%25A9%25E5%2597%258E-locals%25E8%2588%2587globals-%25E6%258A%2580%25E5%25B7%25A7%25E6%2595%2599%25E5%25AD%25B8-bafyreif5yu3avcbm7kvactd3i7ymq5rktsrdz7j4y6oarntob77whrnjyy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.webp" onerror="this.srcset='https://assets.matters.news/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.png" onerror="this.srcset='https://assets.matters.news/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.webp">
+
+        <img src="https://assets.matters.news/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.png" srcset="https://assets.matters.news/processed/540w/embed/41c7419f-0f77-4276-9e5a-d70981e383aa.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><strong>小提醒: 這樣的作法，確實也可以達到我們要的目的，但是如果今天變數一變多，我們有1000個以上的時候，總不能這樣慢慢定義每個變數，會寫到天荒地老，哈哈，所以接下來我們就來看看今天的主角: locals()與globals()如何幫助我們快速實現目的</strong></p><h4><strong>範例2: locals與globals簡單變換變數名稱的運用</strong></h4><ul><li>locals()</li></ul><pre class="ql-syntax">for i in range(1,10):
+  locals()['number'+str(i)] = i
+  print('Print In Once: ', locals()['number'+str(i)])
+</pre><ul><li>globals()</li></ul><pre class="ql-syntax">for i in range(1,10):
+  globals()['number'+str(i)] = i
+  print('Print In Once: ', globals()['number'+str(i)])
+  
+print(number1)
+print(number2)
+print(number3)
+print(number4)
+print(number5)
+print(number6)
+print(number7)
+print(number8)
+print(number9)
+</pre><figure class="image"><img src="https://matters.news/@CHWang/%25E7%25B5%25A6%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584python%25E5%25B0%258F%25E7%25AD%2586%25E8%25A8%2598-python%25E9%2580%25B2%25E9%259A%258E%25E7%2594%25A8%25E6%25B3%2595-%25E6%2583%25B3%25E8%25AE%2593%25E8%25AE%258A%25E6%2595%25B8%25E5%2590%258D%25E7%25A8%25B1%25E8%25B7%259F%25E8%2591%2597%25E8%25BF%25B4%25E5%259C%2588%25E5%258B%2595%25E6%2585%258B%25E5%25AE%259A%25E7%25BE%25A9%25E5%2597%258E-locals%25E8%2588%2587globals-%25E6%258A%2580%25E5%25B7%25A7%25E6%2595%2599%25E5%25AD%25B8-bafyreif5yu3avcbm7kvactd3i7ymq5rktsrdz7j4y6oarntob77whrnjyy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/8404b523-b301-403a-859e-973a30ef2e72.webp" onerror="this.srcset='https://assets.matters.news/embed/8404b523-b301-403a-859e-973a30ef2e72.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/8404b523-b301-403a-859e-973a30ef2e72.png" onerror="this.srcset='https://assets.matters.news/embed/8404b523-b301-403a-859e-973a30ef2e72.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/8404b523-b301-403a-859e-973a30ef2e72.webp">
+
+        <img src="https://assets.matters.news/embed/8404b523-b301-403a-859e-973a30ef2e72.png" srcset="https://assets.matters.news/processed/540w/embed/8404b523-b301-403a-859e-973a30ef2e72.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><h2><strong>問題2: 如果今天在函式中定義好的變數，要怎麼在另一個函式中此用這些變數呢?</strong></h2><p><strong>從上面的結果看起來，不論是locals()還是globals()，都能達到一樣的效果呀，那它們有什麼不同?</strong></p><ul><li>locals(): 宣告為區域變數，它在使用上會遇到一個問題，在函式A中定義好的變數，不能在函式B中被使用</li></ul><pre class="ql-syntax">name_list = ['Jack', 'Eric', 'Cathy', 'Jenny', 'James', 'Gary', 'Lucy', 'Candy']
+​
+def locals_example():
+  for i in range(len(name_list)):
+    locals()['name'+str(i)] = name_list[i]
+    print(locals()['name'+str(i)])
+​
+def greet_example():
+  for n in range(len(name_list)):
+    print('locals(): Hello' + locals()['name'+str(i)])
+    
+  
+if __name__ == '__main__':
+  locals_example()
+  greet_example()
+</pre><figure class="image"><img src="https://matters.news/@CHWang/%25E7%25B5%25A6%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584python%25E5%25B0%258F%25E7%25AD%2586%25E8%25A8%2598-python%25E9%2580%25B2%25E9%259A%258E%25E7%2594%25A8%25E6%25B3%2595-%25E6%2583%25B3%25E8%25AE%2593%25E8%25AE%258A%25E6%2595%25B8%25E5%2590%258D%25E7%25A8%25B1%25E8%25B7%259F%25E8%2591%2597%25E8%25BF%25B4%25E5%259C%2588%25E5%258B%2595%25E6%2585%258B%25E5%25AE%259A%25E7%25BE%25A9%25E5%2597%258E-locals%25E8%2588%2587globals-%25E6%258A%2580%25E5%25B7%25A7%25E6%2595%2599%25E5%25AD%25B8-bafyreif5yu3avcbm7kvactd3i7ymq5rktsrdz7j4y6oarntob77whrnjyy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.webp" onerror="this.srcset='https://assets.matters.news/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.png" onerror="this.srcset='https://assets.matters.news/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.webp">
+
+        <img src="https://assets.matters.news/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.png" srcset="https://assets.matters.news/processed/540w/embed/eed89cd8-25fa-4a1d-8177-6266e349cf68.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p><strong>從最後結果發現，num0並不能在本身函式以外的地方使用，這也正是locals()宣告為區域變數的原因</strong></p><ul><li>globals(): 宣告為全域變數，變數就能在任何其他函數中使用</li></ul><pre class="ql-syntax">name_list = ['Jack', 'Eric', 'Cathy', 'Jenny', 'James', 'Gary', 'Lucy', 'Candy']
+​
+def globals_example():
+  for n in range(len(name_list)):
+    globals()['name'+str(n)] = name_list[n]
+    print(globals()['name'+str(n)])
+​
+def greet_example():
+  for n in range(len(name_list)):
+    print('globals(): Hello' + globals()['name'+str(n)])
+    
+  
+if __name__ == '__main__':
+  globals_example()
+  greet_example()
+  print(name2)
+</pre><figure class="image"><img src="https://matters.news/@CHWang/%25E7%25B5%25A6%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584python%25E5%25B0%258F%25E7%25AD%2586%25E8%25A8%2598-python%25E9%2580%25B2%25E9%259A%258E%25E7%2594%25A8%25E6%25B3%2595-%25E6%2583%25B3%25E8%25AE%2593%25E8%25AE%258A%25E6%2595%25B8%25E5%2590%258D%25E7%25A8%25B1%25E8%25B7%259F%25E8%2591%2597%25E8%25BF%25B4%25E5%259C%2588%25E5%258B%2595%25E6%2585%258B%25E5%25AE%259A%25E7%25BE%25A9%25E5%2597%258E-locals%25E8%2588%2587globals-%25E6%258A%2580%25E5%25B7%25A7%25E6%2595%2599%25E5%25AD%25B8-bafyreif5yu3avcbm7kvactd3i7ymq5rktsrdz7j4y6oarntob77whrnjyy" referrerpolicy="no-referrer"><figcaption><span></span></figcaption></figure><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.webp" onerror="this.srcset='https://assets.matters.news/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.png" onerror="this.srcset='https://assets.matters.news/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.webp">
+
+        <img src="https://assets.matters.news/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.png" srcset="https://assets.matters.news/processed/540w/embed/a5c85d7e-b5b3-4098-a839-fe7a758e899a.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p><br></p><p>從最後結果可以看出，由於name2是被globals()宣告為全域變數的，所以最後可以成功印出</p><h2><strong>既然globals()這麼好用，那全部都用globals就好啦，為什麼還要使用locals呢?</strong></h2><p>未來當撰寫的程式碼越來越多的時候，可能會出現重複定義同一個變數名稱，就有覆寫的問題，所以要斟酌使用locals或是globals喔</p><p><strong>這篇雖然短短的，但我覺得這個技巧是可以幫助我們節省很長很長的時間，來進行數據處理，希望這次對大家也有大大的幫助~~</strong></p><p><strong>如果覺得我寫得還行，再幫我拍拍手喔，感謝您</strong></p>
