@@ -1,0 +1,121 @@
+---
+layout: post
+title: "【理解通证经济】通证篇 2：以太坊 token 的结构和「消费-投资二象性」"
+date: 2019-10-26 15:40:59.000000000 +00:00
+categories: matters
+tags: blog
+author: 不明飞行兔
+---
+
+<p><strong>【前情提要】</strong><a href="https://matters.news/@septentrium/%E7%90%86%E8%A7%A3%E9%80%9A%E8%AF%81%E7%BB%8F%E6%B5%8E-%E9%80%9A%E8%AF%81%E7%AF%87-1-%E6%9F%93%E8%89%B2%E5%B8%81-%E6%9C%80%E6%97%A9%E7%9A%84-token-zdpuAnRjF9TyxwovoQsBfHe253gG7g2Xyx6ZBnwq4BbFbDSK1" target="_blank">上一篇文章</a>中，我介绍了本系列的写作思路、论述逻辑，然后讨论了 token 萌芽染色币的结构。本章将分析以太坊上的 token（下文简写为「以太坊 token」）的结构，与染色币进行对比，然后讨论以太坊 token 是否真的具备某种新特性，这一特性是什么。</p><figure class="audio"><audio controls data-file-name="Om Du Möter Varg"><source src="https://assets.matters.news/embedaudio/00366865-d3f6-4e0f-bbc8-0f474201f046.mpga" type="audio/mpeg" data-asset-id="00366865-d3f6-4e0f-bbc8-0f474201f046"></audio><div class="player">
+      <header>
+        <div class="meta">
+          <h4 class="title">Om Du Möter Varg</h4>
+
+          <div class="time">
+            <span class="current" data-time="00:02"></span>
+            <span class="duration" data-time="03:08"></span>
+          </div>
+        </div>
+
+        <span class="play"></span>
+      </header>
+
+      <footer>
+        <div class="progress-bar">
+          <span></span>
+        </div>
+      </footer>
+    </div><figcaption><span>BGM：Detektivbyrån - Om Du Möter Varg
+（欢迎边听边读哦！）</span></figcaption></figure><h2>6  以太坊上的协议</h2><p>在<a href="https://github.com/ethereum/wiki/wiki/%5B%E4%B8%AD%E6%96%87%5D-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6" target="_blank">以太坊白皮书</a>中，<a href="https://en.wikipedia.org/wiki/Vitalik_Buterin" target="_blank">Vitalik Buterin</a> 告诉我们，以太坊上的「token」直接继承自<a href="https://www.shenliancaijing.com/portal/activity/activedetail.html?id=10976" target="_blank">染色币 token</a> 的设计思路。但是，两者性质有所不同。</p><p>根据<a href="https://matters.news/@septentrium/%E7%90%86%E8%A7%A3%E9%80%9A%E8%AF%81%E7%BB%8F%E6%B5%8E-%E9%80%9A%E8%AF%81%E7%AF%87-1-%E6%9F%93%E8%89%B2%E5%B8%81-%E6%9C%80%E6%97%A9%E7%9A%84-token-zdpuAnRjF9TyxwovoQsBfHe253gG7g2Xyx6ZBnwq4BbFbDSK1" target="_blank">上一篇</a>结尾得出的结论，染色币的第一个根本逻辑是：</p><blockquote>用一个参考系里的账目变动映射另一个参考系里的账目变动，交易者对两个参考系有共同的知识，对两种账目变动有共同的知识，从而对映射关系（即交易）有共同的知识。</blockquote><p>要从这个维度上对以太坊和染色币的区别进行比较，需要首先确定，对于以太坊 token 而言，是什么物品映射了什么物品，两个参考系分别是怎样的。</p><p>染色币处于 token 发展早期，人们对「映射资产」这件事的想象力还未释放出来。以太坊的时代则不同，以太坊上的诸多项目推介给人们交易的资产种类繁多，但往往不是一幅画、一套房子、一份股票（这些资产在区块链外的市场上已经取得法币价格，亦有相对成熟的衍生品市场），而是由程序构造出的协议（即<a href="https://www.chainnews.com/articles/891681682372.htm" target="_blank">智能合约</a>，以及基于智能合约的 <a href="https://medium.com/@c1088kiss/dapp%E9%96%8B%E7%99%BC-%E7%B5%90%E5%90%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-%E4%B8%8D%E6%98%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E6%88%91%E4%B9%9F%E6%83%B3%E4%BA%86%E8%A7%A3-9487dfa22e1b" target="_blank">DApp</a>）。</p><p><strong>协议上线时 token 会自动发行，使用协议就等价于使用 token。协议运行的过程就是 token 流通的过程，token 流通的过程也是协议运行的过程。</strong></p><p>各种各样的区块链项目，各种各样的协议，与 Facebook、淘宝一样，也都是所谓的「互联网产品」（这句话很简单，但很重要，之后还会拿出来多次）。</p><p>项目方做了一个产品，在市场上的第一个目标，就是说服更多人成为自己产品的用户。</p><p>像注册一个普通的互联网产品一样，用户们想要使用协议产品，首先要加入该协议。</p><blockquote>加入的<a href="https://www.chainnews.com/articles/551088337284.htm" target="_blank">方式</a>：开通一个标志自己身份的钱包，然后在以太坊上买入该项目开发的基于 ERC 标准的 token，钱包将接收这笔 token。</blockquote><p>同样，像使用一个普通的互联网产品一样，注册后的用户可以使用该协议。</p><blockquote>使用的<a href="https://www.gamesd.app/how-to-play-dapp-games" target="_blank">方式</a>：就是用这部分 token 与他人交易。智能合约检测不同场景、不同类型、不同程度的用户行为，用户行为满足一定标准后，触发合约，根据合约，token 将从一个用户处交易至另一个用户（或机器人）处。交易是互相的，站在供给方角度，就是卖出行为，站在需求方角度，就是买入行为。</blockquote><p>简言之，对于以太坊上的协议产品：</p><blockquote><strong>注册 = 开通钱包买 token</strong></blockquote><blockquote><strong>使用 = 与他人交易</strong></blockquote><h2>7  加密猫：使用 = 单向交易</h2><p>这种注册和使用产品的方式，与常见的中心化互联网产品相比，看上去有点不同。</p><p>下面拿 17 年底曾风靡一时的「加密猫」游戏举例。加密猫（<a href="https://en.wikipedia.org/wiki/CryptoKitties" target="_blank">CryptoKitties</a>）是一个典型的区块链产品，基于以太坊 ERC-721 标准发行 token，基于智能合约运行，一度运营得比较成功。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.webp" onerror="this.srcset='https://assets.matters.news/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.png" onerror="this.srcset='https://assets.matters.news/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.webp">
+
+        <img src="https://assets.matters.news/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.png" srcset="https://assets.matters.news/processed/540w/embed/c7672106-7ec7-4a67-9e89-2c89e1eacb87.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>图片来源：https://blockgeeks.com/guides/cryptokitties/</span></figcaption></figure><p>要<a href="https://zhuanlan.zhihu.com/p/31720278" target="_blank">「注册」加密猫</a>，第一步就是开通一个钱包，然后在加密猫市场上买一只「猫」，一只猫对应一个根据 CryptoKitties 智能合约发行的 token。</p><p><a href="https://zhuanlan.zhihu.com/p/31780868" target="_blank">加密猫的玩法</a>比较简单，共五种：买（购买相对低价值但有潜力的猫）、租（租属性好的异性猫用来配对）、生（繁殖新猫）、卖（出售相对高价值的新猫）、拍卖（拍卖顶级价值的新猫），分别对应[五种不同类型的智能合约]。显然，这五种智能合约都是某种形式的「交易」。</p><p>由于区块链的账本是实时、公开、透明的，加密猫从上线到你读这句话的这一瞬间的<a href="https://etherscan.io/token/0x06012c8cf97bead5deae237070f9587f8e7a266d?a=0xb1690c08e213a35ed9bab7b318de14420fb57d8c" target="_blank">全部历史游戏数据</a>都可以在以太坊的智能合约数据平台上一览无余，只是读不懂合约代码的普通玩家看不懂这些数据。在我写这段话的时刻（2019 年 10 月 1 日 8:49），共有 79486 个用户持有 1711246 只加密猫，两年来全部玩家的全部游戏行为就是 1853617 次智能合约交易。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/00b30548-4971-4a70-99cd-6fdad4df5483.webp" onerror="this.srcset='https://assets.matters.news/embed/00b30548-4971-4a70-99cd-6fdad4df5483.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/00b30548-4971-4a70-99cd-6fdad4df5483.png" onerror="this.srcset='https://assets.matters.news/embed/00b30548-4971-4a70-99cd-6fdad4df5483.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/00b30548-4971-4a70-99cd-6fdad4df5483.webp">
+
+        <img src="https://assets.matters.news/embed/00b30548-4971-4a70-99cd-6fdad4df5483.png" srcset="https://assets.matters.news/processed/540w/embed/00b30548-4971-4a70-99cd-6fdad4df5483.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>这一点与中心化游戏产品相比是革命性的变化，传统的游戏开发商是不可能让玩家像上帝一样看到游戏数据的，这是 GM 的特权。</p><p>所有这些游戏数据就是一本名为 CryptoKitties 的账本，账本上有「in」和「out」两个方向，即「贷」和「借」。用户每次玩加密猫的行为——即<strong>每一次使用产品的行为，都对应于记录在账本上的一次单向交易。</strong></p><h2>8  我映射我自己</h2><p>现在，从染色币的「用一个 token 作凭证映射一种资产」且「映射关系两边都是账目变动」这套思路出发：</p><blockquote>第一，映射资产的凭证。染色币 token 的凭证一层，是染色的小额比特币，本质上是矿工记录在比特币区块链账本上的这一份小额比特币的账目变动。那么，用这一结论类比以太坊上的加密猫 token，<strong>加密猫的凭证部分，就是智能合约驱动的由矿工记录在以太坊区块链上的账目变动</strong>；</blockquote><blockquote>第二，凭证映射的资产。染色币 token 所映射的资产，本质上是实物资产产权账本的账目变动。同样，用这一结论类比加密猫 token 所映射的资产，那就是用户购买和饲养的加密猫本身，但这个猫本身就是 token，猫的产权记录在以太坊公链上，买卖猫的交易就是以太坊上的智能合约交易——所以，<strong>加密猫 token 映射的资产，同样是以太坊上记录的智能合约交易时的账目变动</strong>。</blockquote><p><strong>加密猫：「我映射我自己！」</strong></p><p><strong>加密猫 token 的凭证部分和资产部分，都是同样的智能合约交易时的账目变动。这就等价于，染色币具有的那种映射关系，在以太坊 token 这里根本不存在。</strong></p><p>相应的，<strong>因为映射关系不存在，所以并不需要一个中心化的代理去负责承兑，不像染色币那样有两本私账，而是只有一本公账。</strong>这本公账由区块链上的所有 Miner、Validator 和 Attestor 共同记录和保真，它们都是计算机，整个机制自动化运行。虽然背后是人类所有者，但他们只为计算机提供运行环境的，并不进入机制内部。</p><h2>9  以太坊 token 的根本逻辑</h2><p>对照染色币 token 的根本逻辑：</p><blockquote>1. 用一个参考系里的账目变动映射另一个参考系里的账目变动，交易者对两个参考系有共同的知识，对两种账目变动有共同的知识，从而对映射关系（即交易）有共同的知识；</blockquote><blockquote>2. 这一映射关系由资产发行方单方面向投资者认证、承兑。</blockquote><p>看一下以太坊 token 的根本逻辑：</p><blockquote><strong>1. 不存在凭证与资产（两个参考系下的两种账目变动）的映射关系，只有一个参考系和一种账目变动，所有交易者的所有共同知识被记录下来形成了这个参考系，账目变动是其中的一条被记录的共同知识；</strong></blockquote><blockquote><strong>2. 这些共同知识由一套无人干预、自动化运行的计算机网络记录和保真。</strong></blockquote><p>可以看出，以太坊上的 token 比之染色币，一方面结构更简单，另一方面让人为因素不再成为整个系统的主导因素。</p><p>也就是说，<strong>虽然二者都使用 token 这个词，但其实是两种不同的东西</strong>。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/68805303-efab-4666-ad3c-1a2bdac5e606.webp" onerror="this.srcset='https://assets.matters.news/embed/68805303-efab-4666-ad3c-1a2bdac5e606.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/68805303-efab-4666-ad3c-1a2bdac5e606.jpeg" onerror="this.srcset='https://assets.matters.news/embed/68805303-efab-4666-ad3c-1a2bdac5e606.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/68805303-efab-4666-ad3c-1a2bdac5e606.webp">
+
+        <img src="https://assets.matters.news/embed/68805303-efab-4666-ad3c-1a2bdac5e606.jpeg" srcset="https://assets.matters.news/processed/540w/embed/68805303-efab-4666-ad3c-1a2bdac5e606.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>染色币和以太坊的 token 结构</span></figcaption></figure><p>在通证经济的怀疑论一节，我提出首先要搞清楚 token 是一个有意义的新概念，还是新瓶装旧酒，通过上面的分析，可以看出，染色币的结构其实是新瓶装旧酒，类似传统的纸币、债券、衍生品，以太坊 token 从结构上看似乎有点新东西，但仅凭这些不能定论。</p><p>如果真的有新东西，那么这个新东西是什么呢？</p><h2>10  Token 价值与协议价值</h2><p>套用讨论染色币时提到的借条喻：在以太坊上，交易双方不区分便签和 1000 元。「借债」就相当于以太坊上的一个基于智能合约的协议，1000 元，约合 1 ETH（以太坊货币符号）。</p><p>依本章第六节所述：协议的运行就是 token 的流通，token 的流通就是协议的运行。借债就是交付 1 ETH，交付 1 ETH 就是借债，不需要任何外在的、形式上的东西去代表「这是借债」这个信息，因为这个信息内含于你借给我的那 1000 元钱里，或者说，<strong>这个信息被编成程序写进了这 1000 元钱里面。</strong>流行的说法把这一点总结为「<a href="https://www.leiphone.com/news/201808/vLmQdQ9huk4phk17.html" target="_blank">可编程货币</a>」。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.webp" onerror="this.srcset='https://assets.matters.news/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.png'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.png" onerror="this.srcset='https://assets.matters.news/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.png'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.webp">
+
+        <img src="https://assets.matters.news/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.png" srcset="https://assets.matters.news/processed/540w/embed/6a23ebfd-ed36-40ec-a626-9b69d7b79014.png" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>可编程货币与其他大类资产的对比
+（图片来源：https://medium.com/@ElectricCapital/programmable-money-79e16dc7bfca）</span></figcaption></figure><p>由于 token 运行于协议上，每一笔 token 交易都有下面这种效果：</p><p>两个用户交易 token，协议也因此运行了起来，协议本身所承诺的智能合约的种种特性，籍此得以落到实处，于是，协议因为 token 的交易而有了价值（效用）。这就意味着，<strong>一方面，token 本身的价值以整个协议的价值为参考系进行测量；另一方面，整个协议的价值也需要通过 token 本身的价值来体现。</strong></p><p>如果说染色币 token 的价值映射关系可以表达为「用 0.01 代表 1」，那么以太坊 token 的价值映射可以表达为「0.01 = 1/100」（注：对于加密猫这样的<a href="https://en.wikipedia.org/wiki/Non-fungible_token" target="_blank">非同质 token</a>，则是「xi = wi/100」, i 为下标，代表 token ID，x 是 token 价值，w 是 token 价值在协议总价值中的权重），也就是一种同义反复，即上一节所说的：映射关系不存在。</p><p>对于以太坊 token 的交易者，<strong>价值的参考系只有一个，就是他们所使用的 token 所在协议的整体价值</strong>，背后是大量 token 交易者（同时也是协议使用者）在交易 token（同时也是使用 token）时各自产生的主观效用。</p><p>如果 token 对不同交易者的效用水平有巨大差异，token 的价值就会剧烈波动；如果效用水平普遍较高，token 的价值就高，反之亦然；如果效用水平普遍增长，token 的价值就会增长，反之亦然。效用不是客观的东西，而是个体主观的偏好，所以，交易者普遍的效用增长，意味着大量交易者正在主观认知到「自己获取的效用在增长」这件事，许多人共同主观认知到一件事，就是所谓的「共识」。这也就是为什么加密货币投资者普遍感觉「共识很重要」的根本原因。（也可以解释目前的加密货币市场为什么有着剧烈波动：因为交易者之间对 token 的效用水平的认识在时间和空间上都有着巨大差异，都在快速变化，所以，波动剧烈根本不是加密货币的「特性」，仅仅是一种历史性的局部市场现象。）</p><h2>11  双向交易 = 消费</h2><p>现在回到「区块链项目也是互联网产品」这句话上来。前面说到，项目方的第一个目标，是让更多人使用产品；现在说一下项目方的第二个目标——让更多人购买自家的产品。</p><p>消费者行为理论把消费定义为消费者「为了满足需要而在物品上分配收入，以利用物品的效用」；日常生活中，一般讲到消费，指的同样是「买下来然后用掉」的过程，即，消费 = 买 + 用。</p><p><strong>第六节的论证说明，在以太坊上，使用 = 交易。这是站在上帝视角上说的。站在持有 token 的消费者的主观视角上，使用 token 的这个「交易」行为其实就是把 token 卖出去。</strong></p><p> 把上述两个命题联立起来，可以得出：<strong>消费 = 买 + 用 = 买 + 卖 = 买卖？</strong></p><p>为了解释这个逻辑，还是以加密猫为例。</p><blockquote>首先，你要使用以太坊来买猫，以太坊自己也是一套协议，为了使用以太坊，你要买入以太坊，它是一种 token。</blockquote><blockquote>然后，你拿着以太坊去买猫，买完以后，你手里的以太坊没了，但你有了一个加密猫——也是一种 token，你手里持有的东西由一种 token 变成了另外一种 token。</blockquote><blockquote>作为消费者，如果想把加密猫「用掉」，有三种办法。</blockquote><blockquote>第一种是把这只猫卖出去，从而失去这只猫，但你又获得了以太坊，还是 token；</blockquote><blockquote>第二种是忘记自己的钱包私钥，全世界都会永久失去对这只猫的控制权；</blockquote><blockquote>第三种是整个以太坊失去全部矿工或所有数据全被销毁从而停止运行。</blockquote><blockquote>除此之外没有别的方法可以「用掉」加密猫。后面两种极端情形可以类比苹果不吃放到腐烂；第一种相当于什么，把苹果转卖给别人？而苹果的常识「用法」，吃掉，却似乎在这里找不到对应物。</blockquote><p>这样的推理的结果是：我作为一个消费者，消费一个苹果，等价于把这个苹果买下来，然后再卖出去？</p><p>可是，理论和常识都要求我们这样推理：消费一个苹果，应该等价于把这个苹果买下来，然后吃掉（利用它的效用）。</p><p>如果两个推论都为真，联立二者，可以得出第三个推论：<strong>把苹果卖掉 = 把苹果吃掉 = 利用它的效用</strong>。根据第七节，<strong>这个推论在以太坊上是成立的</strong>，使用 = 单向交易；但对于苹果的例子，这似乎是反常识的。</p><p>是语言和常识在此施展了障眼法。</p><p>加密猫是一个游戏 DApp，当人们「使用」一个游戏产品时，使用的是其娱乐价值。娱乐价值是信息价值，如果游戏已经打通关，游戏对玩家而言就会失去信息，变得无聊，从而失去娱乐价值。所以，加密猫游戏作为一个游戏产品的价值是可以以类似「吃掉」的方式被「用掉」的。</p><p>但是，游戏中单个的一只加密猫（一个 token），就好比传统游戏中的一个道具。比如一把剑，玩家有两种方式使用这把剑，一种是把它当作不具备使用价值的普通掉落，直接卖掉，换成金币再去买其他道具；另一种是砍怪，实际发生的事情是玩家角色与系统或与其他玩家之间有一次数据交换，数据交换的结果是怪的血量下降，武器的耐久度也下降，使用的次数多了，武器就会报废，这把剑就被「用掉」了。</p><p>对于苹果的例子，也是同样：苹果也有两种「用掉」的方法，一种是卖给其他人（赠送也是「买卖」，交换人际关系）；另一种是「把苹果吃掉」，苹果包含了支持人体生命活动的能量，吃苹果消耗掉的只是苹果的形式，组成苹果的物质永远都在，并不会消失，只是转变了形式，而在这个转变过程中，人体获得了能量，有序性提高，熵降低。在「消费苹果」这个行为中，人需要的是健康，吃苹果相当于人体与苹果之间发生数据交换，人把苹果「卖给了自己的身体」，利用苹果的效用，交换到了健康。</p><p>从这个角度看，消费一个加密猫 token 与消费一个苹果，就没有本质上的不同了。之所以观感上两种消费不太一样，是因为苹果吃下去以后，我们的意识不去注意、也很难去注意「组成这个苹果的这些水、糖和维生素分子」的具体去向，这些「分子 token」的流向对我们来说不可追溯。从常识的观点看上去，就是苹果被「consume」（消耗）掉了；以太坊 token 被使用后，区块链账本就有清晰、实时的关于 token 去向的记录，可追溯，所以很容易被我们的意识注意到。</p><p>所以，本节的结论是：</p><p><strong>对于以太坊上的 token 而言，消费的本质，是从一个交易对象处买入某资源，再把该资源卖给另一个交易对象，是同时包含「买入」与「卖出」两个方向的交易活动。</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/514e591e-e0eb-4005-8538-972e70d952cc.webp" onerror="this.srcset='https://assets.matters.news/embed/514e591e-e0eb-4005-8538-972e70d952cc.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/514e591e-e0eb-4005-8538-972e70d952cc.jpeg" onerror="this.srcset='https://assets.matters.news/embed/514e591e-e0eb-4005-8538-972e70d952cc.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/514e591e-e0eb-4005-8538-972e70d952cc.webp">
+
+        <img src="https://assets.matters.news/embed/514e591e-e0eb-4005-8538-972e70d952cc.jpeg" srcset="https://assets.matters.news/processed/540w/embed/514e591e-e0eb-4005-8538-972e70d952cc.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>常识中的消费概念与 token 的消费概念</span></figcaption></figure><p>在实物商品市场上，消费被描绘成关于「买」或「占有」的狂热，「消费者」一词几乎等同于买家，消费主义被理解为消费者被操纵、被鼓动的集体情绪。一些国家的垃圾分类和回收乱象，某种程度上也是社会将消费片面视作「买」而忽视消费者作为卖家的角色酿成的恶果。</p><p>以太坊 token 揭示出消费者作为卖家的一面，更加类似生物学中的消费者，异养生物摄取已经存在的有机物，排出的终产物又是食物链上其他生物摄取的有机物。在整个加密货币经济中，消费者买入 token，为了使用协议把 token 卖出，通过这个过程可能又获得其他 token，整个经济链条上人人买卖，买卖环环相扣。传统实体经济的产业链条虽然也是上下游环环相扣，但单个环节的市场化程度不一定高，加之信息成本高，每个环节上都可能出现锁定和合约套牢的现象，相比之下，区块链可能提供了更理想的产业链条的组织条件。</p><h2>12  消费与投资</h2><p>一方面，根据对以太坊 token 结构的分析，我们知道，在以太坊上，消费者买到的东西是 token，由于不存在任何映射关系，所以消费者买到手的，就是作为资产本身的 token，而不是代表资产的某种代金券、票据、证券。</p><blockquote><strong>作为苹果的 token：</strong>买到的 token 虽然看似是虚拟的，其实是一种实物资产，这个资产是可以拿来使用的。它不是用廉价的东西代表贵重的东西，而就是用自己的价值代表自己的价值；它不是一张纸币、一张欠条、一张股票，它更像是一个苹果，一个苹果就是一个苹果，不代表什么，不映射其他的资产，自己就是自己。</blockquote><p>另一方面，Token 是资产本身的同时，也是它所在协议整体价值的一部分，所以，买入 token，又相当于买入了协议整体价值的一部分。如果协议整体价值提高了，token 的价值也会提高，反映在加密货币市场上就是 token 的价格提高了，反之亦然。</p><p>比方说加密猫项目最火的那段时间，一只名贵品种的加密猫可以卖到数十万美元，现在热潮退去，一只猫只能卖几美元。Token 的价值与整个项目的价值是一荣俱荣、一损俱损的关系。</p><blockquote><strong>作为股票的 token：</strong>前面说以太坊 token 像一个苹果，可是买了一个苹果，不会买到整个苹果园价值的一部分，买完以后，苹果价格上涨或下跌，也与买苹果的人再无关系；从这个角度看，token 倒是更像一张纸币、一张股票，全国经济通货膨胀，每张纸币都会贬值，公司业绩下滑，每份股票都会下跌。</blockquote><p><strong>说 token 像苹果不像股票时，我强调的是用户买入作为实物资产的 token；</strong></p><p><strong>说 token 像股票不像苹果时，我强调的是用户买入作为协议整体价值一部分（分数所有权）的 token。</strong></p><p><strong>前者一般被视作消费行为，后者一般被视作投资行为。</strong></p><p>当前的加密货币市场上，大多数交易者的主要角色不是用户，而是投资者或者投机者，而且一方面，他们参与交易的主观目的是投资，另一方面，大多数人是在中心化的交易所进行交易，并不在智能合约和 DApp 里交易。</p><p>协议用户显然是 token 的用户和消费者，但他们也是这种 token 的投资者；交易所里的交易者则仅仅是财务投资者。这两种人虽然都是所谓的「投资者」，但并非同一语境下的投资者。前者的交易行为本身就在影响协议的整体价值，后者的交易行为对协议没有直接影响。事实上，中心化交易所里的投资者所持有的「加密货币」是真正意义上的纸币，他们交易的仅仅是交易所基于自身信用发行的数字积分，交易所以这些积分为凭证承兑真正在区块链上的加密货币，交易者在提现之前，都并没有真正持有 token，更谈不上使用 token。</p><p>也就是说，交易所里的交易者的交易行为仅仅是投资行为，消费行为并未发生。</p><p><strong>而在基于智能合约的 DApp 上，用户的消费行为与投资行为同步发生。</strong></p><p>比特币本身就是一个 DApp，是第一个也是规模最大的 DApp。</p><p>比特币用于消费的效用就是「转账」，买入一笔相当于一万美金的比特币，就是获得了「转账一万美金」的效用，全部转账给他人，就是消耗掉了「转账一万美金」的效用，这是一种消费行为，比特币在这里相当于苹果。</p><p>与此同时，现在市场上一共有 1800 万个比特币，你买入一万美金的比特币的时刻，美元总体的购买力下降了，比特币总体的购买力上升了，平均到每一个比特币头上，每个比特币的美元价格也上升了。这又是一种投资行为，比特币在这里相当于股票。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.webp" onerror="this.srcset='https://assets.matters.news/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.jpeg" onerror="this.srcset='https://assets.matters.news/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.webp">
+
+        <img src="https://assets.matters.news/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.jpeg" srcset="https://assets.matters.news/processed/540w/embed/812c6f1b-593b-4b03-812f-2c8f714bc1bb.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>无论是以太坊上的加密猫，还是比特币，<strong>都具备这样一种消费与投资同步的性质</strong>。</p><p><strong>投资是买进卖出的双向交易，而根据上一节的分析，消费也是买进卖出的双向交易。</strong>投资或消费，token 主要承担这两种职能中的哪一种，似乎仅仅取决于我强调哪一种，或者说，用户自己关注哪一种。</p><p><strong>对于以太坊 token，投资和消费是用两个概念在说同一件事，并非两件事。观察者决定了用户的交易行为是投资还是消费。</strong></p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.webp" onerror="this.srcset='https://assets.matters.news/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.jpeg" onerror="this.srcset='https://assets.matters.news/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.webp">
+
+        <img src="https://assets.matters.news/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.jpeg" srcset="https://assets.matters.news/processed/540w/embed/0b6e8f53-f7ee-4803-bed8-9165349700e9.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span></span></figcaption></figure><p>也许可以说：Token 具有一种「消费-投资二象性」。</p><h2>13  「消费-投资二象性」</h2><p>人们经常说，教育是一种投资，同时，教育显然也是一种消费。当父母花钱在子女的教育上时，就投资了子女的成长。政府进行大规模公共基础设施建设，是一笔公共消费支出，但同时也投资了实体经济，尤其是投资了能源、制造、建筑、通讯等基础行业的发展，进而带动其他下游产业发展。</p><p>这种「消费即投资」现象的结构是这样的：</p><p>父母手中有法币，用法币进行消费，买到教育服务，法币和教育服务都是资产，是两种不同类型的资产，然后，父母再用教育服务这种资产投资了子女的人力资本；国家手中也有法币，买到基础设施，二者也都是资产，不同类型的资产，然后，国家再用基础设施这种资产投资了实体经济。</p><p><strong>而以太坊和比特币的消费和投资关系是这样的：协议的用户（即消费者）买到一个 token，购买的瞬间，这个 token 就自动投资了整个协议，即用一个 token 投资了所有的 token。</strong></p><p>如果用以太坊的逻辑类比前面的两个例子，相当于是父母买了教育服务，从而瞬间投资了全世界所有的教育体系；国家今年采购了这一批基础设施项目，从而瞬间投资了全中国已建、在建的所有基础设施项目。这个结论看起来是相当吊诡的。</p><p>也就是说，token 的消费-投资二象性与常识里人们对消费与投资关系的认识是不同的。</p><p>经济学家 <a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%96%87%C2%B7%E8%B4%B9%E9%9B%AA" target="_blank">Irving Fisher</a> 早就揭示出这一点，他认为，<strong>「投资和消费并没有什么本质的区别，投资只不过是在时间维度上的平衡消费」</strong>。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.webp" onerror="this.srcset='https://assets.matters.news/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.jpeg" onerror="this.srcset='https://assets.matters.news/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.webp">
+
+        <img src="https://assets.matters.news/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.jpeg" srcset="https://assets.matters.news/processed/540w/embed/76e001d4-83a3-43b8-b37c-7ef0126553b6.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>Irving Fisher（图片来源：https://www.famouseconomists.net/irving-fisher）</span></figcaption></figure><p>我为了投资买入比特币，在持有它的一段时间里，我忽然有了转账的需求，于是我把它转帐给他人，从而「用掉」了这个比特币「用来转帐」的「效用」。</p><p>又或者我为了转帐一万美金，买了价值一万美金的比特币，结果还没转帐之前，比特币忽然暴涨 40%，一个简单的转帐动作对我而言有了投资的意义，因为我的需求没有变，还是「转账一万美金」，但在满足需求之后，我的财产多了 4000 美金。</p><p>一方面，人们在二级市场上投资一家公司时，能够清楚地意识到「我在投资一家公司」，但不会想到股票有什么特定的使用价值，如果一定要问股票时做什么用的，人们只会说，是用来赚钱的——即投资。</p><p>另一方面，家长在购买教育服务时，也能够清楚地意识到「我在消费一份教育服务」，但不会认为自己在投资教育市场。</p><p>事实上，股票也可以用来进行财产转移，但人们一般用银行满足这个需求，这是社会经济高度<strong>分工</strong>后的结果。</p><p>教育问题上也是一样，对于学生人数极少、收费有捐赠性质的私立贵族学校，家长购买教育服务的同时，事实上就是在投资这所学校，通过投资这所学校来投资自己子女的教育，但普通人上的有<strong>标准化</strong>学费和教学体系的公立学校就没什么可投资的了。</p><p><strong>社会分工和标准化会降低社会运行的交易费用，从而让更多人能享受到更低成本的产品和服务。在这个过程中，投资与消费的边界渐渐清晰起来。</strong></p><p>可是，许多人仍然使用比特币的转帐功能，满足自己国际汇款、大额转账、洗钱、走私交易的需求。<strong>消费与投资没有分开，这似乎应该是一种前分化的状态。然而，人们之所以选择比特币，选择加密猫，是因为在它们所专长的这些狭窄的场景里，看似前分化的状态反而能够支持更低的交易成本，正是这更低的交易成本，吸引人们反而绕开分工成熟的传统社会机构。</strong></p><p><strong>综上所述，所谓的「消费-投资二象性」并非真正意义上的新事物，更不是区块链 token 的专利，传统的商品和证券也都具备这一性质；新的东西在于，对于区块链 token，不管是比特币还是以太坊上的各种 token，这种性质表现得尤为明显。</strong></p><p><strong>更准确的说：对于区块链 token，如果你想消费，你会发现消费有明显的投资效应；如果你想投资，你会发现投资能发挥与消费同等的作用。</strong></p><p>这种现象在实体经济中也能找到：比如爱狗的人养许多只狗，同时也繁殖幼犬用于销售——跟加密猫的逻辑一模一样。</p><p>对比农民购买玉米的例子：一部分用来吃，一部分用来种出新玉米，或者一开始用来吃，吃不了了就拿来播种，这两种情况都是 Fisher 所说的「在时间上的平衡消费」；而<strong>在养狗的例子中，是观察不到这种在时间或空间上绵延的「平衡」现象的，对于养狗和加密猫的例子，消费与投资就是同一的。</strong></p><p>类似的情况还包括《西太平洋上的航海者》中的库拉圈经济：手镯和项圈用来在交换中帮助主人自我炫耀，而每交换一轮，价值都会上升。</p><figure class="image">
+      <picture>
+        <source type="image/webp" media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.webp" onerror="this.srcset='https://assets.matters.news/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.jpeg'">
+
+        <source media="(min-width: 768px)" srcset="https://assets.matters.news/processed/1080w/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.jpeg" onerror="this.srcset='https://assets.matters.news/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.jpeg'">
+
+        <source type="image/webp" srcset="https://assets.matters.news/processed/540w/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.webp">
+
+        <img src="https://assets.matters.news/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.jpeg" srcset="https://assets.matters.news/processed/540w/embed/538c15e4-0360-40c5-b297-d8ef25ae1934.jpeg" loading="lazy" referrerpolicy="no-referrer">
+      </picture>
+    <figcaption><span>Kula Ring（图片来源：https://www.eppi-online.com/2013/06/03/the-kula-ring-swap-a-bracelet-for-a-necklace/）</span></figcaption></figure><p>黄金也是如此：消费就是买入使用它「贮存价值」的效用，同时又等同于对黄金的投资。</p><p>那么，为什么 token 会比许多其他事物更能体现出消费与投资的同一性呢？比起普通的商品（苹果）和普通的证券（股票），token 有什么特殊性？它的本质究竟是什么呢？</p><p><strong>【下节预告】</strong>下一篇文章（也是《通证篇》的最后一部分），我将沿着本文的讨论路径，带领读者回溯「token」这个词的历史，清理货币、商品、证券等所有与 token 有着若隐若现关联的概念与 token 之间的关系，进而回答「token 是什么」。</p>
