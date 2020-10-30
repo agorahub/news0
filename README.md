@@ -2,15 +2,16 @@
 layout: page
 title:  NEWS⓪
 permalink: /readme/
+comments_repo: agorahub/news0
 comments_id: 3
 ---
 
 Read RSS news on demand.
 
-| Source | Importer  | Category |
-| ------ | --------- | -------- |
-| RTHK   | RSSRTHK   | rthk     |
-| CNA    | RSSCNA    | cna      |
+| Source | Importer  | Update |
+| ------ | --------- | ------ |
+| RTHK   | RSSRTHK   | 5/Day  |
+| CNA    | RSSCNA    | 4/Day  |
 
 
 ## Import and Commit
