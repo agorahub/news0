@@ -19,13 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 零新聞
-#email: theagora@github.com
 description: >- # this means to ignore newlines until "baseurl:"
   Read news on demand.
 baseurl: "/news0" # the subpath of your site, e.g. /blog
 url: "https://agorahub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: agoradao
-github_username:  agorahub
+github_username: agorahub
 
 # Build settings
 timezone: Asia/Hong_Kong
@@ -34,7 +32,6 @@ paginate: 50
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-archives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
