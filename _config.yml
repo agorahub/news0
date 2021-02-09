@@ -1,0 +1,53 @@
+# Site settings
+title: NEWS⓪
+url: 'https://agorahub.github.io'
+baseurl: '/news0'
+description: "Agora News Aggregation"
+keywords: "agora, 媒体聚合, 海外中文"
+subtitle: "墙裂时光 隙水长流"
+meta_author: theagora
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 7794B9 #FF6900
+  primary-rgb: "255,105,0"
+  secondary: 7794B9
+  secondary-dark: 7794B9 #2F4050
+
+# Footer settings
+footer:
+  copyright: AGORA COMMUNITY
+  location: Cyberspace
+  social: Websphere
+  credits: Credits
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/agoradao
+  - title: reddit
+    url: https://reddit.com/u/agoradao
+  - title: slack
+    url: https://agora-republic.slack.com
+  - title: github
+    url: https://github.com/agorahub
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: github.com/agora0
+  - line: ⓪pen source ⓵nitiative
+
+# Credits content
+credits: 'AG⓪RA is open to all <br> made with heart by theagora'
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+#for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: ""

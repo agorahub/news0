@@ -1,0 +1,43 @@
+<!-- Portfolio Modal -->
+{% for post in site.posts %}
+    <div class="portfolio-modal modal fade" id="{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- <h2>{{ post.title }}</h2> -->
+                            <!-- <hr class="star-primary"> -->
+                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            {% if post.list %}
+                              <p>
+                              {% for item in site.data[post.list] %}
+                                <a href={{ item.site }}>{{ item.name }} </a> | 
+                              {% endfor %}
+                              </p>
+                            {% endif %}
+                            {% if post.description %}
+                                <p>{{ post.description }}</p>
+                            {% endif %}
+                            {% if post.repo %}
+                              <ul class="list-inline item-details">
+                                <li><button type="button" class="btn btn-secondary"><a href="https://github.com/{{post.repo}}"><i class="fa fa-github fa-2x"></i> </a></button>
+                                </li>
+                                <li><button type="button" class="btn btn-secondary"><a href="https://github.com/{{post.repo}}/discussions"><i class="fa fa-comments fa-2x"></i> </a></button>
+                                </li>
+                              </ul>
+                            {% endif %}
+                            <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
