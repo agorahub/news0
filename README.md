@@ -6,6 +6,8 @@ comments_repo: agorahub/news0
 comments_id: 3
 ---
 
+> This branch has been no longer updated. Please visit the news0 at https://agora0.gitlab.io/news, or its landing page at https://agorahub.github.io/news0.
+
 Read RSS news on demand.
 
 | Source | Importer  | Update |
