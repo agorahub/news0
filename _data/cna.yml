@@ -1,15 +1,18 @@
-- name: 最新
+- name: 最新一週
   repo: https://gitlab.com/agora0/news
-  site: https://agora0.gitlab.io/news/cna.html
+  site: https://agora0.gitlab.io/news/cna
+- name: '2021.02'
+  repo: https://gitlab.com/agora0/pen/2102
+  site: https://agora0.gitlab.io/pen/2102/cna
 - name: '2021.01'
   repo: https://gitlab.com/agora0/pen/2101
-  site: https://agora0.gitlab.io/pen/2101/cna.html
+  site: https://agora0.gitlab.io/pen/2101/cna
 - name: '2020.12'
   repo: https://gitlab.com/agora0/pen/2012
-  site: https://agora0.gitlab.io/pen/2012/cna.html
+  site: https://agora0.gitlab.io/pen/2012/cna
 - name: '2020.11'
   repo: https://gitlab.com/agora0/pen/2011
-  site: https://agora0.gitlab.io/pen/2011/cna.html
+  site: https://agora0.gitlab.io/pen/2011/cna
 - name: '2020.10'
   repo: https://gitlab.com/agora0/pen/2010
-  site: https://agora0.gitlab.io/pen/2010/cna.html
+  site: https://agora0.gitlab.io/pen/2010/cna

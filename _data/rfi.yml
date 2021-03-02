@@ -1,18 +1,21 @@
-- name: 最新
+- name: 最新一週
   repo: https://gitlab.com/agora0/news
-  site: https://agora0.gitlab.io/news/rfi.html
+  site: https://agora0.gitlab.io/news/rfi
+- name: '2021.02'
+  repo: https://gitlab.com/agora0/pen/2102
+  site: https://agora0.gitlab.io/pen/2102/rfi
 - name: '2021.01'
   repo: https://gitlab.com/agora0/pen/2101
-  site: https://agora0.gitlab.io/pen/2101/rfi.html
+  site: https://agora0.gitlab.io/pen/2101/rfi
 - name: '2020.12'
   repo: https://gitlab.com/agora0/pen/2012
-  site: https://agora0.gitlab.io/pen/2012/rfi.html
+  site: https://agora0.gitlab.io/pen/2012/rfi
 - name: '2020.11'
   repo: https://gitlab.com/agora0/pen/2011
-  site: https://agora0.gitlab.io/pen/2011/rfi.html
+  site: https://agora0.gitlab.io/pen/2011/rfi
 - name: '2020.10'
   repo: https://gitlab.com/agora0/pen/2010
-  site: https://agora0.gitlab.io/pen/2010/rfi.html
+  site: https://agora0.gitlab.io/pen/2010/rfi
 - name: '2020.09'
   repo: https://gitlab.com/agora0/pen/2009
-  site: https://agora0.gitlab.io/pen/2009/rfi.html
+  site: https://agora0.gitlab.io/pen/2009/rfi

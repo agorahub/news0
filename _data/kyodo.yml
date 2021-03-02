@@ -1,18 +1,21 @@
-- name: 最新
+- name: 最新一週
   repo: https://gitlab.com/agora0/news
-  site: https://agora0.gitlab.io/news/kyodo.html
+  site: https://agora0.gitlab.io/news/kyodo
+- name: '2021.02'
+  repo: https://gitlab.com/agora0/pen/2102
+  site: https://agora0.gitlab.io/pen/2102/kyodo
 - name: '2021.01'
   repo: https://gitlab.com/agora0/pen/2101
-  site: https://agora0.gitlab.io/pen/2101/kyodo.html
+  site: https://agora0.gitlab.io/pen/2101/kyodo
 - name: '2020.12'
   repo: https://gitlab.com/agora0/pen/2012
-  site: https://agora0.gitlab.io/pen/2012/kyodo.html
+  site: https://agora0.gitlab.io/pen/2012/kyodo
 - name: '2020.11'
   repo: https://gitlab.com/agora0/pen/2011
-  site: https://agora0.gitlab.io/pen/2011/kyodo.html
+  site: https://agora0.gitlab.io/pen/2011/kyodo
 - name: '2020.10'
   repo: https://gitlab.com/agora0/pen/2010
-  site: https://agora0.gitlab.io/pen/2010/kyodo.html
+  site: https://agora0.gitlab.io/pen/2010/kyodo
 - name: '2020.09'
   repo: https://gitlab.com/agora0/pen/2009
-  site: https://agora0.gitlab.io/pen/2009/kyodo.html
+  site: https://agora0.gitlab.io/pen/2009/kyodo
