@@ -17,7 +17,7 @@
                             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                             {% if post.list %}
                               <p>
-                              {% for item in site.data[post.list] %}
+                              {% for item in site.data.lists[post.list] %}
                                 <a href={{ item.site }}>{{ item.name }} </a> | 
                               {% endfor %}
                               </p>
