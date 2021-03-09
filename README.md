@@ -1,19 +1,19 @@
 # NEWS⓪
 
-Landing page of the Agora News Aggregation. 👉 https://agora0.gtilab.io/news
+Landing page of the Agora News Aggregator. 👉 https://agora0.gtilab.io/news
 
-## News Aggregation
+## News Sources
 
-| [🅱🅱🅲](https://agora0.gitlab.io/news/bbc.html) | [Ⓒ🅝🅐](https://agora0.gitlab.io/news/cna.html) | [Ⓓ🅦](https://agora0.gitlab.io/news/dw.html) | [Ⓙ](https://agora0.gitlab.io/news/joins.html) | [共同社](https://agora0.gitlab.io/news/kyodo.html) | [路透社](https://agora0.gitlab.io/news/reuters.html) | [🆁🄵🅸](https://agora0.gitlab.io/news/rfi.html) | [🆁🆃🄷🄺](https://agora0.gitlab.io/news/rthk.html) |
-| :------ | :------ | :------ | :------ | :------ | :------ | :------ | :------ |
-| Monthly | Monthly | Monthly | Monthly | Monthly | Monthly | Monthly | Monthly |
+| [🅱🅱🅲](https://agora0.gitlab.io/news/bbc) | [Ⓒ🅝🅐](https://agora0.gitlab.io/news/cna) | [Ⓓ🅦](https://agora0.gitlab.io/news/dw) | [Ⓙ](https://agora0.gitlab.io/news/joins) | [共同社](https://agora0.gitlab.io/news/kyodo) | [路透社](https://agora0.gitlab.io/news/reuters) | [🆁🄵🅸](https://agora0.gitlab.io/news/rfi) | [🆁🆃🄷🄺](https://agora0.gitlab.io/news/rthk) |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| [![](./img/portfolio/bbc.png)](https://www.bbc.com/zhongwen/simp) | [![](./img/portfolio/cna.png)](https://www.cna.com.tw) | [![](./img/portfolio/dw.png)](https://www.dw.com/zh) | [![](./img/portfolio/joins.png)](https://chinese.joins.com) | [![](./img/portfolio/kyodo.png)](https://china.kyodonews.net) | [![](./img/portfolio/reuters.png)](https://cn.reuters.com) | [![](./img/portfolio/rfi.png)](https://www.rfi.fr/cn/) | [![](./img/portfolio/rthk.png)](https://news.rthk.hk/rthk/ch/) |
 
-## How To Contribute
+## How to Contribute
 
 [Agora Community](https://github.com/agorahub) is an open source driven society.
 - Join the Agora - [agorahub/_join](https://github.com/agorahub/_join)
 - Start exploring - [agorahub/_meta](https://github.com/agorahub/_meta)
-- Leave comments - [agorahub/news0/issues/3](https://github.com/agorahub/news0/issues/3)
+- Manage features - [agorahub/news0#3](https://github.com/agorahub/news0/issues/3)
 
 ## Disclaimer
 
