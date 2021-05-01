@@ -4,9 +4,9 @@ Landing page of the Agora News Aggregator. 👉 https://agora0.gtilab.io/news
 
 ## News Sources
 
-| [🅱🅱🅲](https://agora0.gitlab.io/news/bbc) | [Ⓒ🅝🅐](https://agora0.gitlab.io/news/cna) | [Ⓓ🅦](https://agora0.gitlab.io/news/dw) | [Ⓙ](https://agora0.gitlab.io/news/joins) | [共同社](https://agora0.gitlab.io/news/kyodo) | [路透社](https://agora0.gitlab.io/news/reuters) | [🆁🄵🅸](https://agora0.gitlab.io/news/rfi) | [🆁🆃🄷🄺](https://agora0.gitlab.io/news/rthk) |
+| [ⒶⒿ](https://agora0.gitlab.io/news/aj) | [🅱🅱🅲](https://agora0.gitlab.io/news/bbc) | [Ⓒ🅝🅐](https://agora0.gitlab.io/news/cna) | [Ⓓ🅦](https://agora0.gitlab.io/news/dw) | [共同社](https://agora0.gitlab.io/news/kyodo) | [路透社](https://agora0.gitlab.io/news/reuters) | [🆁🄵🅸](https://agora0.gitlab.io/news/rfi) | [🆁🆃🄷🄺](https://agora0.gitlab.io/news/rthk) |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| [![](./img/portfolio/bbc.png)](https://www.bbc.com/zhongwen/simp) | [![](./img/portfolio/cna.png)](https://www.cna.com.tw) | [![](./img/portfolio/dw.png)](https://www.dw.com/zh) | [![](./img/portfolio/joins.png)](https://chinese.joins.com) | [![](./img/portfolio/kyodo.png)](https://china.kyodonews.net) | [![](./img/portfolio/reuters.png)](https://cn.reuters.com) | [![](./img/portfolio/rfi.png)](https://www.rfi.fr/cn/) | [![](./img/portfolio/rthk.png)](https://news.rthk.hk/rthk/ch/) |
+| [![](./img/portfolio/aj.png)](https://chinese.aljazeera.net) | [![](./img/portfolio/bbc.png)](https://www.bbc.com/zhongwen/simp) | [![](./img/portfolio/cna.png)](https://www.cna.com.tw) | [![](./img/portfolio/dw.png)](https://www.dw.com/zh) | [![](./img/portfolio/kyodo.png)](https://china.kyodonews.net) | [![](./img/portfolio/reuters.png)](https://cn.reuters.com) | [![](./img/portfolio/rfi.png)](https://www.rfi.fr/cn/) | [![](./img/portfolio/rthk.png)](https://news.rthk.hk/rthk/ch/) |
 
 ## How to Contribute
 
