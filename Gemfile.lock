@@ -56,7 +56,7 @@ GEM
       terminal-table (~> 1.8)
     jekyll-data (1.1.0)
       jekyll (>= 3.3, < 5.0.0)
-    jekyll-feed (0.13.0)
+    jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
@@ -82,15 +82,15 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    mini_portile2 (2.5.1)
+    mini_portile2 (2.6.1)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.2)
     multipart-post (2.1.1)
-    nokogiri (1.11.5)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     nokogumbo (2.0.4)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -118,12 +118,11 @@ GEM
       faraday (> 0.8, < 2.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    thread_safe (0.3.6)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (1.2.6)
-      thread_safe (~> 0.1)
-    tzinfo-data (1.2019.3)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2021.2)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.6.1)
     wdm (0.1.1)
@@ -137,16 +136,16 @@ DEPENDENCIES
   html-proofer
   jekyll (~> 4.0.0)
   jekyll-data
-  jekyll-feed (~> 0.13)
+  jekyll-feed
   jekyll-gist
   jekyll-paginate
   jekyll-sitemap
   jemoji
   minima (~> 2.5)
   rake (~> 13.0)
-  tzinfo (~> 1.2)
+  tzinfo
   tzinfo-data
-  wdm (~> 0.1.1)
+  wdm
 
 BUNDLED WITH
    2.2.6
