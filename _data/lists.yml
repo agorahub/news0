@@ -225,32 +225,6 @@
     repo: https://gitlab.com/agora0/pen/2004
     site: https://agora0.gitlab.io/pen/2004/dw
 
-'joins': 
-  - name: ’21.04
-    repo: https://gitlab.com/agora0/pen/2104
-    site: https://agora0.gitlab.io/pen/2104/joins
-  - name: ’21.03
-    repo: https://gitlab.com/agora0/pen/2103
-    site: https://agora0.gitlab.io/pen/2103/joins
-  - name: ’21.02
-    repo: https://gitlab.com/agora0/pen/2102
-    site: https://agora0.gitlab.io/pen/2102/joins
-  - name: ’21.01
-    repo: https://gitlab.com/agora0/pen/2101
-    site: https://agora0.gitlab.io/pen/2101/joins
-  - name: ’20.12
-    repo: https://gitlab.com/agora0/pen/2012
-    site: https://agora0.gitlab.io/pen/2012/joins
-  - name: ’20.11
-    repo: https://gitlab.com/agora0/pen/2011
-    site: https://agora0.gitlab.io/pen/2011/joins
-  - name: ’20.10
-    repo: https://gitlab.com/agora0/pen/2010
-    site: https://agora0.gitlab.io/pen/2010/joins
-  - name: ’20.09
-    repo: https://gitlab.com/agora0/pen/2009
-    site: https://agora0.gitlab.io/pen/2009/joins
-
 'kyodo': 
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
