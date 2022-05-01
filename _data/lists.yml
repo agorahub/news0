@@ -2,6 +2,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/aj
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/aj
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/aj
@@ -40,6 +43,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/bbc
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/bbc
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/bbc
@@ -117,6 +123,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/cna
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/cna
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/cna
@@ -176,6 +185,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/dw
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/dw
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/dw
@@ -253,6 +265,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/kyodo
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/kyodo
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/kyodo
@@ -315,6 +330,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/reuters
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/reuters
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/reuters
@@ -392,6 +410,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/rfi
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/rfi
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/rfi
@@ -454,6 +475,9 @@
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/rthk
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/rthk
   - name: ’22.03
     repo: https://gitlab.com/agora0/pen/2203
     site: https://agora0.gitlab.io/pen/2203/rthk
