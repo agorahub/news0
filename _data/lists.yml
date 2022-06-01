@@ -1,7 +1,7 @@
 'aj': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/aj
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/aj
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/aj
@@ -41,8 +41,8 @@
 
 'bbc': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/bbc
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/bbc
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/bbc
@@ -121,8 +121,8 @@
 
 'cna': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/cna
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/cna
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/cna
@@ -183,8 +183,8 @@
 
 'dw': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/dw
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/dw
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/dw
@@ -263,8 +263,8 @@
 
 'kyodo': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/kyodo
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/kyodo
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/kyodo
@@ -326,90 +326,10 @@
     repo: https://gitlab.com/agora0/pen/2009
     site: https://agora0.gitlab.io/pen/2009/kyodo
 
-'reuters': 
-  - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/reuters
-  - name: ’22.04
-    repo: https://gitlab.com/agora0/pen/2204
-    site: https://agora0.gitlab.io/pen/2204/reuters
-  - name: ’22.03
-    repo: https://gitlab.com/agora0/pen/2203
-    site: https://agora0.gitlab.io/pen/2203/reuters
-  - name: ’22.02
-    repo: https://gitlab.com/agora0/pen/2202
-    site: https://agora0.gitlab.io/pen/2202/reuters
-  - name: ’22.01
-    repo: https://gitlab.com/agora0/pen/2201
-    site: https://agora0.gitlab.io/pen/2201/reuters
-  - name: ’21.12
-    repo: https://gitlab.com/agora0/pen/2112
-    site: https://agora0.gitlab.io/pen/2112/reuters
-  - name: ’21.11
-    repo: https://gitlab.com/agora0/pen/2111
-    site: https://agora0.gitlab.io/pen/2111/reuters
-  - name: ’21.10
-    repo: https://gitlab.com/agora0/pen/2110
-    site: https://agora0.gitlab.io/pen/2110/reuters
-  - name: ’21.09
-    repo: https://gitlab.com/agora0/pen/2109
-    site: https://agora0.gitlab.io/pen/2109/reuters
-  - name: ’21.08
-    repo: https://gitlab.com/agora0/pen/2108
-    site: https://agora0.gitlab.io/pen/2108/reuters
-  - name: ’21.07
-    repo: https://gitlab.com/agora0/pen/2107
-    site: https://agora0.gitlab.io/pen/2107/reuters
-  - name: ’21.06
-    repo: https://gitlab.com/agora0/pen/2106
-    site: https://agora0.gitlab.io/pen/2106/reuters
-  - name: ’21.05
-    repo: https://gitlab.com/agora0/pen/2105
-    site: https://agora0.gitlab.io/pen/2105/reuters
-  - name: ’21.04
-    repo: https://gitlab.com/agora0/pen/2104
-    site: https://agora0.gitlab.io/pen/2104/reuters
-  - name: ’21.03
-    repo: https://gitlab.com/agora0/pen/2103
-    site: https://agora0.gitlab.io/pen/2103/reuters
-  - name: ’21.02
-    repo: https://gitlab.com/agora0/pen/2102
-    site: https://agora0.gitlab.io/pen/2102/reuters
-  - name: ’21.01
-    repo: https://gitlab.com/agora0/pen/2101
-    site: https://agora0.gitlab.io/pen/2101/reuters
-  - name: ’20.12
-    repo: https://gitlab.com/agora0/pen/2012
-    site: https://agora0.gitlab.io/pen/2012/reuters
-  - name: ’20.11
-    repo: https://gitlab.com/agora0/pen/2011
-    site: https://agora0.gitlab.io/pen/2011/reuters
-  - name: ’20.10
-    repo: https://gitlab.com/agora0/pen/2010
-    site: https://agora0.gitlab.io/pen/2010/reuters
-  - name: ’20.09
-    repo: https://gitlab.com/agora0/pen/2009
-    site: https://agora0.gitlab.io/pen/2009/reuters
-  - name: ’20.08
-    repo: https://gitlab.com/agora0/pen/2008
-    site: https://agora0.gitlab.io/pen/2008/reuters
-  - name: ’20.07
-    repo: https://gitlab.com/agora0/pen/2007
-    site: https://agora0.gitlab.io/pen/2007/reuters
-  - name: ’20.06
-    repo: https://gitlab.com/agora0/pen/2006
-    site: https://agora0.gitlab.io/pen/2006/reuters
-  - name: ’20.05
-    repo: https://gitlab.com/agora0/pen/2005
-    site: https://agora0.gitlab.io/pen/2005/reuters
-  - name: ’20.04
-    repo: https://gitlab.com/agora0/pen/2004
-    site: https://agora0.gitlab.io/pen/2004/reuters
-
 'rfi': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/rfi
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/rfi
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/rfi
@@ -473,8 +393,8 @@
 
 'rthk': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/rthk
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/rthk
   - name: ’22.04
     repo: https://gitlab.com/agora0/pen/2204
     site: https://agora0.gitlab.io/pen/2204/rthk
@@ -553,5 +473,80 @@
 
 'wsj': 
   - name: 最新一週
-    repo: https://github.com/agorahub/news0
-    site: https://agorahub.github.io/news0/wsj
+    repo: https://gitlab.com/agora0/news
+    site: https://agora0.gitlab.io/news/wsj
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/reuters
+  - name: ’22.03
+    repo: https://gitlab.com/agora0/pen/2203
+    site: https://agora0.gitlab.io/pen/2203/reuters
+  - name: ’22.02
+    repo: https://gitlab.com/agora0/pen/2202
+    site: https://agora0.gitlab.io/pen/2202/reuters
+  - name: ’22.01
+    repo: https://gitlab.com/agora0/pen/2201
+    site: https://agora0.gitlab.io/pen/2201/reuters
+  - name: ’21.12
+    repo: https://gitlab.com/agora0/pen/2112
+    site: https://agora0.gitlab.io/pen/2112/reuters
+  - name: ’21.11
+    repo: https://gitlab.com/agora0/pen/2111
+    site: https://agora0.gitlab.io/pen/2111/reuters
+  - name: ’21.10
+    repo: https://gitlab.com/agora0/pen/2110
+    site: https://agora0.gitlab.io/pen/2110/reuters
+  - name: ’21.09
+    repo: https://gitlab.com/agora0/pen/2109
+    site: https://agora0.gitlab.io/pen/2109/reuters
+  - name: ’21.08
+    repo: https://gitlab.com/agora0/pen/2108
+    site: https://agora0.gitlab.io/pen/2108/reuters
+  - name: ’21.07
+    repo: https://gitlab.com/agora0/pen/2107
+    site: https://agora0.gitlab.io/pen/2107/reuters
+  - name: ’21.06
+    repo: https://gitlab.com/agora0/pen/2106
+    site: https://agora0.gitlab.io/pen/2106/reuters
+  - name: ’21.05
+    repo: https://gitlab.com/agora0/pen/2105
+    site: https://agora0.gitlab.io/pen/2105/reuters
+  - name: ’21.04
+    repo: https://gitlab.com/agora0/pen/2104
+    site: https://agora0.gitlab.io/pen/2104/reuters
+  - name: ’21.03
+    repo: https://gitlab.com/agora0/pen/2103
+    site: https://agora0.gitlab.io/pen/2103/reuters
+  - name: ’21.02
+    repo: https://gitlab.com/agora0/pen/2102
+    site: https://agora0.gitlab.io/pen/2102/reuters
+  - name: ’21.01
+    repo: https://gitlab.com/agora0/pen/2101
+    site: https://agora0.gitlab.io/pen/2101/reuters
+  - name: ’20.12
+    repo: https://gitlab.com/agora0/pen/2012
+    site: https://agora0.gitlab.io/pen/2012/reuters
+  - name: ’20.11
+    repo: https://gitlab.com/agora0/pen/2011
+    site: https://agora0.gitlab.io/pen/2011/reuters
+  - name: ’20.10
+    repo: https://gitlab.com/agora0/pen/2010
+    site: https://agora0.gitlab.io/pen/2010/reuters
+  - name: ’20.09
+    repo: https://gitlab.com/agora0/pen/2009
+    site: https://agora0.gitlab.io/pen/2009/reuters
+  - name: ’20.08
+    repo: https://gitlab.com/agora0/pen/2008
+    site: https://agora0.gitlab.io/pen/2008/reuters
+  - name: ’20.07
+    repo: https://gitlab.com/agora0/pen/2007
+    site: https://agora0.gitlab.io/pen/2007/reuters
+  - name: ’20.06
+    repo: https://gitlab.com/agora0/pen/2006
+    site: https://agora0.gitlab.io/pen/2006/reuters
+  - name: ’20.05
+    repo: https://gitlab.com/agora0/pen/2005
+    site: https://agora0.gitlab.io/pen/2005/reuters
+  - name: ’20.04
+    repo: https://gitlab.com/agora0/pen/2004
+    site: https://agora0.gitlab.io/pen/2004/reuters

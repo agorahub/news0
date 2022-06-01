@@ -1,7 +1,7 @@
 # Site settings
 title: NEWS⓪
-url: ''
-baseurl: ''
+baseurl: "/news0"
+url: "https://agorahub.github.io"
 description: "Agora News Aggregation"
 keywords: "agora, 媒体聚合, 海外中文"
 subtitle: "墙裂时光 隙水长流"
@@ -38,7 +38,7 @@ address:
   - line: ⓪pen source ⓵nitiative
 
 # Credits content
-credits: 'AG⓪RA is open to all <br> made with heart by theagora'
+credits: AG⓪RA is open to all <br> made with heart by theagora
 
 # Build settings
 markdown: kramdown
