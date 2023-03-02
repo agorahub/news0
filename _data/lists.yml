@@ -2,6 +2,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/abc
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/abc
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/abc
@@ -70,6 +73,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/bbc
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/bbc
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/bbc
@@ -177,6 +183,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/cna
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/cna
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/cna
@@ -266,6 +275,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/dw
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/dw
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/dw
@@ -373,6 +385,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/kyodo
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/kyodo
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/kyodo
@@ -465,6 +480,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/rfi
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/rfi
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/rfi
@@ -557,6 +575,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/rthk
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/rthk
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/rthk
@@ -664,6 +685,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/wsj
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/wsj
   - name: ’23.01
     repo: https://gitlab.com/agora0/pen/2301
     site: https://agora0.gitlab.io/pen/2301/wsj
