@@ -702,10 +702,10 @@
     repo: https://gitlab.com/agora0/pen/2009
     site: https://agora0.gitlab.io/pen/2009/kyodo
 
-'rfi': 
+'rfa': 
   - name: 最新一週
     repo: https://github.com/agora0/news
-    site: https://agora0.github.io/news/rfi
+    site: https://agora0.github.io/news/rfa
   - name: ’24.04
     repo: https://gitlab.com/agora0/pen/2404
     site: https://agora0.gitlab.io/pen/2404/rfi
