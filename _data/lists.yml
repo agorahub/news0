@@ -2,6 +2,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/aj
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/aj
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/aj
@@ -103,6 +106,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/abc
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/abc
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/abc
@@ -135,6 +141,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/bbc
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/bbc
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/bbc
@@ -293,6 +302,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/nyt
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/nyt
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/nyt
@@ -307,6 +319,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/cna
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/cna
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/cna
@@ -447,6 +462,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/dw
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/dw
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/dw
@@ -605,6 +623,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/kyodo
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/kyodo
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/kyodo
@@ -748,6 +769,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/rfa
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/rfa
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/rfa
@@ -891,6 +915,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/rthk
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/rthk
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/rthk
@@ -1049,6 +1076,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/wsj
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/wsj
   - name: ’24.06
     repo: https://gitlab.com/agora0/pen/2406
     site: https://agora0.gitlab.io/pen/2406/wsj
