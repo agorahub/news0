@@ -103,9 +103,6 @@
     site: https://agora0.gitlab.io/pen/2105/aj
 
 'abc': 
-  - name: 最新一週
-    repo: https://github.com/agora0/news
-    site: https://agora0.gitlab.io/news/abc
   - name: ’24.07
     repo: https://gitlab.com/agora0/pen/2407
     site: https://agora0.gitlab.io/pen/2407/abc
@@ -1073,9 +1070,6 @@
     site: https://agora0.gitlab.io/pen/2004/rthk
 
 'wsj': 
-  - name: 最新一週
-    repo: https://github.com/agora0/news
-    site: https://agora0.gitlab.io/news/wsj
   - name: ’24.07
     repo: https://gitlab.com/agora0/pen/2407
     site: https://agora0.gitlab.io/pen/2407/wsj
