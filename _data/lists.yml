@@ -1,7 +1,10 @@
 'aj': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/aj
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/aj
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/aj
@@ -142,8 +145,11 @@
 
 'bbc': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/bbc
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/bbc
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/bbc
@@ -306,8 +312,11 @@
 
 'nyt': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/nyt
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/nyt
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/nyt
@@ -326,8 +335,11 @@
 
 'cna': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/cna
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/cna
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/cna
@@ -472,8 +484,11 @@
 
 'dw': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/dw
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/dw
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/dw
@@ -636,8 +651,11 @@
 
 'kyodo': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/kyodo
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/kyodo
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/kyodo
@@ -785,8 +803,11 @@
 
 'rfa': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/rfa
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/rfa
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/rfa
@@ -934,8 +955,11 @@
 
 'rthk': 
   - name: 最新一週
-    repo: https://github.com/agora0/news
+    repo: https://gitlab.com/agora0/news
     site: https://agora0.gitlab.io/news/rthk
+  - name: ’24.09
+    repo: https://gitlab.com/agora0/pen/2409
+    site: https://agora0.gitlab.io/pen/2409/rthk
   - name: ’24.08
     repo: https://gitlab.com/agora0/pen/2408
     site: https://agora0.gitlab.io/pen/2408/rthk
