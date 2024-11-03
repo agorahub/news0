@@ -59,6 +59,39 @@
   - name: ’23.04
     repo: https://gitlab.com/agora0/pen/2304
     site: https://agora0.gitlab.io/pen/2304/aj
+  - name: ’24.08
+    repo: https://gitlab.com/agora0/pen/2408
+    site: https://agora0.gitlab.io/pen/2408/abc
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/abc
+  - name: ’24.06
+    repo: https://gitlab.com/agora0/pen/2406
+    site: https://agora0.gitlab.io/pen/2406/abc
+  - name: ’24.05
+    repo: https://gitlab.com/agora0/pen/2405
+    site: https://agora0.gitlab.io/pen/2405/abc
+  - name: ’24.04
+    repo: https://gitlab.com/agora0/pen/2404
+    site: https://agora0.gitlab.io/pen/2404/abc
+  - name: ’23.03
+    repo: https://gitlab.com/agora0/pen/2303
+    site: https://agora0.gitlab.io/pen/2303/abc
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/abc
+  - name: ’23.01
+    repo: https://gitlab.com/agora0/pen/2301
+    site: https://agora0.gitlab.io/pen/2301/abc
+  - name: ’22.12
+    repo: https://gitlab.com/agora0/pen/2212
+    site: https://agora0.gitlab.io/pen/2212/abc
+  - name: ’22.11
+    repo: https://gitlab.com/agora0/pen/2211
+    site: https://agora0.gitlab.io/pen/2211/abc
+  - name: ’22.10
+    repo: https://gitlab.com/agora0/pen/2210
+    site: https://agora0.gitlab.io/pen/2210/abc
   - name: ’22.09
     repo: https://gitlab.com/agora0/pen/2209
     site: https://agora0.gitlab.io/pen/2209/aj
@@ -111,45 +144,10 @@
     repo: https://gitlab.com/agora0/pen/2105
     site: https://agora0.gitlab.io/pen/2105/aj
 
-'abc': 
-  - name: ’24.08
-    repo: https://gitlab.com/agora0/pen/2408
-    site: https://agora0.gitlab.io/pen/2408/abc
-  - name: ’24.07
-    repo: https://gitlab.com/agora0/pen/2407
-    site: https://agora0.gitlab.io/pen/2407/abc
-  - name: ’24.06
-    repo: https://gitlab.com/agora0/pen/2406
-    site: https://agora0.gitlab.io/pen/2406/abc
-  - name: ’24.05
-    repo: https://gitlab.com/agora0/pen/2405
-    site: https://agora0.gitlab.io/pen/2405/abc
-  - name: ’24.04
-    repo: https://gitlab.com/agora0/pen/2404
-    site: https://agora0.gitlab.io/pen/2404/abc
-  - name: ’23.03
-    repo: https://gitlab.com/agora0/pen/2303
-    site: https://agora0.gitlab.io/pen/2303/abc
-  - name: ’23.02
-    repo: https://gitlab.com/agora0/pen/2302
-    site: https://agora0.gitlab.io/pen/2302/abc
-  - name: ’23.01
-    repo: https://gitlab.com/agora0/pen/2301
-    site: https://agora0.gitlab.io/pen/2301/abc
-  - name: ’22.12
-    repo: https://gitlab.com/agora0/pen/2212
-    site: https://agora0.gitlab.io/pen/2212/abc
-  - name: ’22.11
-    repo: https://gitlab.com/agora0/pen/2211
-    site: https://agora0.gitlab.io/pen/2211/abc
-  - name: ’22.10
-    repo: https://gitlab.com/agora0/pen/2210
-    site: https://agora0.gitlab.io/pen/2210/abc
-
-'bbc': 
+'nhk': 
   - name: 最新一週
     repo: https://gitlab.com/agora0/news
-    site: https://agora0.gitlab.io/news/bbc
+    site: https://agora0.gitlab.io/news/nhk
   - name: ’24.10
     repo: https://gitlab.com/agora0/pen/2410
     site: https://agora0.gitlab.io/pen/2410/bbc
@@ -341,6 +339,165 @@
   - name: ’24.04
     repo: https://gitlab.com/agora0/pen/2404
     site: https://agora0.gitlab.io/pen/2404/nyt
+  - name: ’24.08
+    repo: https://gitlab.com/agora0/pen/2408
+    site: https://agora0.gitlab.io/pen/2408/wsj
+  - name: ’24.07
+    repo: https://gitlab.com/agora0/pen/2407
+    site: https://agora0.gitlab.io/pen/2407/wsj
+  - name: ’24.06
+    repo: https://gitlab.com/agora0/pen/2406
+    site: https://agora0.gitlab.io/pen/2406/wsj
+  - name: ’24.05
+    repo: https://gitlab.com/agora0/pen/2405
+    site: https://agora0.gitlab.io/pen/2405/wsj
+  - name: ’24.04
+    repo: https://gitlab.com/agora0/pen/2404
+    site: https://agora0.gitlab.io/pen/2404/wsj
+  - name: ’24.03
+    repo: https://gitlab.com/agora0/pen/2403
+    site: https://agora0.gitlab.io/pen/2403/wsj
+  - name: ’24.02
+    repo: https://gitlab.com/agora0/pen/2402
+    site: https://agora0.gitlab.io/pen/2402/wsj
+  - name: ’24.01
+    repo: https://gitlab.com/agora0/pen/2401
+    site: https://agora0.gitlab.io/pen/2401/wsj
+  - name: ’23.12
+    repo: https://gitlab.com/agora0/pen/2312
+    site: https://agora0.gitlab.io/pen/2312/wsj
+  - name: ’23.11
+    repo: https://gitlab.com/agora0/pen/2311
+    site: https://agora0.gitlab.io/pen/2311/wsj
+  - name: ’23.10
+    repo: https://gitlab.com/agora0/pen/2310
+    site: https://agora0.gitlab.io/pen/2310/wsj
+  - name: ’23.09
+    repo: https://gitlab.com/agora0/pen/2309
+    site: https://agora0.gitlab.io/pen/2309/wsj
+  - name: ’23.08
+    repo: https://gitlab.com/agora0/pen/2308
+    site: https://agora0.gitlab.io/pen/2308/wsj
+  - name: ’23.07
+    repo: https://gitlab.com/agora0/pen/2307
+    site: https://agora0.gitlab.io/pen/2307/wsj
+  - name: ’23.06
+    repo: https://gitlab.com/agora0/pen/2306
+    site: https://agora0.gitlab.io/pen/2306/wsj
+  - name: ’23.05
+    repo: https://gitlab.com/agora0/pen/2305
+    site: https://agora0.gitlab.io/pen/2305/wsj
+  - name: ’23.04
+    repo: https://gitlab.com/agora0/pen/2304
+    site: https://agora0.gitlab.io/pen/2304/wsj
+  - name: ’23.03
+    repo: https://gitlab.com/agora0/pen/2303
+    site: https://agora0.gitlab.io/pen/2303/wsj
+  - name: ’23.02
+    repo: https://gitlab.com/agora0/pen/2302
+    site: https://agora0.gitlab.io/pen/2302/wsj
+  - name: ’23.01
+    repo: https://gitlab.com/agora0/pen/2301
+    site: https://agora0.gitlab.io/pen/2301/wsj
+  - name: ’22.12
+    repo: https://gitlab.com/agora0/pen/2212
+    site: https://agora0.gitlab.io/pen/2212/wsj
+  - name: ’22.11
+    repo: https://gitlab.com/agora0/pen/2211
+    site: https://agora0.gitlab.io/pen/2211/wsj
+  - name: ’22.10
+    repo: https://gitlab.com/agora0/pen/2210
+    site: https://agora0.gitlab.io/pen/2210/wsj
+  - name: ’22.09
+    repo: https://gitlab.com/agora0/pen/2209
+    site: https://agora0.gitlab.io/pen/2209/wsj
+  - name: ’22.08
+    repo: https://gitlab.com/agora0/pen/2208
+    site: https://agora0.gitlab.io/pen/2208/wsj
+  - name: ’22.07
+    repo: https://gitlab.com/agora0/pen/2207
+    site: https://agora0.gitlab.io/pen/2207/wsj
+  - name: ’22.06
+    repo: https://gitlab.com/agora0/pen/2206
+    site: https://agora0.gitlab.io/pen/2206/wsj
+  - name: ’22.05
+    repo: https://gitlab.com/agora0/pen/2205
+    site: https://agora0.gitlab.io/pen/2205/wsj
+  - name: ’22.04
+    repo: https://gitlab.com/agora0/pen/2204
+    site: https://agora0.gitlab.io/pen/2204/reuters
+  - name: ’22.03
+    repo: https://gitlab.com/agora0/pen/2203
+    site: https://agora0.gitlab.io/pen/2203/reuters
+  - name: ’22.02
+    repo: https://gitlab.com/agora0/pen/2202
+    site: https://agora0.gitlab.io/pen/2202/reuters
+  - name: ’22.01
+    repo: https://gitlab.com/agora0/pen/2201
+    site: https://agora0.gitlab.io/pen/2201/reuters
+  - name: ’21.12
+    repo: https://gitlab.com/agora0/pen/2112
+    site: https://agora0.gitlab.io/pen/2112/reuters
+  - name: ’21.11
+    repo: https://gitlab.com/agora0/pen/2111
+    site: https://agora0.gitlab.io/pen/2111/reuters
+  - name: ’21.10
+    repo: https://gitlab.com/agora0/pen/2110
+    site: https://agora0.gitlab.io/pen/2110/reuters
+  - name: ’21.09
+    repo: https://gitlab.com/agora0/pen/2109
+    site: https://agora0.gitlab.io/pen/2109/reuters
+  - name: ’21.08
+    repo: https://gitlab.com/agora0/pen/2108
+    site: https://agora0.gitlab.io/pen/2108/reuters
+  - name: ’21.07
+    repo: https://gitlab.com/agora0/pen/2107
+    site: https://agora0.gitlab.io/pen/2107/reuters
+  - name: ’21.06
+    repo: https://gitlab.com/agora0/pen/2106
+    site: https://agora0.gitlab.io/pen/2106/reuters
+  - name: ’21.05
+    repo: https://gitlab.com/agora0/pen/2105
+    site: https://agora0.gitlab.io/pen/2105/reuters
+  - name: ’21.04
+    repo: https://gitlab.com/agora0/pen/2104
+    site: https://agora0.gitlab.io/pen/2104/reuters
+  - name: ’21.03
+    repo: https://gitlab.com/agora0/pen/2103
+    site: https://agora0.gitlab.io/pen/2103/reuters
+  - name: ’21.02
+    repo: https://gitlab.com/agora0/pen/2102
+    site: https://agora0.gitlab.io/pen/2102/reuters
+  - name: ’21.01
+    repo: https://gitlab.com/agora0/pen/2101
+    site: https://agora0.gitlab.io/pen/2101/reuters
+  - name: ’20.12
+    repo: https://gitlab.com/agora0/pen/2012
+    site: https://agora0.gitlab.io/pen/2012/reuters
+  - name: ’20.11
+    repo: https://gitlab.com/agora0/pen/2011
+    site: https://agora0.gitlab.io/pen/2011/reuters
+  - name: ’20.10
+    repo: https://gitlab.com/agora0/pen/2010
+    site: https://agora0.gitlab.io/pen/2010/reuters
+  - name: ’20.09
+    repo: https://gitlab.com/agora0/pen/2009
+    site: https://agora0.gitlab.io/pen/2009/reuters
+  - name: ’20.08
+    repo: https://gitlab.com/agora0/pen/2008
+    site: https://agora0.gitlab.io/pen/2008/reuters
+  - name: ’20.07
+    repo: https://gitlab.com/agora0/pen/2007
+    site: https://agora0.gitlab.io/pen/2007/reuters
+  - name: ’20.06
+    repo: https://gitlab.com/agora0/pen/2006
+    site: https://agora0.gitlab.io/pen/2006/reuters
+  - name: ’20.05
+    repo: https://gitlab.com/agora0/pen/2005
+    site: https://agora0.gitlab.io/pen/2005/reuters
+  - name: ’20.04
+    repo: https://gitlab.com/agora0/pen/2004
+    site: https://agora0.gitlab.io/pen/2004/reuters
 
 'cna': 
   - name: 最新一週
@@ -1143,164 +1300,3 @@
   - name: ’20.04
     repo: https://gitlab.com/agora0/pen/2004
     site: https://agora0.gitlab.io/pen/2004/rthk
-
-'wsj': 
-  - name: ’24.08
-    repo: https://gitlab.com/agora0/pen/2408
-    site: https://agora0.gitlab.io/pen/2408/wsj
-  - name: ’24.07
-    repo: https://gitlab.com/agora0/pen/2407
-    site: https://agora0.gitlab.io/pen/2407/wsj
-  - name: ’24.06
-    repo: https://gitlab.com/agora0/pen/2406
-    site: https://agora0.gitlab.io/pen/2406/wsj
-  - name: ’24.05
-    repo: https://gitlab.com/agora0/pen/2405
-    site: https://agora0.gitlab.io/pen/2405/wsj
-  - name: ’24.04
-    repo: https://gitlab.com/agora0/pen/2404
-    site: https://agora0.gitlab.io/pen/2404/wsj
-  - name: ’24.03
-    repo: https://gitlab.com/agora0/pen/2403
-    site: https://agora0.gitlab.io/pen/2403/wsj
-  - name: ’24.02
-    repo: https://gitlab.com/agora0/pen/2402
-    site: https://agora0.gitlab.io/pen/2402/wsj
-  - name: ’24.01
-    repo: https://gitlab.com/agora0/pen/2401
-    site: https://agora0.gitlab.io/pen/2401/wsj
-  - name: ’23.12
-    repo: https://gitlab.com/agora0/pen/2312
-    site: https://agora0.gitlab.io/pen/2312/wsj
-  - name: ’23.11
-    repo: https://gitlab.com/agora0/pen/2311
-    site: https://agora0.gitlab.io/pen/2311/wsj
-  - name: ’23.10
-    repo: https://gitlab.com/agora0/pen/2310
-    site: https://agora0.gitlab.io/pen/2310/wsj
-  - name: ’23.09
-    repo: https://gitlab.com/agora0/pen/2309
-    site: https://agora0.gitlab.io/pen/2309/wsj
-  - name: ’23.08
-    repo: https://gitlab.com/agora0/pen/2308
-    site: https://agora0.gitlab.io/pen/2308/wsj
-  - name: ’23.07
-    repo: https://gitlab.com/agora0/pen/2307
-    site: https://agora0.gitlab.io/pen/2307/wsj
-  - name: ’23.06
-    repo: https://gitlab.com/agora0/pen/2306
-    site: https://agora0.gitlab.io/pen/2306/wsj
-  - name: ’23.05
-    repo: https://gitlab.com/agora0/pen/2305
-    site: https://agora0.gitlab.io/pen/2305/wsj
-  - name: ’23.04
-    repo: https://gitlab.com/agora0/pen/2304
-    site: https://agora0.gitlab.io/pen/2304/wsj
-  - name: ’23.03
-    repo: https://gitlab.com/agora0/pen/2303
-    site: https://agora0.gitlab.io/pen/2303/wsj
-  - name: ’23.02
-    repo: https://gitlab.com/agora0/pen/2302
-    site: https://agora0.gitlab.io/pen/2302/wsj
-  - name: ’23.01
-    repo: https://gitlab.com/agora0/pen/2301
-    site: https://agora0.gitlab.io/pen/2301/wsj
-  - name: ’22.12
-    repo: https://gitlab.com/agora0/pen/2212
-    site: https://agora0.gitlab.io/pen/2212/wsj
-  - name: ’22.11
-    repo: https://gitlab.com/agora0/pen/2211
-    site: https://agora0.gitlab.io/pen/2211/wsj
-  - name: ’22.10
-    repo: https://gitlab.com/agora0/pen/2210
-    site: https://agora0.gitlab.io/pen/2210/wsj
-  - name: ’22.09
-    repo: https://gitlab.com/agora0/pen/2209
-    site: https://agora0.gitlab.io/pen/2209/wsj
-  - name: ’22.08
-    repo: https://gitlab.com/agora0/pen/2208
-    site: https://agora0.gitlab.io/pen/2208/wsj
-  - name: ’22.07
-    repo: https://gitlab.com/agora0/pen/2207
-    site: https://agora0.gitlab.io/pen/2207/wsj
-  - name: ’22.06
-    repo: https://gitlab.com/agora0/pen/2206
-    site: https://agora0.gitlab.io/pen/2206/wsj
-  - name: ’22.05
-    repo: https://gitlab.com/agora0/pen/2205
-    site: https://agora0.gitlab.io/pen/2205/wsj
-  - name: ’22.04
-    repo: https://gitlab.com/agora0/pen/2204
-    site: https://agora0.gitlab.io/pen/2204/reuters
-  - name: ’22.03
-    repo: https://gitlab.com/agora0/pen/2203
-    site: https://agora0.gitlab.io/pen/2203/reuters
-  - name: ’22.02
-    repo: https://gitlab.com/agora0/pen/2202
-    site: https://agora0.gitlab.io/pen/2202/reuters
-  - name: ’22.01
-    repo: https://gitlab.com/agora0/pen/2201
-    site: https://agora0.gitlab.io/pen/2201/reuters
-  - name: ’21.12
-    repo: https://gitlab.com/agora0/pen/2112
-    site: https://agora0.gitlab.io/pen/2112/reuters
-  - name: ’21.11
-    repo: https://gitlab.com/agora0/pen/2111
-    site: https://agora0.gitlab.io/pen/2111/reuters
-  - name: ’21.10
-    repo: https://gitlab.com/agora0/pen/2110
-    site: https://agora0.gitlab.io/pen/2110/reuters
-  - name: ’21.09
-    repo: https://gitlab.com/agora0/pen/2109
-    site: https://agora0.gitlab.io/pen/2109/reuters
-  - name: ’21.08
-    repo: https://gitlab.com/agora0/pen/2108
-    site: https://agora0.gitlab.io/pen/2108/reuters
-  - name: ’21.07
-    repo: https://gitlab.com/agora0/pen/2107
-    site: https://agora0.gitlab.io/pen/2107/reuters
-  - name: ’21.06
-    repo: https://gitlab.com/agora0/pen/2106
-    site: https://agora0.gitlab.io/pen/2106/reuters
-  - name: ’21.05
-    repo: https://gitlab.com/agora0/pen/2105
-    site: https://agora0.gitlab.io/pen/2105/reuters
-  - name: ’21.04
-    repo: https://gitlab.com/agora0/pen/2104
-    site: https://agora0.gitlab.io/pen/2104/reuters
-  - name: ’21.03
-    repo: https://gitlab.com/agora0/pen/2103
-    site: https://agora0.gitlab.io/pen/2103/reuters
-  - name: ’21.02
-    repo: https://gitlab.com/agora0/pen/2102
-    site: https://agora0.gitlab.io/pen/2102/reuters
-  - name: ’21.01
-    repo: https://gitlab.com/agora0/pen/2101
-    site: https://agora0.gitlab.io/pen/2101/reuters
-  - name: ’20.12
-    repo: https://gitlab.com/agora0/pen/2012
-    site: https://agora0.gitlab.io/pen/2012/reuters
-  - name: ’20.11
-    repo: https://gitlab.com/agora0/pen/2011
-    site: https://agora0.gitlab.io/pen/2011/reuters
-  - name: ’20.10
-    repo: https://gitlab.com/agora0/pen/2010
-    site: https://agora0.gitlab.io/pen/2010/reuters
-  - name: ’20.09
-    repo: https://gitlab.com/agora0/pen/2009
-    site: https://agora0.gitlab.io/pen/2009/reuters
-  - name: ’20.08
-    repo: https://gitlab.com/agora0/pen/2008
-    site: https://agora0.gitlab.io/pen/2008/reuters
-  - name: ’20.07
-    repo: https://gitlab.com/agora0/pen/2007
-    site: https://agora0.gitlab.io/pen/2007/reuters
-  - name: ’20.06
-    repo: https://gitlab.com/agora0/pen/2006
-    site: https://agora0.gitlab.io/pen/2006/reuters
-  - name: ’20.05
-    repo: https://gitlab.com/agora0/pen/2005
-    site: https://agora0.gitlab.io/pen/2005/reuters
-  - name: ’20.04
-    repo: https://gitlab.com/agora0/pen/2004
-    site: https://agora0.gitlab.io/pen/2004/reuters

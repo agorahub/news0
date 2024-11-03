@@ -4,9 +4,9 @@ Landing page of the Agora News Aggregator. 👉 https://agora0.gitlab.io/news
 
 ## News Sources
 
-| [ⒶⒿ](https://agora0.gitlab.io/news/aj) | [🅱🅱🅲](https://agora0.gitlab.io/news/bbc) | [Ⓒ🅝🅐](https://agora0.gitlab.io/news/cna) | [Ⓓ🅦](https://agora0.gitlab.io/news/dw) | [共同社](https://agora0.gitlab.io/news/kyodo) | [🅽🆈🆃](https://agora0.gitlab.io/news/nyt) | [ⓇⒻⒶ](https://agora0.gitlab.io/news/rfa) | [🆁🆃🄷🄺](https://agora0.gitlab.io/news/rthk) |
+| [ⒶⒿ](https://agora0.gitlab.io/news/aj) | [Ⓒ🅝🅐](https://agora0.gitlab.io/news/cna) | [Ⓓ🅦](https://agora0.gitlab.io/news/dw) | [共同社](https://agora0.gitlab.io/news/kyodo) | [🄽🄷🄺](https://agora0.gitlab.io/news/nhk) | [🅽🆈🆃](https://agora0.gitlab.io/news/nyt) | [ⓇⒻⒶ](https://agora0.gitlab.io/news/rfa) | [🆁🆃🄷🄺](https://agora0.gitlab.io/news/rthk) |
 | -- | -- | -- | -- | -- | -- | -- | -- |
-| [![](./img/portfolio/aj.png)](https://chinese.aljazeera.net) | [![](./img/portfolio/bbc.png)](https://www.bbc.com/zhongwen/simp) | [![](./img/portfolio/cna.png)](https://www.cna.com.tw) | [![](./img/portfolio/dw.png)](https://www.dw.com/zh) | [![](./img/portfolio/kyodo.png)](https://china.kyodonews.net) | [![](./img/portfolio/nyt.png)](https://cn.nytimes.com) | [![](./img/portfolio/rfa.png)](https://www.rfa.org/cantonese) | [![](./img/portfolio/rthk.png)](https://news.rthk.hk/rthk/ch/) |
+| [![](./img/portfolio/aj.png)](https://chinese.aljazeera.net) | [![](./img/portfolio/cna.png)](https://www.cna.com.tw) | [![](./img/portfolio/dw.png)](https://www.dw.com/zh) | [![](./img/portfolio/kyodo.png)](https://china.kyodonews.net) | [![](./img/portfolio/nhk.png)](https://www.nhk.or.jp/nhkworld/zh/news) | [![](./img/portfolio/nyt.png)](https://cn.nytimes.com) | [![](./img/portfolio/rfa.png)](https://www.rfa.org/cantonese) | [![](./img/portfolio/rthk.png)](https://news.rthk.hk/rthk/ch/) |
 
 ## Test and Deploy
 
