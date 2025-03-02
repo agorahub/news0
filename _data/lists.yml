@@ -1048,10 +1048,10 @@
     repo: https://github.com/agora0/2009
     site: https://agora0.github.io/2009/kyodo
 
-'rfa': 
+'joins': 
   - name: 最新一週
     repo: https://github.com/agora0/news
-    site: https://agora0.github.io/news/rfa
+    site: https://agora0.github.io/news/joins
   - name: ’25.02
     repo: https://github.com/agora0/2502
     site: https://agora0.github.io/2502/rfa
