@@ -1084,10 +1084,10 @@
     repo: https://github.com/agora0/2009
     site: https://agora0.github.io/2009/kyodo
 
-'joins': 
+'chosun': 
   - name: 最新一週
     repo: https://github.com/agora0/news
-    site: https://agora0.github.io/news/joins
+    site: https://agora0.github.io/news/chosun
   - name: ’25.04
     repo: https://github.com/agora0/2504
     site: https://agora0.github.io/2504/joins
