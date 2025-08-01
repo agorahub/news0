@@ -2,6 +2,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/aj
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/aj
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/aj
@@ -172,6 +175,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/nhk
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/nhk
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/nhk
@@ -366,6 +372,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/nyt
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/nyt
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/nyt
@@ -575,6 +584,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/cna
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/cna
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/cna
@@ -751,6 +763,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/dw
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/dw
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/dw
@@ -945,6 +960,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/kyodo
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/kyodo
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/kyodo
@@ -1124,6 +1142,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/chosun
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/chosun
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/chosun
@@ -1303,6 +1324,9 @@
   - name: 最新一週
     repo: https://github.com/agora0/news
     site: https://agora0.github.io/news/rthk
+  - name: ’25.07
+    repo: https://github.com/agora0/2507
+    site: https://agora0.github.io/2507/rthk
   - name: ’25.06
     repo: https://github.com/agora0/2506
     site: https://agora0.github.io/2506/rthk
