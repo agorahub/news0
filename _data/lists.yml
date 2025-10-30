@@ -177,10 +177,10 @@
     repo: https://github.com/agora0/2105
     site: https://agora0.github.io/2105/aj
 
-'nhk': 
+'bbc': 
   - name: 最新一週
     repo: https://github.com/agora0/news
-    site: https://agora0.github.io/news/nhk
+    site: https://agora0.github.io/news/bbc
   - name: ’25.09
     repo: https://github.com/agora0/2509
     site: https://agora0.github.io/2509/nhk
