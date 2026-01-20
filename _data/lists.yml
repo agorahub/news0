@@ -1,7 +1,7 @@
-'abc': 
+'nikkei': 
   - name: 最新一週
     repo: https://github.com/agora0/news
-    site: https://agora0.github.io/news/abc
+    site: https://agora0.github.io/news/nikkei
   - name: ’25.12
     repo: https://github.com/agora0/2512
     site: https://agora0.github.io/2512/aj
